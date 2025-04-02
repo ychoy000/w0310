@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+</head>
+<body>
+    <h1>FORM에 대한 기본 요소</h1>
+    <h2>input태그의 23개 타입</h2>
+    <!--  -->
+
+    <form action="form.jsp">
+        입력상자<input type="text"><br>
+        <label for="">입력상자<input type="text"></label><br><!-- 라벨링하는 종은 방법이 아님. 
+            아래 검색 문 참고 -->
+        <!-- 여러 줄 입력상자: 글쓰기, 회칙
+            name은 구분위해 가급적 작성하나 생략 가능,
+            중요: 데이터 전송시 변수 역할 -->
+        글쓰기<textarea name="user_write" id=""></textarea><br>
+        <!-- CSS
+            rows: 줄(행, 가로) 수
+            cols: 칸(열, column, 세로) 수
+            width: 가로크기
+            height: 세로크기
+            resize:none; ->크기수정 못함 -->
+        회칙<textarea name="" cols="100" rows="10" id="" readonly style="width:300px; height:150px; resize:none">회칙을 여기에 기록 못한다</textarea><br>
+        
+        <!-- 버튼의 종류 -->
+        <input type="submit" value="전송"><br>
+        <input type="reset" value="취소"><br>
+        <input type="button" value="버튼"><br>
+        
+        <button type="submit">submit</button>
+        <button type="reset" >cancel</button>
+        <button type="button">button</button>
+        이미지<input type="image"><br>
+        파일첨부<input type="file"><br>
+        
+        <!-- alt+클릭, 다중 커서
+            alt+드래그
+        ctrl+alt+아래방향키 -->
+        <!-- 3. ctrl+D: 같은 단어 선택 -->
+        <!--NAME속성으로 그룹핑한다.
+        NAME의 속성은 아무거나 써도 됨, 같은 이름인 경우 한 가지만 선택 -->
+        
+        <!-- 여러 개 중 여러 개를 선택 가능 -->
+        <input type="checkbox" name="chkgroup" >HTML
+        <input type="checkbox" name="chkgroup">CSS
+        <input type="checkbox" name="chkgroup">Javascript<br>
+        <label><input type="checkbox" name="chkgroup" >HTML</label>
+        <label><input type="checkbox" name="chkgroup">CSS</label>
+        <label><input type="checkbox" name="chkgroup">Javascript</label><br>
+        <!-- 여러 개 중 하나만 선택 가능 -->
+        
+        <input type="radio" name="radiogroup">동의함
+        <input type="radio" name="radiogroup">동의하지 않음
+        <input type="radio" name="radiogroup">모름<br>
+        
+        <!-- 버튼은 용도에 맞게 사용해야 한다.
+        전송 - 로그인, 회원가입 시 확인 -->
+        
+        <!-- text가 다음과 같이 세분화됨(html5부터) -->
+        <!-- for와 id의 값이 같아야 한다. -->
+        <label for="search_box">검색</label>
+        <input type="search" id="search_box"><br>
+        전화번호<input type="tel"><br>
+        주소
+        <!-- select의 value는 서버로 전송될 값이다. 영문으로 사용함이 바람직 -->
+        <select>
+            <option value="Gyeonggi" selected="selected">경기도</option>
+            <option value="Seoul">서울특별시</option>
+            <option value="Gangwon">강원도</option>
+            <option value="Chungchong">충청도</option>
+            <option value="Gyongsang">경상도</option>
+            <option value="Jolla">전라도</option>
+            <option value="">Jeju</option>
+        </select>
+        이메일<input type="email"><br>
+        웹주소<input type="url"><br>
+        
+        비밀번호<input type="password"><br>
+        <!-- 날짜/시간 -->
+        <input type="date">
+        <!-- datetime-local을 사용하고 datetime는 사용하지 않는다. -->
+         <!-- https://caniuse.com/에서 브라우저별 체크 -->
+        <input type="datetime"><!-- 모든 브라우저X -->
+        <input type="datetime-local">
+        <input type="time"><!-- 파이어폭스137 X, 사파리5.0 X -->
+        <input type="month"> <!-- 파이어폭스137 X, 사파리5.0 X -->
+        <input type="week"><!-- 파이어폭스137 X, 사파리5.0 X -->
+        <!-- 색 -->
+        <input type="color">
+        <!-- 범위 -->
+        <input type="range">
+        <!-- 스핀버튼 -->
+        <input type="number">
+    </form>
+
+</body>
+</html>
