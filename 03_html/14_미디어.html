@@ -20,13 +20,43 @@
          3. controls: 제어바(실행, 중지)
          4. loop: 무한반복
      -->
-    <video src="./../portfolio/video/110877-689510466_tiny.mp4" autoplay muted width="700"></video>
-    <video src="./../portfolio/video/110877-689510466_tiny.mp4" controls width="700"></video>
+    <video src="./../70_portfolio/video/110877-689510466_tiny.mp4" autoplay muted loop width="700"></video>
+    <video src="./../70_portfolio/video/110877-689510466_tiny.mp4" controls></video>
     <!-- 대우건설 홈피(적응형) 데스크탑용에서 검사 보기 -->
+
     <video>
-        <source src="./../portfolio/video/110877-689510466_tiny.mp4" type="video/mp4">
-        <source src="./../portfolio/video/110877-689510466_tiny.webm" type="video/webm">
-        <source src="./../portfolio/video/110877-689510466_tiny.ogg" type="video/ogg">
+        <source src="./../../assets/main_movie_new_250212.mp4" controls type="video/mp4">
+        <!-- 위는 w0310밖의 폴더에 해당 파일 위치
+         이런 경우는 'open in browse'에서 
+         디폴트 브라우저인 경우는 alt+B
+         기타 브라우저인 경우는 alt+shift+B
+         를 누르면 구현
+         기존의 live-server에는 실시간 구현되나 안 바뀜
+         -->
+        <source src="./../70_portfolio/video/110877-689510466_tiny.webm" type="video/webm">
+        <source src="./../70_portfolio/video/110877-689510466_tiny.ogv" type="video/ogg">
+        Your browser does not support the video tag.
+
     </video>
+
+    <!-- 비디오자료수집
+        1. 유튜브
+        2. 비메오
+        3. 네이버
+     -->
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/X4E2UKpYhIg" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" frameborder="0"></iframe>
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/X4E2UKpYhIg" style="width:400px; height:225px; border:none"></iframe>" frameborder="0"></iframe>
+
+    <audio src="./../70_portfolio/video/Mas Cafe - Casa Rosa.mp3" controls></audio>
+    <!-- 배경음악 -->
+    <audio src="./../70_portfolio/video/Mas Cafe - Casa Rosa.mp3"></audio> <!-- autoplay loop를 삽입 -->
+    <audio controls>
+        <source  src="./../70_portfolio/video/Mas Cafe - Casa Rosa.mp3" type="audio/mpeg">
+        <source  src="./../70_portfolio/video/Mas Cafe - Casa Rosa.wav" type="audio/wave">
+        <source  src="./../70_portfolio/video/Mas Cafe - Casa Rosa.ogg" type="audio/ogg">
+    </audio>
+
+    <!-- 효과음 -->
+
 </body>
 </html>
