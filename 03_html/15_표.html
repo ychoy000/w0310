@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <!-- style태그는 head 사이에 기록한다. -->
+    <style>
+        /*CSS 내부 스타일(style tag로 기록)* /
+        /*선택자 {속성: 값 값 값;}*/
+        /* 본문(body)에 있는 td태그에 텔\두리를 선 두께 1px, 선종류 solid(실선, 선 색은 검정으로 지정한다.)*/
+        tr {border:1px; solid; black;}
+        td {border:1px; solid; black;}
+       </style>
+</head>
+<body>
+    <h1>표(Table)</h1>
+    <h2>1행1열의 표</h2>
+    <!-- <table border="4"> 옛날 방식, 이젠 CSS사용할 것 -->
+    <table style="border:1px solid black;">
+        <tr><td>1행1열</td></tr>
+
+
+</table>
+<h2>1행2열</h2>
+<table style="border:1px solid black; border-collapse: ;">
+    <!-- tr은 행(rows), td은 셀 <-columns -->
+     <tr>
+        <td >1행1열</td>
+        <td>1행1열</tdstyle=>
+    </tr>
+</table>
+
+<h2>2행1열</h2>
+<!-- 테이블은 자식으로 하나 이상의 tr이 있어야 한다. -->
+<!-- tr은 자식으로 하나 이상의 td이 있어야 한다. -->
+<!-- 인라인스타일: HTML의 style속성으로 기록하는 방식 -->
+<table style="border:1px solid black;">
+    <tr style="border:1px solid black;"><td>1행2열</td></tr>
+    <tr style="border:1px solid black;"><td>1행1열</td></tr>
+</table>
+
+</table>
+<h2>2행2열</h2>
+<table  style="border:1px solid black;">
+    <tr  style="border:1px solid black;">
+        <td>col1row1</td>
+        <td>col2row1</td>
+    </tr>
+    <tr>
+        <td style="border:1px solid black;">col1row2</td>
+        <td style="border:1px solid black;">col2row2</td>
+    </tr>
+    <tr>
+        <td style="border:1px solid black;">col1row3</td>
+        <td style="border:1px solid black;">rowcol32</td>
+    </tr>
+    <tr>
+        <td style="border:1px solid black;">rc41</td>
+        <td style="border:1px solid black;">rc42</td>
+    </tr>
+</table>
+</body>
+</html>
