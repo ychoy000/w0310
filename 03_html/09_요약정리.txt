@@ -32,6 +32,13 @@
 <samp></samp>
 <kbd></kbd>
 <var></var>
+<ul></ul>
+<ol></ol>
+<li></li>
+<dt></dt>
+<optgroup></optgroup>
+<option></option>
+
 &nbsp;              공백 1개
 &gt;                >
 &lt;                <
