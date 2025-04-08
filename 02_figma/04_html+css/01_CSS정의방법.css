@@ -1,0 +1,5 @@
+/* 
+선택자 {속성: 값;}  -> type(tag, element) 선택자
+.class {속성: 값;}  -> .**는 클래스 선택자
+ */
+.color_green {color:green;}
