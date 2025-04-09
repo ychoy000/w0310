@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- en:영문 페이지, ko: 한글페이지 -->
+<!-- https://www.w3schools.com/TAgs/ref_language_codes.asp -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            부모 요소에 지정
+            display: flex;
+            flex-direction - 방향
+            flex-wrap -> 줄바꿈 방식
+            align-items
+            align-content
+
+            속기 속성
+            flex-flow: direction-wrap;
+
+            자식 요소에 지정
+                개별 속성
+                flex-grow    공간이 남으면 늘려준다(1)
+                flex-shrink  공간이 부족하면 줄여준다(1)
+                flex-basis   원하는 가로 크기(기본 100px)  
+                order - 자식 요송의 순서를 지정한다.
+                align-self 정렬
+        
+            /* 개별속성 */
+            flex-grow: 1;   /* fla */
+            flex-shrink: 1; /* fls */
+            flex-basis: 0;  /* flb */
+
+             /* 속기 속성 */
+            flex: 1;
+            flex: 1 1 0;
+        */
+        /* vendor prefix
+         -webkit- 크롬에 대한 접두사
+         -ms-  엣지(이전 IE)에 대한 접두사
+         -safari- 사파리
+         -moz- Firefox
+         -o- Opera
+         flex에 처음 나왔을 때 5대 브라우저에 제공한 접두사
+        */
+
+        /* 부모 */
+        .flexbox {
+           display: flex;  /* df*/
+           display: -webkit-flex;
+           display: -ms-flex; /* 지금은 필요 없음 */
+        /*   flex-direction: row; 방향
+           flex-wrap: -> 줄바꿈 방식
+           justify-content 가로/세로(주축 또는 기초축)에 따라 정렬(align)
+           flex-wrap: wrap; /*flw*/
+        
+           
+
+            height: 200px; /* h200 */
+            background: #ccc; /* bg */
+        }
+        .flexbox >div {
+            flex: 1;
+           /* -webkit-flex: 1;
+            -ms-flex: 1;*/
+            
+            background: darkcyan;
+            margin: 10px; /* m10 */
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <!-- shft+alt+아래방향키 -->
+         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, vero. </div>
+         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sit tempore odio. Suscipit rem voluptatibus aliquam quas veniam fuga quibusdam corporis! Nam officia incidunt molestiae animi sed. Rem sequi iusto officia ullam exercitationem maxime praesentium, totam illum quia ducimus, ex nostrum facilis id eveniet magni sed cupiditate, omnis mollitia assumenda ratione. Possimus nulla, sequi nam vero voluptatem eius nostrum aliquam nihil quasi natus sapiente explicabo, nesciunt inventore, sit impedit a quaerat dignissimos praesentium laboriosam ea ut. Delectus neque fugit officiis sunt atque non exercitationem expedita est iusto! Asperiores aperiam beatae officia modi quasi? Eveniet quae nesciunt eaque aspernatur a numquam.</div>
+         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam porro officiis, sint iure earum distinctio reprehenderit sed nulla laudantium maxime.</div>
+         <div><img src="img/flex.png" alt="flex"> </div>
+         <div><img src="img/flex.png" alt="flex"> </div>
+         <div><img src="img/flex.png" alt="flex"> </div>
+         <div><img src="img/flex.png" alt="flex"> </div>
+    </div>
+</body>
+</html>
