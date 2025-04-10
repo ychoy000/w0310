@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃-응용2</title>
+    <style>
+        /* shift+alt+f: 들여쓰기 */
+        /* 자식요소를 가로 배치 */
+        /* 부모인 .wrap에 display flex */
+        .wrap {display: flex;}
+        
+        .header {width: 100px; background: #ccc;}
+        .right_contents {width: 500px; }
+
+        .slide {
+            height: 150px;
+            background: #d68d8d;
+        }
+
+        .banner {
+            height: 70px;
+            background: #c4e8b3;
+        }
+
+        .contents {
+            height: 80px;
+            background: #8caca3;
+        }
+        .footer {
+            height: 50px; width: 600px;
+            background: #96ab5c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">헤더</div>
+        <div class="right_contents">
+            <div class="slide">slide</div>
+            <div class="banner">banner</div>
+            <div class="contents">contents</div>
+        </div>
+    </div> 
+    <div class="footer">footer2</div>
+     <!-- ctrl+alt+아래방향키(한꺼번에 여러 줄에 동일하게 적용) -->
+</body>
+
+</html>

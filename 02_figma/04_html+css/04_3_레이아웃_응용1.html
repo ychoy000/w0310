@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃-응용1</title>
+    <style>
+        /* shift+alt+f: 들여쓰기 */
+        /* 자식요소를 가로 배치 */
+        .wrap {display: flex;}
+        
+        .header {width: 100px; background: #ccc;}
+        .right_contents {width: 500px; background: #d68d8d; }
+
+        .slide {
+            height: 200px;
+            background: #d68d8d;
+        }
+
+        .contents {
+            height: 100px;
+            background: #c4e8b3;
+        }
+
+        .footer {
+            height: 50px;
+            background: #8caca3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">헤더</div>
+        <div class="right_contents">오른쪽 컨텐츠
+        <div class="slide">slide</div>
+        <div class="contents">contents</div>
+        <div class="footer">footer</div>
+        </div>
+    </div> 
+     <!-- ctrl+alt+아래방향키(한꺼번에 여러 줄에 동일하게 적용) -->
+</body>
+
+</html>
