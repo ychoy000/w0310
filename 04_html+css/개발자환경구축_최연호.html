@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃_최연호</title>
+    <style>
+        * {margin:0;}
+        .wrap { 
+            width: 1204px;
+            margin: 0 auto;
+        }
+
+        header {
+            height: 858px;
+            width: 1204px;
+            display: flex;
+        }
+
+        .logo {
+            width:200px; 
+            margin-right: 4px;
+            background:#999;
+        }
+        .slide1 {
+            height: 400px;
+            background: #eee;
+        }
+
+        .slide2 {
+            height: 200px; 
+            margin-top: 4px;
+            background: #ddd;
+        }
+
+        .contents {
+            height: 250px; 
+            margin-top: 4px;
+            display: flex;
+        }
+
+        .notice {
+            height: 250px;
+            width: 496px;
+            background: #ccc;
+        }
+
+        .banner {
+            width: 500px;
+            background: #bbb;
+        }
+
+        /* footer layout */
+
+
+        footer {
+            display: flex;
+            height: 100px; 
+            margin-top: 4px;
+
+        }
+
+        .blogo {
+            width: 200px;
+            margin-right: 4px;
+            background: #777;
+        }
+
+        .copy {
+            width: 792px;
+            margin-right: 4px;
+            background: #666;
+        }
+
+        .sns {
+            width: 200px;
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo">LOGO</div>
+            <div class="right">
+                <div class="slide1">SLIDE1</div>
+                <div class="slide2">SLIDE2</div>
+                <div class="contents">
+                    <div class="notice">공지시항</div>
+                    <div class="banner">배너</div>
+                </div>
+            </div>
+        </header>
+    <footer>
+        <div class="blogo">하단로고</div>
+        <div class="copy">주소 및 저작권</div>
+        <div class="sns">SNS</div>
+    </footer>
+    </div>
+</body>
+
+</html>
