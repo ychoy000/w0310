@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2depth Navigation</title>
+</head>
+
+<body>
+    <!-- Emmet 기능
+    
+    >           자식(Child)
+    *           형제개수(Multiplication)
+    .           속성값  클래스
+    #           속성값  아이디
+    [속성=값]   속성
+    {ㅌ\콘텐츠} 콘텐츠
+    $           순번(item numbering)은 1, 2, 3, ...
+    
+    ul>li*3>a[href=#]{메인메뉴$}
+    h1+h2+p      형제들 반복 예
+    ul>li*3>a[href=#]{메인메뉴$}+ul>li*3>a[href=#]{서브메뉴$}   작동안됨
+    ul>li*3>a{메인메뉴$}+ul>li*3>a[href=#]{서브메뉴$}   첫번째 대괄호 제거후 작동
+    
+    nav#gnb>ul.mail>li*3>a{메인메뉴$}+ul.sub>li*3>a[href=#]{서브메뉴$}
+    를 ctrl+spacebar -> tab 또는 마지막 } 지우고 다시 써서 tab
+    -->
+
+     <h1>2depth navigation</h1>
+     <h2>에밋 사용</h2>
+     
+<nav id="gnb">
+    <ul class="mail">
+        <li>
+            <a href="">메인메뉴1</a>
+            <ul class="sub">
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">메인메뉴2</a>
+            <ul class="sub">
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">메인메뉴3</a>
+            <ul class="sub">
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+     <ul>
+        <li>
+            <a href="">메인메뉴1</a>
+            <ul class="sub">
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">메인메뉴2</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">메인메뉴3</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+     </ul>
+
+     <h2>직접 기록: 복사</h2>
+    <ul>
+        <li><a href="#">메가스토리</a>
+            <!-- 서브 메뉴 -->
+            <ol>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">푸드</a></li>
+                <li><a href="#">상품</a></li>
+            </ol> <!-- main menu ul의 끝 -->
+        </li>
+        <li><a href="#">메가스토리</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul> <!-- main menu ul의 끝 -->
+        </li>
+        <li><a href="#">메가스토리</a>       
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul> 
+        </li>
+    </ul>
+</body>
+
+</html>
