@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하위선택자</title>
+    <style>
+        /* 
+        하위 선택자를 선택하지 않은 경우의 예
+
+        p {color: blue}
+        .p5 {color: black} */
+        /* 
+        하위 선택자는 공백으로 구분
+        선택자1(조상) 선택자2(하위 자손)
+        */
+        /* .abox p {color: blue} */
+        /*
+        자식 선택자는 > 로 구분
+        손자는 안됨(하위 선택자와의 차잇점)
+         */
+        .abox > p {color: blue}
+    </style>
+</head>
+<body>
+    <h1>하위/자식 선택자: 결합선택자의 일종</h1>
+    <div class="abox">
+        <p>7월의 여행지(div의 첫번째 자식)</p>
+        <p>8월의 여행지(div의 두번째 자식)</p>
+        <ul >
+            <li><p>1주차 여행지(첫번째 li의 자식, div의 손자)</p></li>
+            <li><p>2주차 여행지(두번째 li의 자식, div의 손자)</p></li>
+        </ul>
+    </div>
+    <p class="p5">내년의 여행지, body의 자식</p>
+</body>
+</html>

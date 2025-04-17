@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인접선택자</title>
+    <style>
+        /* 바로 밑에 다른 형재가 있는 경우에는 적용 안됨 */
+        h1 + p + p {color: blue;}
+        h3 + p {color: red;}
+    </style>
+</head>
+<body>
+    <h1>엑스포안내</h1>
+    <p>책자를 배부하고 있습니다.</p>
+    <p>안내데스크를 활용하시기 바랍니다.</p>
+
+    <h2>하위/자식 선택자: 결합선택자의 일종</h2>
+    <div class="abox">
+        <h3>7월의 여행지(div의 첫번째 자식)</h3>
+        <p>8월의 여행지(div의 두번째 자식)</p>
+        <ul >
+            <li><p>1주차 여행지(첫번째 li의 자식, div의 손자)</p></li>
+            <li><p>2주차 여행지(두번째 li의 자식, div의 손자)</p></li>
+        </ul>
+    </div>
+    <p class="p5">내년의 여행지, body의 자식</p>
+
+</body>
+</html>
