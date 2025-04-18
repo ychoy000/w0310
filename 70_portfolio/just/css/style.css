@@ -28,8 +28,8 @@ display:flex를 부모 요소에 지정하면
 /* 푸터 */
 .footer {display: flex; height: 100px;}
 /* 하단로고 */
-.blogo {width: 200px; grid-auto-columns: 200px;}
+.blogo {width: 264px;}
 /* 주소 및 저작권 */
-.copy {width: 800px; grid-auto-columns: 800px;}
+.copy {width: 675px;}
 /* SNS */
-.sns {width: 200px; grid-auto-columns: 200px;}
+.sns {width: 261px;}
