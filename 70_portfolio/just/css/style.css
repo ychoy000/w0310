@@ -1,0 +1,35 @@
+@charset "utf-8";  /* 뺴 먹으면 안되는 필수 문구 */
+
+/* 전체 */
+* {margin: 0;} /* 0만 단위 생략 가능 */
+body {background:#fff; color: #333;}
+.wrap {width: 1200px; margin: 0 auto;}
+
+/* 헤더 */
+.header {display: flex; height: 100px;}
+/* 로고 */
+.logo {width: 200px; height: 40px; }
+/* 네비게이션 */
+.gnb {}
+/* 슬라이드 */
+.slide {height: 300px;}
+
+/* 콘텐츠 */
+/* 
+display:flex를 부모 요소에 지정하면
+부모는 flex containter가 되고 자식은 flex item이 되며, 가로 배치된다.
+*/
+.contents {height: 200px; display: flex;}
+.notice, .banner, .shortcut {width: 400px;}
+/* 공지사항 */
+/* 배너 */
+/* 바로가기 */
+
+/* 푸터 */
+.footer {display: flex; height: 100px;}
+/* 하단로고 */
+.blogo {width: 200px; grid-auto-columns: 200px;}
+/* 주소 및 저작권 */
+.copy {width: 800px; grid-auto-columns: 800px;}
+/* SNS */
+.sns {width: 200px; grid-auto-columns: 200px;}
