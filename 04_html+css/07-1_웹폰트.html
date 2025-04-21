@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBfont</title>
+    <style>
+        /* https://fonts.google.com/ 
+        구글 폰트
+        외부 폰트 가져오기*/
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum Gothic');
+        @import url('https://fonts.googleapis.com/earlyaccess/jejuhallasan.css');
+        /* 제주 한라산체-구글 폰트
+        @import url('글꼴 주소')
+        
+        제주 돌담체
+        @font-face {font-family: 폰트명; -> 폰트명은 읨의 이름으로 지정
+        src: url('글꼴주소')*/
+        @font-face { 
+            font-family: 'EF_jejudoldam'
+            src: url('https://fastly.jsdelivr.net/gh/protectnoonnu/noonnufonts_2210-EF1.0/EF_jejudoldam.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* 현재 문서에 적용하기 */
+        .p1 {font-family: 'EF_jejudoldam', times new roman, "Noto Sans KR", sans-serif; }
+        .p2 {font-family: 'jeju hallasan', "Nanum Gothic"; }
+  font-weight: <weight>;
+  font-style: normal;}
+
+    </style>
+</head>
+<body>
+    <h1>웹 폰트</h1>
+    <p class="p1">(구글 폰트로 지정) Web fonts are a technology that allows web browsers to display fonts that are not installed on the computer by default.
+        (웹폰트는 컴퓨터에 기본적으로 설치되어 있지 않은 글꼴도 인터넷을 통해 웹브라우저에서 보여주는 기술을 의미합니다.)
+    </p>
+    <p class="p2">(눈누 폰트로 지정) Web fonts are a technology that allows web browsers to display fonts that are not installed on the computer by default.
+        (웹폰트는 컴퓨터에 기본적으로 설치되어 있지 않은 글꼴도 인터넷을 통해 웹브라우저에서 보여주는 기술을 의미합니다.)
+    </p>
+</body>
+</html>

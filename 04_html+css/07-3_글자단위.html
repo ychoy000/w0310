@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FONTUNIT</title>
+    <style>
+        html {font-size: 24px;}
+        ul {font-size: 12px;}
+        li {font-size: 1.5em;} /* fz1.5em */
+        /* 글자속성은 상속 개념이 있다. */
+        /* 
+            1.5em는 li의 부모, 즉 ul 12px의 1.5배
+            1.5*12=18px */
+        /* 
+            em의 기준은? 부모
+            rem의 기준은? 최상위 부모 즉 html태그
+            선택자로 표시? :root (pseudo selector)
+            :root = html 두 개는 동일한 의미
+         */
+         /* rem의 크기는 24*1.5=36px  */
+        li:nth-child(4) {font-size: 1.5rem;}
+     </style>
+</head>
+<body>
+    <h1>글자단위: 2em</h1>
+    <p>글자의 단위에는 px, em, %, rem등이 있다.</p>
+    <ul>
+        <li>px 18px</li>
+        <li>% 18px</li>
+        <li>em 18px</li>
+        <li>rem 36px</li>
+    </ul>
+</body>
+</html>
