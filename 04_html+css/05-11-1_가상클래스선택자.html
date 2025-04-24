@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            ~child
+            :nth-child()
+            :nth-last-child()
+            :first-child
+            :last-child
+
+            ~of-type
+            :nth-of-type()
+            :nth-last-of-type()
+            :first-of-type
+            :last-of-type
+        */
+        /* div의 첫번째 자식 p = nth-child(1) */
+        p:first-letter {font-size: 200%;}
+        p:first-child {color:magenta;}
+        /* 모든 p */
+        p {background:lightgray;}
+        /* last-child=nth-last-child(1) */
+        p:last-child {background: palegoldenrod;}
+        p:nth-child(3) {color: red;}
+        p:before {content: "★"}
+        .box:after {
+            content: "항목을 선택해 주세요.";
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <p>div의 첫 번째 자식</p>
+        <p>div의 두 번째 자식</p>
+        <p>div의 세 번째 자식</p>
+        <p>div의 네 번째 자식</p>
+        <p>pppppRODUCT</p>
+        <p>sssSRVICE</p>
+        <p>tttCOMmunity</p>
+    </div>
+</body>
+</html>

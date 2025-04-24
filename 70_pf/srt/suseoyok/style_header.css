@@ -1,0 +1,44 @@
+@character "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 전체 */
+body {
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+ul {
+    padding: 0;  /* left padding */
+    list-style: none;
+}
+
+/* 블록레벨요소를 가로 가운데 맞춤하기 */
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+
+.header {
+    display: flex;
+    height: 100px;
+}
+.logo {
+    margin-top: 30px;
+    width: 200px;
+    }
+.gnb {
+    justify-content: flex-end;
+    width: 1000px;
+    padding-right: 32px;
+}
+.main {
+    display: flex;
+    width: 400px;
+    line-height: 100px;
+    justify-content: space-between;
+    font-size: 18px;
+}
