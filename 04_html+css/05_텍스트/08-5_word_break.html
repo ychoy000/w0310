@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        p {
+            width: 200px;
+            text-align: justify;
+            border: 1px solid #000;
+        }
+        .breaking1 {
+            word-break: normal;
+        }
+        .breaking2 {
+            /* 글자가 넘치면 줄바꿈된다. */
+            word-break: break-all;
+        }
+        .breaking3 {
+            word-break: keep-all;
+        }
+        breaking {
+            /* word-wrap: break-word; */
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+   <p class="breaking1">홍길동<br>
+        한국사회역사연구회 고고학 전임교수<br>
+        startonlybreakingonlygood@naver.crimson</p> 
+   <p class="breaking2">홍길동<br>
+        한국사회역사연구회 고고학 전임교수<br>
+        startonlybreakingonlygood@naver.crimson</p> 
+   <p class="breaking3">홍길동<br>
+        한국사회역사연구회 고고학 전임교수<br>
+        startonlybreakingonlygood@naver.crimson</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero excepturi iure autem libero, quo natus veritatis ipsam, sed voluptatem deserunt consectetur. Modi ex accusamus esse, minus obcaecati eveniet quo beatae!</p> 
+        <p class="breaking">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero excepturi iure autem libero, quo natus veritatis ipsam, sed voluptatem deserunt consectetur. Modi ex accusamus esse, minus obcaecati eveniet quo beatae!</p> 
+</body>
+</html>
