@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>말줄임</title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+        body {
+            font: 1.6rem '굴림', sans-serif;
+        }
+        ul, h3 {margin: 0;}
+        ul {
+            padding-left: 0;
+            padding: 16px;
+            list-style: none;
+        }
+        a {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none; /* tdn */
+            /* 웹 안전 컬러: 000, 333, 666, 999, ccc 
+            링크는 기본 색이 파랑색 
+            */
+            color: #777;   
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .notice a h3 {
+            width: 200px;
+            padding-right: 8px;
+            /* 아래 세가지 css문이 말줄임에 필수적임 */
+            overflow: hidden; /* oh */
+            white-space: nowrap; /* whs */
+            text-overflow: ellipsis; /* tov */
+        }
+        .notice a:hover h3 {
+            color: #111;
+            text-decoration: underline;
+            text-overflow: clip;
+            overflow: visible;
+            white-space: normal;
+        }
+        .notice {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>말줄임</h1>
+    <h2>공지사항: 최근 글</h2>
+    <ul class="notice">
+        <!-- h3으로 묶는 것이 SEO(검색엔진 최적화)나 접근성 측면에서 유리하다. -->
+        <li><a href="#"><h3 title="시간 배분을 위하여 현명한 판단을 바랍니다.">시간 배분을 위하여 현명한 판단을 바랍니다.</h3></a><span>2025-04-29</span></li>
+        <li><a href="#"><h3>욕심껏 내용을 채우는 것도 좋습니다.</h3></a><span>2025-04-28</span></li>
+        <li><a href="#"><h3>결과물을 볼 수 있어야 하는 것이 우선입니다.</h3></a><span>2025-04-26</span></li>
+        <li><a href="#"><h3>분당구청에서는 주차관리를 잘 못한다고 한다.</h3></a><span>2025-04-06</span></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV</title>
+    <!-- 블록 레벨 요소를 그룹핑 -> CSS 적용을 위해
+     테스트, 인라인 요소, div를 포함한 모든 블록레벨 요소를 포함할 수 있다.
+     -->
+</head>
+    <!-- 
+        블록레벨 요소를 가로 가운데 배치
+        width: 1200px; margin 0 auto;
+
+        인라인 요소를 가로 가운데 배치
+        text-align: center;
+ -->
+        <!-- class와 id
+            class는 두 개 이상이 같은 이름을 가질 수 있으나
+            id는 두 개 이상이 같은 이름을 가질 수 없음 
+        -->
+    <style>
+        .wrap {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        header {
+            border: 1px solid #000;
+        }
+        section {
+            border: 1px solid #333;
+        }
+        footer {
+            border: 1px solid #999;
+        }
+    </style>
+<body>
+    <div class="wrap">
+        <header>헤더</header><br>
+        <section>본문</section><br>
+        <footer>푸터</footer>
+    </div>
+</body>
+</html>

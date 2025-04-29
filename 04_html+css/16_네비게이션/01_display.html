@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+        .gnb li {
+            display: inline;
+        }
+        .gnb li a {
+            display: inline-block;
+            width: 200px;
+            border: 1px solid #000;
+            margin: 30px;
+            text-align: center;
+            background: brown;
+            height: 35px;
+            line-height: 35px;
+            text-decoration: none;
+        }
+        .gnb li a:hover {
+            text-decoration: underline;
+            background: #369;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>네비게이션</h1>
+    <ul class="gnb">
+        <li><a href="#">SUCESS</a></li>
+        <li><a href="#">FAIL</a></li>
+        <li><a href="#">PASS</a></li>
+    </ul>
+</body>
+</html>
