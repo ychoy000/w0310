@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEO</title>
+    <style>
+        .vid1 {
+            width: 600px;
+        }
+        iframe {
+            border: 50px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1 bit(binary digit): 0, 1
+        8 bit=1 byte
+        1 word= min. 2 byte(english)
+    
+        B(byte)-KB-MB-GB-TB-
+
+        Github : provide 2 GB/repository : over the limit, cannot upload
+    -->
+    <h1>VIDEO</h1>
+    <video class="vid1" src="./assets/3065047-hd_1920_1080_30fps.mp4" controls autoplay muted></video>
+    <video width="600" poster="./assets/freeroad.png" controls>
+        <source  src="./assets/3065047-hd_1920_1080_30fps.mp4" type="video/mp4">
+        <source src="./assets/260397_tiny.webm" type="video/webm">
+        <source src="./assets/260397_tiny.ogv" type="video/ogv">
+        Your browser does not support the video elements.
+
+    </video><br>
+    <iframe width="749" height="421" src="https://www.youtube.com/embed/A7GPW_FVTD0" title="커피마시면서 듣기 좋은 음악#21🎧 생각 없이 틀어만 놓으세요" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="749" height="421" src="https://www.youtube.com/embed/x2bd1zp_q6Y" title="Simon and Garfunkel ( The Concert in Central Park 1981 ) Full Concert 16:9 HQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+    <!-- 
+    sourceURL?parameter1&parameter2...
+    autoplay=1  automatic play
+    mute=1      sound off
+    loop=1      replay on
+    controls=0  no control bar
+    start=30 play after 30 seconds
+    modestbranding=1    minimize youtube logo
+    rel=0   keep off next video after current(keep current on)
+    -->
+    <iframe src="https://youtu.be/JFXf01ePZRI?autoplay=1&mute=1" title="beautiful and comfortable spring songs"></iframe>
+    <iframe src="https://youtu.be/JFXf01ePZRI?t=1301?autoplay=1&mute=1" title="spring song"></iframe>
+    
+</body>
+</html>

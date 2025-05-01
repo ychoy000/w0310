@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOAT</title>
+    <style>
+        /* block-level elements
+            width: auto ->  100% size of parent */
+            body {
+                margin: 0;
+            }
+            h1, p {
+            border: 1px solid #000;
+            padding: 0;
+            margin: 0;
+            }
+        /* float: left/right; of the other elements */
+            h1 {float: left;
+                background: burlywood;
+            margin: 5px 20px 5px 0;
+            padding: 3px 10px;
+            font-size: 45px;
+            color: #fff;
+            }
+            p {
+             /* In english, use ;'justify' and 'break-all' together */
+                text-align: justify;
+                padding: 8px 16px;
+                word-break: break-all;  
+                border: 1px solid #000;
+                width: 300px;
+                color: darkgoldenrod
+            }
+            p b {
+                font-size: 200%;
+            }
+        span {
+            font-weight: lighter;
+            }
+    </style>
+</head>
+<body>
+    <h3>금 연<br>일 지</h3>
+    <p><strong>강한 강조</strong>Lorem ipsum dolor sit, amet consectetur adipisicing <span>elit. Maiores, eveniet</span>. <b>Quaerat</b> ratione numquam praesentium <italic>aspernatur officia</italic>, nesciunt ut voluptates placeat tempore et ipsa in dolorem<b> deleniti hic</b>, consectetur dolorum. Illo.</p>
+</body>
+</html>
