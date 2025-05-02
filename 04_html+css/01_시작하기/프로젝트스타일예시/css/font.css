@@ -1,0 +1,7 @@
+@charset "utf-16";
+/* CDN 방식: content delivery network 물리적으로 떨어져 있는 사용자에게 켄텐트를 더 빠르게 제공하기 위해 고안된 기술, 여러 개의 서버에 분산 네트워크 중 사용자에게 더 가까이 있는 서버로부터 컨텐츠를 배포하는 방식, so fast*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}

@@ -1,0 +1,7 @@
+/* reseet.css */
+@charset "utf-8";
+body, h1, h2, h3, ul, p {margin: 0;}
+ul {
+    padding: 0;
+    border: 1px solid #000;
+}
