@@ -1,8 +1,14 @@
 @charset "utf-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
 /*
 padding, margin 설정으로 인한 박스 크기 변경시 맞추기 위해 조정
 
 * body {box-sizing: border-box;} */
+body, h1, h2, ul, p {
+    margin: 0;
+}
+
 body {
     background: #fff;
     color: #333;
@@ -71,21 +77,68 @@ ul {
     display: flex;
     align-items: center;
     height: 200px;
+    padding-left: 20px;
     background: lightcyan;
 }
 .banner > div:first-of-type {
     display: flex;
 }
+.banner > div:nth-of-type(3) {
+    padding-left: 60px;
+}
+.banner h2 {
+    width: 600px;
+    padding-left: 30px;
+}
 .banner p {
     width: 600px;
+    padding-left: 30px;
+}
+.btn img {
+    padding: 30px 0 0 200px;
 }
 .notegal {
+    background: darkblue;
+    display: flex;
     height: 400px;
-    background: lightgoldenrodyellow;
+    color: #fff;
+}
+.notice {
+    width: 540px;
+    /* width: calc(1200px/2); */
+}
+.notice h2 {
+    margin: 16px 0 0 8px;
+}
+
+td:nth-of-type(1) {
+    margin-top: 30px;
+    width: 100px;
+}
+td:nth-of-type(2) {
+    margin-top: 30px;
+    width: 450px;
+    padding-left: 8px;
+}
+
+.gallery {
+    width: 660px;
+    /* width: calc(1200px/2); */
+}
+.gallery h2 {
+    margin: 16px 0 0 8px;
+}
+.inner {
+    display: flex;
+}
+
+.gallery a {
+    width: 220px;
+    /* border: 1px solid #000; */
 }
 footer {
     display: flex;
-    background: #333;
+    background: #999;
     height: 120px;
     color: #fff;
 }
