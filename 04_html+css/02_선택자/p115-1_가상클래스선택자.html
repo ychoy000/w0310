@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스선택자</title>
+
+    <style>
+        /*
+          가상 클래스 -> 사용자 인터렉션
+
+            a:link       -> 방문전, 파랑
+            a:visited   -> 사용자가 방문한 링크에 적용 
+            link, visited는 a 태그에만 적용   
+            선택자:hover      -> 마우스 커서를 요소 위에 올렸을 때  *중요
+            선택자:active     -> 요소가 활성화되었을 때(클릭 중인 상태)
+            선택자:focus      -> 요소에 포커스가 있을 때(예: input 박스에 클릭한 상태)
+        
+           가상 클래스 - 위치 기반
+            :first-child
+            :last-child
+            :nth-child(n)   *중요
+            :nth-last-child(n)
+            :only-child
+        
+            :first-of-type 
+            :last-of-type
+            :nth-of-type(n)     *중요
+            :nth-last-of-type(n)
+            :only-of-type
+
+        가상 요소 선택자(:: 또는 :)
+            ::first-letter  -> 요소의 첫 글자               잘 안 쓰임
+            ::first-line    -> 요소의 첫 줄                 잘 안 쓰임
+            ::before        -> 요소 안 맨 앞에 배치될 요소  *중요
+            ::after         -> 요소 안 맨 뒤에 배치될 요소  *중요
+
+        */
+        a:link {color: lightcoral}
+        a:visited {color: lightgreen}
+        a:hover {color: lightgray}
+        a:active {color: orange}
+
+        /* 
+            p76
+            Tab키로 이동시 포커스를 받는 요소
+            a, input, textara, select, button 등
+
+            논리적으로 마크업한 이동순서에 영향을 줄 수 있기 때문에 주의해서 사용한다.
+            tabindex 속성
+            1: 가장 먼저 포커스를 받는다.
+            0: 포커스를 갖지 않는 요소에 포커스를 적용
+            -1: 키보드 포커스를 받는 요소에 포커스를 받지 않도록 한다.
+        */
+        p:hover {
+            color: brown
+        }
+        input:focus {
+            outline: 3px solid red;
+            color: blue;
+        }
+
+
+        /* 위의 4가지는 순서에 따라 다르게 나타난다. */
+
+        /* 태그(요소) 선택자: a, ul, li, body, ... */
+        /* li {list-style: none;} */
+        
+        /* 배경을 바꾸려면 background, 테두리 바꾸려면 border-bottom */
+    </style>
+</head>
+
+<body>
+    <h1>선택자</h1> 
+    <h2>가상 클래스 선택자</h2>
+    <h2>가상 요소 선택자</h2>
+    <ul>
+        <li><a href="https://naver.com" tabindex="-1">naver</a></li>
+        <li><a href="https://google.com" tabindex="1">google</a></li>
+        <li><a href="https://nate.com">nate</a></li>
+
+    </ul>
+    <p>:hover와 :active는 다른 요소에도 적용된다.</p>
+    <input type="text" class="text">
+    <input type="text" class="text">
+</body>
+
+</html>
