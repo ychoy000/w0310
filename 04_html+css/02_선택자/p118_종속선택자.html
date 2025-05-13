@@ -15,18 +15,25 @@
         4. 선택자+선택자 -> 인접 형제(adjacent sibling) 선택자
         */
 
-        /* 다음의 atxt는 id 선택자 */
-        #atxt {color: red;}
+        /* 다음의 atxt는 id 선택자
+            #atxt   아이디선택자
+            p       태그 선택자
+            p#atxt  태그+아이디 선택자 결합
+        */
+        p#atxt {color: red;}
         /* 다음의 atxt는 종속선택자 -> type과 class의 결합
         p이면서 class가 atxt인 경우 */
         p.atxt {color: blue;}
         /* 다음의 atxt는 종속선택자 -> type과 class의 결합
         p이면서 id가 atxt인 경우
          */
-        p#atxt {color: cyan;}
+        p .atxt {
+            color: cyan;
+        }
+        /* p#atxt {color: cyan;} */
         /* 다음의 atxt는 종속선택자 -> type과 class의 결합
         id가 atxt이면서 class 또한 atxt인 경우 */
-        #atxt.atxt {color: green;}
+        /* #atxt.atxt {color: green;} */
 
         p span {color: black;}
     </style>
@@ -34,8 +41,8 @@
      -->
 </head>
 <body>
-    <p id="atxt">선택자의 다양한 표현</p>
+    <p id="atxt">선택자의 <span class="atxt">다양한</span>다양한 표현</p>
     <p class="atxt"><span>선택자</span>의 다양한 표현</p>
-    <p id="atxt" class="atxt">선택자의 span<span>다양한</span> 표현</p>
+    <p id="atxt" class="atxt">선택자의 <span>다양한</span> 표현</p>
 </body>
 </html>

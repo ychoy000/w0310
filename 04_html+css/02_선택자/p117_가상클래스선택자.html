@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML+CSS</title>
+    <title>가상클래스 선택자(:)</title>
     <style>
         /* 
             ~child
@@ -25,8 +25,8 @@
         p {background:lightgray;}
         /* last-child=nth-last-child(1) */
         p:last-child {background: palegoldenrod;}
-        p:nth-child(3) {color: red;}
-        p:before {content: "★"}
+        p:nth-child(3) {color: darkgreen;}
+        /* p:before {content: "★"} */
         .box:after {
             content: "항목을 선택해 주세요.";
             color: red;
@@ -40,6 +40,7 @@
         <p>div의 두 번째 자식</p>
         <p>div의 세 번째 자식</p>
         <p>div의 네 번째 자식</p>
+        <p>COMPANY</p>
         <p>pppppRODUCT</p>
         <p>sssSRVICE</p>
         <p>tttCOMmunity</p>

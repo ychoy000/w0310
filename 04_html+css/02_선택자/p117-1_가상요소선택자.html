@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소선택자</title>
+</head>
+    <style>
+        ul {
+            list-style: none;
+        }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #333;
+            border-bottom: 3px solid transparent;
+        }
+        /* a:hover {
+            width: auto; */
+            a:after {
+                display: block;
+                width: 0px;
+                content: "";
+                border-bottom: 3px solid red;
+                transition: .3s;
+
+            }
+            a:hover::after {
+                width: 30px;
+            }
+    </style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

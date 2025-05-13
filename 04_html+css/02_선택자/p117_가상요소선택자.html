@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 선택자(::)</title>
+    <style>
+        p::first-letter {
+            font-size: 150%;
+        }
+        /* 네이게이션 제작시 많이 쓰임
+            ::before     이전에(시작태그 바로 뒤) 내용 삽입
+            ::after      종료태그 이후에 내용 삽입
+            */
+        p::before {
+            content: "♣";/* 한글의 'ㅁ'+한자키 */
+        }
+    </style>
+</head>
+<body>
+        <div class="box">
+        <p>div의 첫 번째 자식</p>
+        <p>div의 두 번째 자식</p>
+        <p>div의 세 번째 자식</p>
+        <p>div의 네 번째 자식</p>
+        <p>COMPANY</p>
+        <p>pppppRODUCT</p>
+        <p>sssSRVICE</p>
+        <p>tttCOMmunity</p>
+    </div>
+
+</body>
+</html>
