@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자의 우선순위</title>
+    <style>
+      /* 
+        선택자(키워드, 지정방식 포함)의 우선순위
+            1. important -> 키워드 -> 가능한 사용하지 않는다.(다른 사람이 코딩한 것을 갖고 왔을 때 분석 시 사용)
+            2. 인라인 -> 지정방식 -> 가능한 사용하지 않는다.
+            3. id
+            4. class, pseudo class, 속성
+            5. 요소, 가상 요소
+
+            id>class>element(pseudo-)
+
+            같은 우선순위를 가진다면 아래 기록한 내용이 적용된다.
+      */
+      p {color: pink;}
+        #ctxt {color: orange;
+            font-size: 30px;}
+        p.atxt {color: blue;}
+        p.atxt.btxt {color: gray;}
+        p:first-child {color: cyan;}
+    </style>
+</head>
+<body>
+    <!-- 인라인 스타일이 내부 스타일보다 우선한다. -->
+    <p class="atxt btxt" >선택자의 우선 순위1</p>
+    <p id="ctxt" class="atxt btxt" style="color: green">선택자의 우선 순위2</p>
+    <p>선택자의 우선 순위3</p>
+</body>
+</html>
