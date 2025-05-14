@@ -45,12 +45,13 @@ header {
 nav {
     text-align: center;
     padding: 5px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
+    flex-shrink: inherit;
 }
 nav li {
     border: 1px solid #000;
-    height: 60px;
+    height: 50px;
     line-height: 60px;
     margin-top: 8px;
     text-align: center;
@@ -66,10 +67,28 @@ nav a {
     /* 0.3초 지연 */
     transition: 0.3s;
 }
+/* 콘텐츠 */
 .contents {
     width: 400px;
     background: lightcyan;
 }
+/* 콘텐츠 4개 부 */
+.banner {
+    height: 120px;
+    background: cyan;
+}
+.notice {
+    height: calc(100%-600px);
+}
+.gallery {
+    height: 360px;
+    background: lightgreen;
+}
+.link {
+    background: lightpink;
+    height: 120px;
+}
+/* 슬라이드 */
 .slide {
     /* width: calc(100% - 600px); */
     background: lightgreen;
@@ -77,6 +96,41 @@ nav a {
     overflow: hidden;
 }
 footer {
+    display: flex;
     height: 120px;
-    background-color: yellow;
+    background-color: rgba(229, 229, 215, 0.854);
+    align-items: center;
+}
+.blogo {
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    /* margin: 30px 40px; */
+}
+.center_content {
+    width: 1200px;
+    font: 16px normal 'noto sans kr', arial;
+    text-align: center;
+    letter-spacing: -1px;
+    margin-top: 25px;
+}
+.bmenu {
+    display: flex;
+    height: 40px;
+}
+.bmenu li {
+    margin-right: 10px;
+    padding-left: 40px;
+
+}
+.bmenu li:not(:last-child):after {
+    content: '|';
+    margin-left: 16px;
+}
+.bmenu a {
+    color: #433d3d;
+}
+.fs {
+    /* font-size: 24px; */
+    width: calc(100%-600px);
 }
