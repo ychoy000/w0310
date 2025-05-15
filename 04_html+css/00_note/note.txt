@@ -1,0 +1,55 @@
+HTML : Hyper Text Markup Language
+
+<태그 속성="값">
+
+CSS : Cascading Style Sheet
+
+선택자 {속성: "값";}
+
+요소 선택자     p, ul, li, header, body, html,   
+클래스 선택자   .name
+아이디 선택자   #name
+전체 선택자     *
+하위 선택자     p body
+자식 선택자     p>a 
+형제 선택자     p ~ ul
+인접형제 선택자 p + ul
+그룹 선택자     p, ul, ...
+가상 요소 선택자 ::after ::before
+가상 클래스 선택자  :hover  :nth-child(n)    :nth-of-type(n) :first-child    :last-child
+속성 선택자     [속성] [속성="값"] [속성|="값"] [속성 ~= "값"] [속성 ^= "값"] [속성 $= "값"] [속성 *= "값"]
+
+속성
+
+color
+font
+font-size
+font-family
+font-Style
+letter-spacing
+background
+
+width
+height
+margin
+padding
+border
+
+display
+judstify-content
+align-items
+
+align-content
+align-self
+flex
+flex-direction
+flex-wrap
+flex-flow
+flex-grow
+flex-shrink
+flex-basis
+order
+
+
+
+

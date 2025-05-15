@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text styles</title>
+    <style>
+        /* 
+            serif : 주로 인쇄물(꼬리가 있는 형태)
+            san-serif: 주로 웹에서(꼬리가 없는 형태)
+        */
+        p:nth-of-type(2) {
+            font-family: 'times new roman', '바탕체','gullim','times', 'serif';
+            font-size: 32px;
+            font-style: italic;
+            line-height: 1.5; /* 글자크기의 1.5~2em, 황금비: 1.618 */
+            font-weight: 800; /* 100, 200, ... 900, bold
+            글꼴이 지원해야 적용됨. noto sans kr은 100~900까지 모두 적용됨
+            */
+            /* 묶어 쓸 수 없는 것 */
+            letter-spacing: -1px;
+            color: red;
+            
+            /* 속성 값의 순서가 있다.
+            굵기, 기울임, 줄간격은 생략 가능 */
+            /* font: [굵기|기울임] 크기/줄간격 글꼴1, 글꼴2, sans-serif; */
+            font: 700 italic 20px/1.5 'Times New Roman', serif;
+            font: 20px 'Times New Roman', serif;
+            /* font: 20px; (x) */
+        }
+    </style>
+</head>
+<body>
+    <h1>Title</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsum repudiandae autem? Accusantium hic corporis reiciendis consequatur accusamus totam vel!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsum repudiandae autem? Accusantium hic corporis reiciendis consequatur accusamus totam vel!</p>
+</body>
+</html>
