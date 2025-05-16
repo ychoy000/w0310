@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* CSS reset */
+body {
+    margin: 0;
+    font: 15px/1.6 "gullim", sans-serif;
+    background: #fff;
+    color: #333;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /*기본값
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 40px; */
+}
+/* 상단영역 */
+.wrap {
+    display: flex;
+    height: 850px;
+}
+header {
+    width: 200px;
+    background: rgb(217, 226, 235);
+}
+.logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+}
+nav a {
+    display: block;
+    width: 90%;
+    height: 100%;
+    border: 1px solid #999;
+    padding-left: 8px;
+}
+nav a:hover {
+    background: darkorange;
+    color: #fff;
+}
+.gnb {
+    margin-left: 10px;
+}
+.spotmenu {
+    margin-top: 50px;
+    padding-left: 8px;
+}
+.spotmenu a {
+    margin-left: 10px;
+    color: #555;
+}
+/* container region */
+.container {
+    width: calc(100%-200px);
+}
+.slide {
+    height: 400px;
+}
+.banner {
+    display: flex;
+    height: 200px;
+    background: rgb(219, 241, 224);
+}
+.banner_txt {
+    margin-left: 8px;
+    width: 600px;
+    line-height: 20px;
+}
+.arrow {
+    margin: 50px 30px;
+}
+.notice {
+    margin-left: 8px;
+    width: 800px;
+}
+.notice a {
+    display: inline-block;
+    width: 600px;
+}
+/* 푸터 영역 */
+footer {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    font-family: 'noto sans kr', serif;
+    background: lightgrey;
+}
+.blogo {
+    width: 200px;
+}
+.bmenu ul {
+    display: flex;
+    padding-left: 60px;
+}
+.bmenu li:not(:last-of-type)::after {
+    content: " | ";
+    margin: 8px;
+}
+.bmenu p {
+    line-height: 10px;
+    padding-left: 60px;
+}
+.bmenu p:nth-of-type(3) {
+    text-align: center;
+    line-height: 16px;
+}
