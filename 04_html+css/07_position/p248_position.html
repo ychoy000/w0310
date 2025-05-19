@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        p {margin: 0;}
+        body {margin: 20px;}
+        .box {
+            width: 650px;
+            background: rgb(0,0,0,0.3);
+            position: relative;
+            left: 00px;
+        }
+
+        /* 
+            box-sizingL content-box
+            width + padding*2 + border*2
+        */
+        p {
+            margin: 0;
+            font-weight: bold;
+            width: 250px;
+            height: 100px;
+            padding: 20px;
+            /* box-sizing: border-box; */
+            /* 위 사이즈로 주면 실제 박스 너비는 250+40+2 만큼이 된다. */
+            border: 1px solid red;
+        }
+        /* position을 주면 위로 올라간다.
+            static은 0
+            z-index를 주면 위로 올라간다.
+        */
+        .green {
+            box-sizing: border-box;
+            border: 1px solid green;
+            background: green;
+            position: absolute;
+            left:70px;
+            top:50px;
+            z-index: 1;
+        }
+        .red {
+            background: red;
+        }
+        .yellow {
+            background: yellow;
+            position: relative;
+            left: 100px;
+            top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="red">red box</p>
+        <p class="green">green</p>
+        <p class="yellow">yellow box</p>
+    </div>
+</body>
+</html>

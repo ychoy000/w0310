@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Position</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .wrap {
+            display: flex;
+            height: 850px;
+        }
+        header {
+            width: 200px;
+            background: yellow;
+        }
+        .container {
+            width: calc(100% - 200px);
+        }
+        .slide {
+            height: 400px;
+            background: lightcoral;
+        }
+        .contents {
+            height: 450px;
+            background: cyan;
+        }
+        .link {
+            width: 120px;
+            height: 300px;
+            /* margin-left: calc(100% - 120px); 이렇게 쓰면 안됨*/
+            position: fixed;
+            top: 50px;
+            right: 0px;
+            background: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>header</header>
+        <div class="container">
+            <div class="slide">SLIDE</div>
+            <div class="contents">
+                <div class="link">LINK</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
