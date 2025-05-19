@@ -6,10 +6,11 @@ body {
     background: #fff;
     color: #333;
 }
-ul {
+ul li {
     list-style: none;
     margin: 0;
     padding: 0;
+    text-decoration: none;
     /*기본값
     margin-top: 1em;
     margin-bottom: 1em;
@@ -31,7 +32,7 @@ header {
 }
 nav a {
     display: block;
-    width: 90%;
+    width: 70%;
     height: 100%;
     border: 1px solid #999;
     padding-left: 8px;
@@ -59,15 +60,28 @@ nav a:hover {
 .slide {
     height: 400px;
 }
+.link {
+    position: fixed;
+    right: 0;
+    top: 30px;
+    width: 120px;
+    height: 320px;
+    background: lightgreen;
+    opacity: .7;
+}
+.link span {
+    display: block;
+}
 .banner {
     display: flex;
     height: 200px;
     background: rgb(219, 241, 224);
+    padding: 0px 0px;
+    /* justify-content: space-between; */
 }
-.banner_txt {
-    margin-left: 8px;
-    width: 600px;
-    line-height: 20px;
+.banner .banner_txt {
+    width: 800px;
+    padding-left: 10px;
 }
 .arrow {
     margin: 50px 30px;
