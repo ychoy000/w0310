@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+       /*
+        display  속성 : 화면 표시 방식
+          값: block, inlink, inline-block, none(자리 차지 하지 않음, 흔적도 없앰), ... : 대상에 부과
+            table-cell, ... (잘 안 씀)
+            list-item : li
+            flex : 부모 요소에 부과
+            grid
+
+
+        visibility : 가시성
+          값: visible (기본값)
+                hidden (자리 차지함, 흔적은 남음)
+        opacity : 불투명도
+            값 : 1(기본값)
+                0~1 사이값(소수점 사용)
+
+        overflow : 넘침
+            값 : auto, visible, hidden, scroll
+
+            말줄임(...)
+                width: 200px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            */
+        /* h1 {display: none;} */
+        /* h1 {visibility: hidden;} */
+        /* h1 {opacity: 0;} */
+        h1 {
+            width: 100px;
+            border: 1px solid #000;
+            background: yellow;
+            text-overflow: hidden;/* 안 먹힘 */
+        }
+        li {
+            list-style-type: none;
+        }
+        /* 블록레벨 요소는 줄바꿈된다. */
+        .gnb li a {
+            display: inline-block; /* a 가 들어가면서 inline 상태가 줄바꿈이 일어남. 블럭 요소 효과는 적용 안됨 */
+            /* 가로 배치: 인라인 요소는 강제 줄바꿈되지 않는다. */
+            width: 200px;
+            height: 35px;
+            color: #fff;
+            background: brown;
+            text-align: center;
+            text-decoration: none; /* 글자색은 바뀌지 않음, 밑줄은 없어짐 */
+        }
+        .gnb li a:hover {
+            text-decoration: underline;
+            background: #369;
+        }
+    </style>
+</head>
+<body>
+    <!-- 블럭레벨 요소 : body, h1, ul, li -->
+     <!-- 인라인 요소: a -->
+    <h1>title Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, veniam.</h1>
+    <ul class="gnb">
+        <li><a href="#">COmpany Lorem ipsum dolor sit amet.</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Community Lorem, ipsum dolor.</a></li>
+    </ul>
+</body>
+</html>
