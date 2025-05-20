@@ -1,0 +1,60 @@
+<!doctype>
+<html></html>
+<head></head>
+<body></body>
+<meta>
+<title></title>
+<link>
+<style></style> -> 가급적 외부 css로 사용
+
+제목과 단락
+<h1></h1>
+<p></p>
+<br>  -> 가급적 줄바꿈은 박스모델 속성으로~
+
+스타일, 가급적 css로
+<b></b>
+<i></i>
+
+목록, 그룹화
+<ul></ul>
+<li></li>
+
+그룹화
+<span></span>
+<div></div>
+<header></header>
+<nav></nav>
+<section></section>
+<footer></footer>
+<a></a>
+
+
+미디어
+<img src="" href="">
+<video src="" href=""></video>
+<audio src="" href=""></audio>
+<source>
+<iframe></iframe>
+
+
+게시판, 공지사항
+<table></table>
+<colgroup></colgroup>
+<tr></tr>
+<th></th>
+<td></td>
+<legend></legend>
+
+
+로그인, 회원가입, 검색
+<form action="" method=""></form>
+<input type="">
+<fieldset></fieldset>
+<textarea></textarea>
+<button></button>
+<legend></legend>
+<select></select>
+<option></option>
+
+

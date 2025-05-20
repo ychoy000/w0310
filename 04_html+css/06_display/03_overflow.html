@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        /* 
+            overflow::after
+                값::after
+                  visible(기본값)
+                  hidden
+                  auto
+                  scroll
+            overflow-x
+            overflow-y
+        */
+        p {
+            width: 550px;
+            height: 80px;
+            border: 1px solid #000;
+            overflow-y: scroll;
+        }
+        /* 박스 크기를 지정하지 않으면 의미 없음 */
+        .agree1 {overflow: scroll; color: red;}
+        .agree2 {overflow: auto; color: blue;}
+        .agree3 {overflow: hidden; color: green;}
+        .agree4 {overflow: visible;}
+    </style>
+</head>
+<body>
+    <h3>서비스 이용약관</h3>
+    <p class="agree1">
+        제 17조 (서비스의 변경 및 내용수정)<br>
+        ⓐ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.<br>
+        ⓑ ipisicing elit. Quae, blanditiis. Rem et doloremque sit sapiente.<br>
+        ⓒ ia perspiciatis doloremque, porro ab veritatis odio culpa vero reiciendis.
+    </p>
+    <p class="agree2">
+        제 17조 (서비스의 변경 및 내용수정)<br>
+        ⓐ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.<br>
+        ⓑ ipisicing elit. Quae, blanditiis. Rem et doloremque sit sapiente.<br>
+        ⓒ ia perspiciatis doloremque, porro ab veritatis odio culpa vero reiciendis.
+    </p>
+    <p class="agree3">
+        제 17조 (서비스의 변경 및 내용수정)<br>
+        ⓐ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.<br>
+        ⓑ ipisicing elit. Quae, blanditiis. Rem et doloremque sit sapiente.<br>
+        ⓒ ia perspiciatis doloremque, porro ab veritatis odio culpa vero reiciendis.
+    </p>
+    <p class="agree4">
+        제 17조 (서비스의 변경 및 내용수정)<br>
+        ⓐ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.<br>
+        ⓑ ipisicing elit. Quae, blanditiis. Rem et doloremque sit sapiente.<br>
+        ⓒ ia perspiciatis doloremque, porro ab veritatis odio culpa vero reiciendis.
+    </p>
+</body>
+</html>  

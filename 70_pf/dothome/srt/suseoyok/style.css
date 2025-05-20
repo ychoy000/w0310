@@ -2,18 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
 /* 전체 */
-body, h1, h2, h3, ul, p {
-    margin: 0 auto;    /* 위아래 마진 */
+* {
+    margin: 0 ;    /* 위아래 마진 */
     }
 body {
     background:#fff;
     color: #222328;
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 1.5;
-
-    /* font: 700 italic 15px/1.5 "Noto Sans KR", sans-serif; */
+    font: 15px/1.6 bold "Noto Sans KR", sans-serif;
 }
 ul {
     padding: 0;  /* left padding */
@@ -30,35 +25,50 @@ a {
 
 /* 헤더 */
 /* shift+alt+f: 자동정렬 */
-.header {
-    display: flex;
+header {
     height: 100px;
 }
 .logo {
     margin-top: 30px;
     width: 200px;
     }
-.gnb {
+.gnb ul {
     display: flex;
     justify-content: flex-end;
-    width: 1000px;
-    padding-right: 32px;
 }
-.main {
-    width: 400px;
-    line-height: 100px;
-    display: flex;
-    justify-content: space-between;
-    : 1px solid red;
+.gnb li a {
     font-size: 18px;
 }
 
 /* 스라이드 */
+/* 슬라이드 이미지 */
 .slide {
-    height: 400px;
-    background: #ddd;
+    width: 400px;
+    height: 300px;
+    overflow:hidden;
+}
+.slide ul {
+    position: relative;
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 8s infinite;
+}
+li {
+    width: 25%;
+    font-size: 100px;
 }
 
+@keyframes slide {
+    0% {left:0%;}
+    10% {left:-100%;}
+    33% {left:-100%;}
+    43% {left:-200%;}
+    66% {left:-200%;}
+    76% {left:-300%;}
+    99.99% {left:-300%;}
+    100% {left:0%;}
+}
 /* 콘텐츠 */
 .contents {
     height: 600px;
