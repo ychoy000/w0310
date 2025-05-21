@@ -1,0 +1,121 @@
+font-family: '돋움', ;
+font-size: 12px or 150% or 1.5em or 1.5rem
+font-weight
+fint-style
+font-variant
+line-height: 1.4; -> 부모 요소의 글자 크기 기준
+font: weight|style|variant size/line-height family: 순서 있다.
+@font-face {font-family: 이름; src:url('font');} -> nunnu, google, naver
+color: rgba(R, G, B, alpha); -> alpha= 0~1
+letter-spacing
+word-spacingtext-decoration: none; underline
+text-transform
+text-shadow: blur color on x- or y-
+
+text-align -> block level element, don't work on inline(display:inline;)
+vertical-align -> inline element
+text-indent
+word-wrap
+word-break: break-all; -> text-align: justify(양쪽 맞춤), 영문자만 적용(한글 X)
+white-space: nowrap
+text-overflow: ellipsis; -> 말줄임 (white-space: nowrap; 와 같이 써야 함)
+
+display: block|inline|inline-block|none|flexl
+visibility
+overflow:hidden;
+opacity
+
+background
+background-colorbackground-image
+background-repeat
+background-position
+background-attachment
+background-size
+background-origin
+background-clip
+
+width - max-width, min-width
+height - max-height, min-height
+padding - top, bottom, left, right (negative X)
+margin - top, bottome, left, right (negative OK)
+border: 1px solid red; -> 순서 없음 - top, bottome, left, right
+    border-width, border-style, border-color, border-top-width, ....
+boder-radius, border-top-right-radius, border-top-left-radius, border-bottom-right-radius, border-bottom-left-radius
+outline: 1px solid red; -> only this one format
+box-sizing: border-box;
+box-shadow: x- y- blur [spread] color inset; -> 순서 준수
+    inset = inner shadow (photoshop)
+    box-shadow (=photoshop)
+resize: none;
+appearance
+
+p.218
+<2D transform>
+transform: scale();
+ scale  확대
+ rotate 회전
+ skew   기울기
+ translate  이동
+
+transition: 1s;  전환
+  transition-property
+  transition-duration
+  transition-timing-function
+  transition-delay
+animation
+  animation-name
+  animation-duration
+  animation-timing-function
+  animation-delay
+  animation-iteration-count: infinity;
+  animation-direciton
+  animation-fill-mode: backwards;
+  animation-play-state;
+
+p229. multi-column(안 쓸 것들)
+column-count
+column-gap
+column-rule
+column-span: all;
+column-width:
+
+p.231-245. (no use) 
+float: left|right;
+clear: left|right|both;
+
+p.246-268. (hard to use)
+position
+left
+right
+top
+bottom
+z-index
+
+p.269
+@media
+@import url(file name);
+
+p.279 flex
+flex-direciton
+flex-wrap
+flex-flow
+justify-content: space-between;
+align-items:center;
+align-content
+align-self
+flex-grow
+flex-shrink
+flex-basis
+flex
+order
+
+p.301. grid layout
+grid-template-columns
+grid-template-rows
+grid-column-start
+grid-column-end
+grid-row-start
+grid-row-end
+
+@keyframes name {}
+

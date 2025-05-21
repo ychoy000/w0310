@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 선택자 {속성: 값;} */
+        
+        /* bgc */
+        /* HEX 값 -> 16wlstn(0~9, a~f)
+         */
+        body {background-color: #abcdef;}
+        body {background-color: transparent;}
+        
+        /* 140개 색상명 */
+        body {background-color: red;}
+/* www.w3schools.com/colors/colors_names_asp  */
+        /* RGB, red+green+blue 값 */
+        /* 
+            색표현
+            1. 140개 영문키워드 (https://www.w3schools.com/colors/colors_names.asp)
+            2. HEX값 -> 16진수(0~9, a~f) -> #3자 또는 #6자
+                #3자: 2개씩 같은 경우에만 사용
+                    #RGB = #RRGGBB
+                    #ff0000 (red)
+                    #00ff00 (green)
+                    #0000ff (blue)
+                    #ffff00 (yellow)
+                    #ff00ff (magenta)
+                    #00ffff (cyan)
+                    #000000 (black) ~ #ffffff (white)
+
+                진법
+                    10진법(decimal)
+                    2진법(binary): 0, 1
+                    8진법(octal): 0~7
+                    16진법(hexadecimal): 0~15 -> 0~9, a~f
+            3. RGB : rgb(R, G, B) where R, G, B = 0~255 ex. rgb(255,0,0)
+            4. RGBa : alpha = 0(transparent)~1(opaque) ex. rgb(255,0,0,0.78)
+            5. HSL : hsl(Hue, Saturation, Lightness) where, H: 0~360, S: 0~100%, L: 0~100%
+            6. HSLa : alpha = 0(transparent)~1(opaque) ex. hsl(255,10,10,0.)
+        */
+        /* RBGa
+            R: 0~255
+            G: 0~255
+            B: 0~255
+            a: 0~1
+             */
+        body {background-color: rgb(156, 173, 29);}
+        /* RGBa, RGB+alpha(투명도) 값 */
+        body {background-color: rgb(53, 232, 22);}
+        /* hsl, hue+saturation+lightness 값 */
+        /* 
+            H(색상): 0~360도
+            S(채도): 0~100%
+            L(명도): 0~100%
+         */
+        body {background-color: hsl(126, 73%, 63%);}
+        p {
+            color: orange;
+            background: beige;
+            border-width: 1px;
+            border-style: solid;/* 생략 불가 */
+            /* border의 기본색은 글자색과 같다. */
+            border-color: red;
+            outline: 50px solide #ffffff;
+            text-shadow: 1px 1px 1px #ff0000;
+            box-shadow: 10px 10px 10px 10px #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>색지정</h1>
+    <p>글자 색, 배경 색, 태두리 색을 지정한다.</p>
+
+</body>
+</html>

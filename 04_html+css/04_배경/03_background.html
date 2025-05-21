@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <style>
+        /* 
+            background-color
+            background-image: url(경로/이미지)
+                background-repeat
+                값: repeat(반복, 기본값)
+                    no-repeat
+                    repeat-x(repeat on x)
+                    repeat-y(repeat on y)
+                    space
+                    round
+
+            background-position: left(default, 0%), right(100%), center(50%), px, %            background-attachment: scroll, 
+                                fixed -> parallex scroll
+            background-size: 80px 60px;
+                            150px;
+                            50% 100%;
+                            auto;
+                            contain; 잘림 없이 표시, 빈공간 생길 수 
+                            cover; 잘림 O, 빈공간 X
+            background-clip: border-box, padding-box, content-box;
+            background-origin: border-box, padding-box, content-box;
+            
+            속기 속성
+            background: color|image [repeat] [position][/size] [attachment] [origin] [clip] 
+        */
+        /* html에는 마진이 없고,
+        div의 부모는 body인데 body에도 아무것도없으면 height가 없다. contents의 높이가 된다. */
+        html, body {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            border: 1px solid #000;
+            background: url(swgred.png) repeat-x 0 0, url(swgblackup.png) repeat-x 0 100% ;
+        }
+        div {
+            width: 800px;
+            height: 500px;
+            /* background-color: blue; */
+            /* background: red; */
+            background-image: url(figma.png), url(don-kaveen-unsplash.jpg) ;
+            background-repeat: no-repeat;
+            /* positionL x, y; center=50% */
+            background-position: 80% 50%, 00%;
+            background-size: auto, contain;
+            background-origin: border-box;
+            padding: 0px;
+            border: 10px solid red;
+            background-clip: padding-box;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>box</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display:NONE</title>
+    <style>
+        .opacity {opacity: 0;} /* interactive */
+        .opacity:hover {
+            opacity: 1;
+            transition: 1s;
+        }
+        .visibility {visibility: hidden;}/* No interactive */
+        .visibility:hover {
+            visibility: visible;
+            transition: 1s;
+        }
+        .none {display: none;} /* 완벽하게 공간까지 사라짐 */
+        .none:hover {
+            display: block;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <h1>use with navigation</h1>
+    <div>난 아무 것도 안 함</div>
+    <div class="opacity">I treat OPACITY. opacity:0</div>
+    <div>난 아무 것도 안 함</div>
+    <div class="visibility">Am I visible? visibility: hidden</div>
+    <div>난 아무 것도 안 함</div>
+    <div class="none">I do NONE(Nothing). display:none</div>
+    <div>난 아무 것도 안 함</div>
+</body>
+</html>
