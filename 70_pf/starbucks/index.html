@@ -4,13 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STARBUCKS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font: 15/1.6 "Noto San KR", sans-serif;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        header {background: lightpink;}
+        .sec {height: 800px;}
+        .s1 {background: darkcyan;}
+        .s2 {background: darkgoldenrod;}
+        .s3 {background: darkgray;}
+        .s4 {background: darkkhaki;}
+        footer {background: #333;}      
+        
+        /* 3rd section */
+        .s3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(./images/bg.png) no-repeat 50% 50%/cover fixed;
+        }
+        /* 
+        display: flex;는
+        flex-direction: row;
+            주축: justify-content
+                flex-start
+                flex-end
+                center
+            교차축: align-items
+                flex-start
+                flex-end
+                center
+             
+        flex-direction: column;
+            주축: align-items
+            교차축: justify-content
+
+        */
+        .s3 .txt {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 90px;
+        }
+        .s3 .txt p {
+            margin: 48px 0 48px;
+        }
+        /* ghost button */
+        .s3 .txt a {
+            width: 126px;
+            height: 38px;
+            line-height: 2;
+            border-radius: 3px;
+            border: 2px solid #fff;
+            text-align: center;
+            color: #fff;
+            margin-right: 8px;
+        }
+        .s3 .txt a:hover {
+            color: #333;
+            text-decoration: underline;
+            background: #fff;
+            transition: 0.5s;
+        }
+    </style>
 </head>
 <body>
-    <header>header</header>
-    <section>1</section>
-    <section>2</section>
-    <section>3</section>
-    <section>4</section>
+    <header>
+        <h1>header</h1></header>
+    <section class="sec s1">
+        <h2>1st section</h2>
+    </section>
+    <section class="sec s2">
+        <h2>2nd section</h2>
+    </section>
+    <section class="sec s3">
+        <!-- Title and description -->
+         <div class="txt">
+            <h2><img src="./images/title.png" alt="title"></h2>
+            <p><img src="./images/description.png" alt="desc"></p>
+            <!-- ghost button -->
+             <a href="#">자세히 보기</a>
+         </div>
+         <!-- image contents -->
+          <div class="cont"><img src="./images/contents.png" alt=""></div>
+    </section>
+    <section class="sec s4">
+        <h2>4th section</h2></section>
     <footer>footer</footer>
 </body>
 </html>
