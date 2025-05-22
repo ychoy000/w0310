@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART footer</title>
+    <style>
+        body, h1, p, ul {margin: 0;}
+        ul {padding: 0;}
+        li {
+            /* li or ul works the same */
+            list-style-type: none;
+        }
+        /* 글자색은 상속 개념을 갖는다.
+            단, a 는 상속받지 않는다.
+        */
+        a {
+            text-decoration: none;
+            color: #444;
+        }
+        header {
+            background: cornflowerblue;
+            height: 40px;
+            line-height: 40px;
+            /* 위 두 가지를 같이 쓰면 글자를 수직 중앙 정렬 - 단, 한 줄 텍스트 일때만 가능*/
+        }
+        #container {
+            width: 600px; margin: 0 auto; /* 자기 자신을 가운데 배치(cf. flex는 부모 요소에 적용) */
+            /* 
+                calc(value - value) 수학 연산자, 전 후 공백 필수
+
+                viewport unit: vh vw vmin (smaller one of width/height) vmax (larger one of width/height)
+            */
+            min-height: calc(50vh - 80px);
+        }
+        .lnb {background: lightblue;}
+        .lnb li {display: inline;}
+        .lnb li a { 
+            background: red;
+            display: inline-block;
+            padding: 5px 20px;
+            text-align: center;
+        }
+        .content_area {
+            background: dodgerblue; opacity: 0.5;
+        }
+        footer {
+            background: lightgray;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <!-- font size of 'h1' is 2em, so it is 32px -->
+             <!-- a(a:link) tag results blue font color with underline by default. 
+              (default)
+              a:link {text-decoration: underline; color: #0000ee}
+              a:visited {color: #551a8b;}
+              a:active {color: red;}
+              a:hover {color:blue; color: magenta;}
+              -->
+            <h1><a href="#">How many contents are there?</a></h1>
+        </header>
+        <div id="container">
+            <ul class="lnb">
+                <li><a href="#">s1</a></li>
+                <li><a href="#">s2</a></li>
+                <li><a href="#">s3</a></li>
+            </ul>
+            <div class="content_area">
+                <p>1 smart footer...<br>2 smart footer...<br>3 smart footer...<br>4 smart footer...<br>5 smart footer...<br>6 smart footer...<br>7 smart footer...<br>8 smart footer...<br>9 smart footer...<br>last...</p>
+            </div>
+        </div>
+        <footer>
+            <p>copyright</p>
+        </footer>
+    </div> <!-- wrap의 끝 -->
+</body>
+</html>
