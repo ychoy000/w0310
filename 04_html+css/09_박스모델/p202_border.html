@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style>
+        /* 
+            개별속성
+            border-top, bottom-width, style, color
+            border-left, right-width, style, color
+            
+            border-style
+            속기속성
+            border-width: medium(default)
+            border-style: none(default)
+            border-color: (default=font-color)
+
+            border-top, bottom, left, right
+
+            border: 1px solid red;
+        */
+        p {
+            font-size: 24px;
+            padding: 10px 20px;
+            margin: 20px;
+            width: 500px;
+            border-left-radius: 100px;
+        }
+        p:nth-of-type(1) {border: 40px solid #000;}
+        p:nth-of-type(2) {border: 40px dotted #000;}
+        p:nth-of-type(3) {border: 40px dashed #000;}
+        p:nth-of-type(4) {border: 40px double #000;}
+        p:nth-of-type(5) {border: 40px groove red;}
+        p:nth-of-type(6) {border: 40px none blue; }
+        p:nth-of-type(7) {border: 40px ridge blue;}
+        p:nth-of-type(8) {border: 40px inset brown;}
+        p:nth-of-type(9) {border: 40px outset green;}
+    </style>
+</head>
+<body>
+    <h1>Styling Border</h1>
+    <p>I am SOLID border LINE.</p>
+    <p>I am DOTTED border LINE.</p>
+    <p>I am DASHED border LINE.</p>
+    <p>I am DOUBLE border LINE.</p>
+    <p>I am GROOVE(홈이 파인 듯한 입체선) border LINE.</p>
+    <p>I am NONE(없음) border LINE.</p>
+    <p>I am RIDGE(튀어나온 입체선) border LINE.</p>
+    <p>I am INSET(안으로 들어 간 느낌) border LINE.</p>
+    <p>I am OUTSET(밖으로 튀어나온 느낌) border LINE.</p>
+</body>
+</html>

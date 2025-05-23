@@ -1,2 +1,178 @@
-@charset ("utf-8");
-* {margin: 0;}
+@charset "utf-8";
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font: 15px/1.6 "noto sans KR", sans-serif;
+    background: #fff;
+    color: #333;
+}
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: cyan;
+}
+nav {
+    width: 600px;
+    height: 60px;
+}
+nav li {
+    display: inline-block;
+    width: 120px;
+    line-height: 60px;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* Slides (moveing upwards) */
+.slide {
+    position: relative;
+    /* width: 1200px; */
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide ul {
+    position: relative;
+    /* display: flex;
+            flex-direction: column; */
+    width: 100%;
+    /* 없어도 됨 */
+    height: 400%;
+    background: #000;
+    animation: slide 8s infinite;
+}
+
+.slide li {
+    flex: 0 0 25%;
+    /* 25%는 없어도 되나 이미지가 컨텐츠보다 작은 경우 겹치고 안 보이는 등 문제 발생 */
+}
+
+@keyframes slide {
+    0% {
+        top: 0%
+    }
+
+    10% {
+        top: -100%
+    }
+
+    33% {
+        top: -100%
+    }
+
+    43% {
+        top: -200%
+    }
+
+    66% {
+        top: -200%
+    }
+
+    76% {
+        top: -300%
+    }
+
+    99.99% {
+        top: -300%
+    }
+
+    100% {
+        top: 0%
+    }
+}
+
+/* lower section: 공지사항, 갤러리, 링크 */
+.lower {
+    display: flex;
+    margin-top: 5px;
+    height: 200px;
+}
+
+.notice {
+    width: 400px;
+    height: 200px;
+    border: 1px solid #fff;
+}
+
+.notice p {
+    display: inline-block;
+    width: 200px;
+    line-height: 1.2;
+    /* margin-top: 10px; */
+}
+
+.notice h2 {
+    margin-bottom: 5px;
+}
+
+.gallery {
+    display: flex;
+    width: 400px;
+    border: 1px solid #fff;
+    margin-top: 5px;
+}
+
+.gallery a {
+    margin: 5px;
+}
+
+.gallery span {
+    display: inline-block;
+    padding: 2px;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.link {
+    width: 400px;
+    border: 1px solid #000;
+}
+.link p {
+    margin-top: -60px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* footer */
+footer {
+    display: flex;
+    height: 90px;
+    background: #999;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.left_footer {
+    width: calc(100% - 400px);
+    /* text-align: center; */
+}
+
+.sns li {
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+}
+.fs {
+    /* padding-left: 30px; */
+}
