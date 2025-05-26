@@ -23,12 +23,16 @@ ul {
     list-style: none;
 }
 /* HEADER */
-header {
+.inner {
     display: flex;
+    width: 1200px;
+    /* margin: 0 auto; This one works easier than below. */
+    margin-left: calc(50% - 1200px / 2);
+}
+header .inner {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background: cyan;
 }
 nav {
     width: 600px;
@@ -37,7 +41,7 @@ nav {
 nav li {
     display: inline-block;
     width: 120px;
-    line-height: 60px;
+    line-height: 120px;
 }
 .container {
     width: 1200px;
@@ -68,37 +72,14 @@ nav li {
 }
 
 @keyframes slide {
-    0% {
-        top: 0%
-    }
-
-    10% {
-        top: -100%
-    }
-
-    33% {
-        top: -100%
-    }
-
-    43% {
-        top: -200%
-    }
-
-    66% {
-        top: -200%
-    }
-
-    76% {
-        top: -300%
-    }
-
-    99.99% {
-        top: -300%
-    }
-
-    100% {
-        top: 0%
-    }
+    0% {top: 0%}
+    10% {top: -100%}
+    33% {top: -100%}
+    43% {top: -200%}
+    66% {top: -200%}
+    76% {top: -300%}
+    99.99% {top: -300%}
+    100% {top: 0%}
 }
 
 /* lower section: 공지사항, 갤러리, 링크 */
@@ -116,7 +97,7 @@ nav li {
 
 .notice p {
     display: inline-block;
-    width: 200px;
+    width: 300px;
     line-height: 1.2;
     /* margin-top: 10px; */
 }
@@ -158,21 +139,34 @@ nav li {
 footer {
     display: flex;
     height: 90px;
+    line-height: 90px;
     background: #999;
     margin-top: 10px;
-    padding-top: 20px;
 }
 
 .left_footer {
-    width: calc(100% - 400px);
-    /* text-align: center; */
+    display: flex;
+    width: 800px;
+}
+.left_footer img {
+    padding: 28px 0;
+    width: 200px;
+    /* height: 40px; */
+}
+.left_footer p {
+    padding-left: 120px;
+}
+.right_footer {
+    line-height: 60px;
+}
+.sns {
+    height: 30px; 
+    line-height: 40px;
+}
+.sns a {
+    color: #333; 
 }
 
-.sns li {
-    display: inline-block;
-    justify-content: space-between;
-    align-items: center;
-}
-.fs {
-    /* padding-left: 30px; */
+.sns a:hover {
+    color: #fff;
 }

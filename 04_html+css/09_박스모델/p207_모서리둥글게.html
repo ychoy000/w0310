@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORDER-RADIUS</title>
+    <style> 
+        .radius {
+            display: inline-block;
+            padding: 40px 0;
+            text-align: center;
+            background: #07d;
+        }
+        .darius1 {
+            width: 230px;
+            margin: 10px;
+            border-radius: 15px/70px;
+        }
+        /* bodrder-raius: horizontal radius/vertical radius */
+        .darius2 {
+            width: 490px;
+            /* border-radius: 15px 70px 15px 70px/70px 15px 70px 15px; */
+            border-radius: 15px 270px/70px 15px;
+        }
+    </style>
+</head>
+<body>
+    <span class="radius darius1">border-radius: 20px / 70px;</span>
+    <span class="radius darius2">border-radius: 15px 70px 15px 70px / 70px 15px 70px 15px;</span>
+</body>
+</html>

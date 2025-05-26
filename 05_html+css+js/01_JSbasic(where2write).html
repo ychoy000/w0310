@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSBackboneStructure</title>
+    <!-- 내부스타일 -->
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+    <!-- 외부스타일 -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- 내부 스크립트 -->
+    <script>
+        // 4. 주석 쓰기 방식
+        // ctrl+/ 한줄 주석
+        /* shift+alt+a 여러 줄 주석 */
+
+        // 1. 문장 끝에 ; 을 쓴다.
+        
+        // 경고창(window는 생략 가능)
+        window.alert("자바스크립트 학습을 시작합니다.");
+        // 문서 쓰기(출력)
+        // 2. case sensitive
+        // 3. 가독성을 위해 들여쓰기를 사용한다. <- shift+alt=f
+        document.write("in head 자바스크립트 실행문");
+        // console log
+        console.log("F12를 누르면 볼 수 있다.")
+        </script>
+    <!-- 외부 스크립트 -->
+    <script src="01_JSbasic.js"></script>
+</head>
+<body style="background: yellow;" >
+    <!-- div를 클릭하면 alert()를 호출한다. -->
+    <!-- onlcick은 HTML의 이벤트 속성 -->
+    <div onclick="alert('inline script');">BOX</div>
+    document.write("in body 자바스크립트 실행문");
+</body>
+</html>
