@@ -9,7 +9,20 @@
     <script>
         /* 
             Data Type
-                1. number:
+                1. 원시(Primitive)
+                  a. number ex. 10
+                  b. string(문자열)  ex. 'javascript' 또는 "javascrupt"
+                  c. Boolean : true, false -> 예약어(키워드)
+                  d. undefined - 선언만 하고 값을 할당하지 않았을 때의 값
+                  e. null - 비어 있는 값(값 없음)
+                  f. symbol
+                  g. bigint (big integer)
+
+                2. 참조(reference) -> 객체(Object) 데이터
+                  b. Object(객체) : {}
+                  a. function(함수) : function(){}
+                  c. array(배열) : []
+                  d. date
 
         */
        var num1 = 10; //정수
@@ -19,6 +32,71 @@
        console.log(num1);
        console.log(num2);
        console.log(num3);
+
+       var str1='문자1';
+       var str2="문자2";
+       var str3="123";
+       var str4=123+"123";
+
+       console.log("str1 = " + str1);
+        /* // + 는 문자열을 나열, 이 때 +는 문자열 연결 연산자라고 함 */
+       console.log(str2);
+       console.log(str3);
+       console.log(str4);
+       console.log(10+str4);
+       document.write(10+str4);
+
+       var str5='문자는 "문자"';
+       var str6="문자는\t '문자'";
+       
+       document.write(str5, str6);
+       
+       //이스케이프 문자
+       var str7='문자는\\ \'문자\'';
+       var str8="문자는\n \"문자\"";
+       document.write(str7, str8);
+       console.log(str7, str8);
+       
+       /* alert(str1,str8 + '<br>'); 암 먹힘*/
+       /* alert('자바스크립트\n제이쿼리'); */
+       console.log('자바스크립트\n제이쿼리');
+
+       document.write(str4 + '<br>');
+       document.write(str5 + '<br>');
+       document.write(str6 + '<br>');
+       document.write(str7 + '<br>');
+
+       var boo1=(5>4);
+       var boo2=(5<4);
+
+       document.write(boo1);
+       document.write('<br>');
+       document.write(boo2);
+       
+       //JS는 객체지향 프로그래밍 언어 : JAVA, JS, Python, C++  (cf. 절차지향)
+       //객체, 클래스, 생성자, 함수, 메서드, 속성, ...
+       //Boolean(데이터) -> 데이커를 불 값으로 생성한다.
+       // 0 만 false, 다른 숫자(1, 0.3, -3.4 ...) 등은 모두 true(==1)
+       
+       var boo3=0;
+       var boo4=1.3;
+       console.log(Boolean(boo3));
+       console.log('<br>');
+       console.log(Boolean(boo4));
+       
+       var temp1;
+       
+       document.write('<br>');
+        console.log(temp1);
+        document.write( temp1);
+
+        //객체 데이터는 {}로 표기한다.
+        var obj={};
+        obj.name='홍길동';
+        obj.age;
+        document.write('<br>');
+        document.write(obj);
+
     </script>
 </body>
 </html>
