@@ -6,6 +6,7 @@
     <title>Data Type</title>
 </head>
 <body>
+    <div id="gnb">I am GNB!</div>
     <script>
         /* 
             Data Type
@@ -57,7 +58,7 @@
        document.write(str7, str8);
        console.log(str7, str8);
        
-       /* alert(str1,str8 + '<br>'); 암 먹힘*/
+       /* alert(str1,str8 + '<br>'); 안 먹힘*/
        /* alert('자바스크립트\n제이쿼리'); */
        console.log('자바스크립트\n제이쿼리');
 
@@ -69,9 +70,9 @@
        var boo1=(5>4);
        var boo2=(5<4);
 
-       document.write(boo1);
+       document.write('boo1= ' + boo1);
        document.write('<br>');
-       document.write(boo2);
+       document.write('boo2= ' + boo2);
        
        //JS는 객체지향 프로그래밍 언어 : JAVA, JS, Python, C++  (cf. 절차지향)
        //객체, 클래스, 생성자, 함수, 메서드, 속성, ...
@@ -80,15 +81,41 @@
        
        var boo3=0;
        var boo4=1.3;
-       console.log(Boolean(boo3));
+       console.log("Boolean(boo3) = " + Boolean(boo3));
+       console.log('<br>');
+       document.write('<br>');
        console.log('<br>');
        console.log(Boolean(boo4));
        
+       //변수 선언 후 값을 할당하지 않았을 때: undefined
        var temp1;
        
+       var boo5;
+       var boo6=null;
+       document.write('<br>');
+       document.write("Boolean(boo5)=" + Boolean(boo5));
+       document.write('<br>');
+       document.write("Boolean(boo6)=" + Boolean(boo6));
+
        document.write('<br>');
         console.log(temp1);
         document.write( temp1);
+
+        // null - empty 상태(초기화), 데이터를 할당하였으나 값이 존재하지 않을 때
+
+        var temp2=10;
+        temp2=null;
+        
+        document.write('<br>');
+        document.write(temp2);
+        
+        // document는 문서 객체
+        // .getElementById()는 객체의 method(동작, 방법)
+        // .method(parameter,매개변수, ...)
+        var gnb=document.getElementById('gnb')
+        document.write('<br>');
+        document.write(gnb);
+
 
         //객체 데이터는 {}로 표기한다.
         var obj={};

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Navigation Bar(GNB)</title>
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style-type: none;
+        }
+        body {
+            font: 15px/1.6 '돋움', snas-serif;
+            color: #333;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        /* GNB */
+        /* typo(title, body, 텍스트 간의 위계질서) */
+        /* Main and SUbmenu */
+        .gnb .main>li>a {
+            font-size: 18px;
+            font-weight: bold;
+            color: #999;
+        }
+        /* SUBMENU */
+        .gnb .sub a {
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">승차권</a>
+                    <ul class="sub">
+                        <li><a href="#">승차권예약</a></li>
+                        <li><a href="#">발권취소</a></li>
+                        <li><a href="#">발권변경</a></li>
+                        <li><a href="#">예약조회</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">이용안내</a>
+                    <ul class="sub">
+                        <li><a href="#">승차권이용안내</a></li>
+                        <li><a href="#">정차역이용안내</a></li>
+                        <li><a href="#">노선안내</a></li>
+                        <li><a href="#">여객제도안내</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">회원서비스</a>
+                    <ul class="sub">
+                        <li><a href="#">회원제도</a></li>
+                        <li><a href="#">제휴서비스</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">공공할인 이용신청</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">여행상품</a>
+                    <ul class="sub">
+                        <li><a href="#">BEST 여행상품</a></li>
+                        <li><a href="#">지역별 여행상품</a></li>
+                        <li><a href="#">당일 여행상품</a></li>
+                        <li><a href="#">1박2일 여행상품</a></li>
+                        <!-- <li><a href="#">계절 여행상품</a></li> -->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

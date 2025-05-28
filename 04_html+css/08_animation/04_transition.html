@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        /* 
+        transition
+        지정한 시간동안 부드럽게 속성을 변경한다. (단계적으로 늘이고, 줄일 수 있는 속성에만)
+        참고로 display, position, z-index, overflow, visibility, font-family, box-sizing 등에는 적용되지 않는다.
+        
+        개별 속성
+            transition-property: all(default)
+            transition-duration: 3s(unit: seconds, default is 0 seconds)
+            transition-timing-function 
+                값: 가속 -  ease -> cubic-bezier(0.25,0.1,0.25,0.1), default
+                            ease-in -> cubic-bezier(0.42,0,1,1) 점점 빨라짐, 느림-빠름
+                            ease-out -> cubic-bezier(0,0,0.58,1) 점점 느려짐, 빠름-느림
+                            ease-in-out  -> cubic-bezier(0.42,0,0.58,1) 느림-빠름-느림
+                    등속 - linear -> cubic-bezier(0,0,1,1)
+                    cf. cubic-bezier(x1,y1,x2,y2), xi ~ (0,1), yi ~ 음수, 1이상 가능
+            transition-delay: 0s (default)
+        
+        속기 속성
+            transition: property duration timing-function delay;
+                        [속성명] 전환시간 [가속도] [지연시간];  순서 제약 없음
+
+        */
+
+        ul {
+            list-style-type: none;
+        }
+        a {
+            display: block;
+            width: 300px;
+            margin-bottom: 2px;
+            padding: 10px;
+            text-decoration: none;
+            background: #abc;
+
+/*             transition-property: width, color;
+            transition-duration: 1s, 1s;
+ */
+            /* transition: width 1s, color 1s; */
+            /* transition: all 1s; */
+            transition: 1s;
+        }
+        a:hover {
+            color: #c00;
+            width: 450px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Moving Menu</h1>
+    <ul class="menu">
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Customer Support</a></li>
+        <li><a href="#">Community</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display:flex;</title>
+    <style>
+        .flexbox {
+            display: flex; /* 부모 요소에 지정, 부모는 플렉스 컨테이너가 되고, 자식 요소는 플렉스 아이템이 된다. 그리고 플렉스 아이템은 가로 배치(flex-direction:row;가 default) */
+            flex-direction:row; /* row(default), row-reverse, column, column-reverse */
+            background: #ccc;
+            height: 200px;
+            justify-content: space-around;
+            align-items:stretch; /* last baseline */
+            /* 
+                맞춤(정렬)-주축/교차축(flex-direction에 따라 결정) 정렬
+                    flex-direction: row; -> 주축이 가로
+                    flex-direction: column; -> 주축이 세로
+
+                컨테이너(부모)에 지정
+                justify-content 주축 정렬
+                   flex-start, center, flex-end
+                   space-between, space-evenly, space-around
+                align-items     교차축 정렬 stretch(default)
+                    flex-start, center, flex-end
+                    space-between, space-evenly, space-around
+
+                align-content   교차축 정렬  - 해보니까, 부모 요소에서 안 먹힘, 자식 요소에서는 됨
+                    flex-start, center, flex-end
+                    space-between, space-evenly, space-around
+                    baseline, 
+
+                아이템(자식)에 지정
+                align-self      교차축 정렬
+                    flex-start, center, flex-end
+                    space-between, space-evenly, space-around
+                    auto, baseline, 
+            */
+        }
+        .flexbox > div {
+            background: darkcyan; /* 부모요소의 배경색과 자식요소-플렉스아이템의 배경색 다름 */
+            margin: 10px;
+            align-self: center;
+        }
+    </style>
+</head>
+<body><div class="flexbox">
+            <!-- 블록레벨 요소(div)는 세로 배치 -->
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    
+</body>
+</html>

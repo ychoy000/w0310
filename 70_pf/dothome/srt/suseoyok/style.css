@@ -4,6 +4,7 @@
 /* 전체 */
 * {
     margin: 0 ;    /* 위아래 마진 */
+    /* outline: 1px dotted red; */
     }
 body {
     background:#fff;
@@ -15,29 +16,38 @@ ul {
     list-style: none;
 }
 a {
+    text-decoration: none;
     color: #222328;
 }
 /* 블록레벨요소를 가로 가운데 맞춤하기 */
 .wrap {
-    width: 1200px;
+    /* width: 1200px; */
     margin: 0 auto;
 }
 
 /* 헤더 */
 /* shift+alt+f: 자동정렬 */
 header {
+    display: flex;
+    justify-content: space-between;
     height: 100px;
+    
 }
 .logo {
     margin-top: 30px;
     width: 200px;
-    }
-.gnb ul {
-    display: flex;
-    justify-content: flex-end;
 }
-.gnb li a {
+.gnb ul {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    }
+.gnb li {
     font-size: 18px;
+}
+.gnb a {
+    /* border: 1px solid #000; */
+    line-height: 140px;
 }
 
 /* 스라이드 */
@@ -46,6 +56,8 @@ header {
     width: 400px;
     height: 300px;
     overflow:hidden;
+    position: relative;
+    left: 30%;
 }
 .slide ul {
     position: relative;
@@ -54,9 +66,8 @@ header {
     height: 100%;
     animation: slide 8s infinite;
 }
-li {
+.slide li {
     width: 25%;
-    font-size: 100px;
 }
 
 @keyframes slide {
@@ -71,32 +82,32 @@ li {
 }
 /* 콘텐츠 */
 .contents {
-    height: 600px;
+    height: 740px;
     margin: 10px;    
-    line-height: 1.8;
 }
-.details {
+.details ul{
     display: flex;
-    /* padding:16px 0 0 16px; */
     width: 1200px;
+    justify-content: space-between;
 }
-#info {
+.details li {
     margin: 10px 15px 20px;
     width: 280px;
+    line-height: 1.8;
 }
-.notice h2 {
-    margin-bottom: 8px;
+section {
+    display: flex;
+    height: 400px;
+
 }
-.notice span {
-    display: inline-block;
-    width: 290px;}
 .banner {
-    width: 400px;
-    background: #888;
+    width: 730px;
+    padding: 10px 5px;
 }
 .map {
     width: 400px;
-    background: cyan;
+    padding: 10px 5px;
+    
 }
 /* 푸터 */
 .footer {

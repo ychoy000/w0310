@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeOfCommand</title>
+</head>
+<body>
+    <script>
+        var num=10;
+        var str = '문자';
+        document.write(1+2+6);
+        document.write('<br>');
+        document.write('num 변수의 형태는 ' + typeof num + '<br>');
+        document.write('<br>');
+        document.write('str 변수의 형태는 ' + typeof str +'<br>' );
+        
+        // number
+        var num1 = 10;
+        var num2 = 10.2;
+        var num3 = 1e+2;
+        document.write(num1+ ', ' + num2 + ', ' +num3);
+        document.write('<br>');
+        document.write('num1+num2 + num3=' + num1+num2 + num3);
+        document.write('<br>');
+        document.write(num1+num2 + num3);
+        // string
+        var str1='string',
+            str2='string is "string"',
+            str3="string is 'string'",
+            //escape character
+            // \\, \', \", \n, \t, ...
+            str4= 'you\'re too smart...';
+
+        document.write(str1 + ', ' + str2 + ', ' + str3 + ', ' + str4 + '<br>') ;
+        // boolean
+        var com1=3>4, com2=3<4;
+        document.write(com1 + ', ' + com2 + '<br>')
+        // undefined
+        // null
+        // typeof
+
+        var num=10,
+            str='string',
+            bool=0,
+            unde,
+            nu=null,
+            obj={},
+            ar=[],
+            fn=function(){};
+
+            document.write('type of num is ' + typeof num + '<br>');
+            document.write('type of str is ' + typeof str + '<br>');
+            document.write('type of bool is ' + typeof bool + '<br>');
+            document.write('type of unde is ' + typeof unde + '<br>');
+            document.write('type of nu is ' + typeof nu + '<br>');
+            document.write('type of obj is ' + typeof obj + '<br>');
+            document.write('type of ar is ' + typeof ar + '<br>');
+            document.write('type of fn is ' + typeof fn + '<br>');
+
+    </script>
+</body>
+</html>
