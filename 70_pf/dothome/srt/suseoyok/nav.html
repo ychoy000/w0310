@@ -22,18 +22,73 @@
             color: #333;
             text-decoration: none;
         }
+        /* Header */
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 1320px;
+            height: 100px;
+            margin: 0 auto;
+            background: yellow;
+        }
         /* GNB */
         /* typo(title, body, 텍스트 간의 위계질서) */
-        /* Main and SUbmenu */
+                
+        /* Main(1-depth) */
+        .gnb .main {
+            position: absolute;
+            right: 10%;
+            top: 35px;
+            display: flex;
+
+        }
+        .main>li>a {
+            display: block;
+            width: 160px;
+            height: 30px;
+            text-align: center;
+        }
+        .main>li>a:hover {
+            background: #1b3b86;
+        }
+        .main>li:hover .sub {
+            height: 150px;
+            /* overflow:hidden; */
+        }
+        
+        
         .gnb .main>li>a {
             font-size: 18px;
             font-weight: bold;
             color: #999;
         }
-        /* SUBMENU */
+        /* SUBMENU(2-depth) */
+        .sub {
+            height: 0px;
+            overflow:hidden;
+            text-align: center;
+            transition: .3s;
+            background: #aeb7ce;
+        }
+        .sub::before {
+            display: block;
+            content: ' ';
+            height: 10px;
+        }
+        .sub li a {
+            padding: 30px 0 20px;
+        }
+        .sub li:hover {
+            background: #222;
+        }
+        .sub li:hover a {
+            color: #fdfdfd;
+        }
         .gnb .sub a {
             font-size: 14px;
         }
+
 
     </style>
 </head>

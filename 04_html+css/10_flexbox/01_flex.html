@@ -7,12 +7,12 @@
     <style>
         .flexbox {
             display: flex; /* 부모 요소에 지정, 부모는 플렉스 컨테이너가 되고, 자식 요소는 플렉스 아이템이 된다. 그리고 플렉스 아이템은 가로 배치(flex-direction:row;가 default) */
-            flex-direction:row; /* row(default), row-reverse, column, column-reverse */
+            /* flex-direction:row; */ /* row(default), row-reverse, column, column-reverse */
             background: #ccc;
             height: 200px;
-            justify-content: space-around;
-            align-items:stretch; /* last baseline */
-            /* 
+            /* justify-content: space-around; */
+            /* align-items:stretch; */ /* last baseline */
+            /*  속성으로서의 flex
                 맞춤(정렬)-주축/교차축(flex-direction에 따라 결정) 정렬
                     flex-direction: row; -> 주축이 가로
                     flex-direction: column; -> 주축이 세로
@@ -36,16 +36,37 @@
                     space-between, space-evenly, space-around
                     auto, baseline, 
             */
+
+            /* 
+            개별 속성
+                flex-grow
+                flex-shrink
+                flex-basis
+            속기 속성
+                flex: grow [shrink] [basis] ; -> 순서 있다.
+
+                flex:1; is the same as flex: 1 1 0%;
+            */
         }
-        .flexbox > div {
-            background: darkcyan; /* 부모요소의 배경색과 자식요소-플렉스아이템의 배경색 다름 */
+        .flexbox div {
+            /* width: 200px; same as flex: 0 1 auto; */
+            /* flex as an item */
+            /* flex: 1 0 100px; */
+            /* flex: 1; */
+            flex: 0; /* flex: 200 1 0%; */
+            /* flex: 200px; flex: 1 1 200px; */
+            /* flex-grow: 0;/* default is 0(does not grow), 1(grow) */
+            /* flex-shrink: 1; */ /* default is 1(shrink), 0(deos not shrink*/
+            /* flex-basis: 0%; */ /* 가로(주축) 크기 auto is initial value (0%), auto 와 0 이외에는 지정해야 함 */
+            background: darkcyan; /* 부모요소의 배경색과 자식요소-플렉스아이템의 배경색 다름 */ 
             margin: 10px;
-            align-self: center;
+            /* align-self: center; */
         }
     </style>
 </head>
-<body><div class="flexbox">
+<body><div class="flexbox"><!-- 플렉스 컨테이너 -->
             <!-- 블록레벨 요소(div)는 세로 배치 -->
+             <!-- 플렉스 아이템 -->
             <div>1</div>
             <div>2</div>
             <div>3</div>
