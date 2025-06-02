@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
 /* 공통 */
 * {
     margin: 0;
@@ -17,47 +17,83 @@ a {
     text-decoration: none;
     color: #333;
 }
-
+img {
+    vertical-align: top;
+}
 ul {
     list-style: none;
 }
 
-img {
-    vertical-align: top;
+/* 기본 레이아웃 */
+wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+header, contents, footer {
+    width: 1340px;
+    margin: 0 auto;
 }
 
 /* a영역: 헤더 */
 header {
-    background: #e1f7f2;
-}
-header .inner {
-    width: 1200px;
-    height: 100px;
-    margin: 0 auto;
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
+    background: #f0f0f0;
 }
-
-nav {
-    align-self: flex-end;
-    width: 600px;
-    height: 60px;
+/* LOGO */
+.logo {
+    width: 200px;
+    height: 40px;
 }
-nav ul {
+/* NAVIGATION */
+.gnb {
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    width: 640px;
+    height: 30px;
+    background: darkkaki;
+    text-align: center;
+}
+/* 1depth Menu */
+.gnb .main {
     display: flex;
-    justify-content: space-evenly;
 }
-/* nav li {
-    display: flex;
-    height: 60px;
-    align-items: flex-end;
-} */
-
-nav a {
+.gnb .main>li>a {
+    display: block;
+    width: 160px;
+    height: 30px;
     font-size: 18px;
+    font-weight: bold;
+    background: #999;
 }
-
+.gnb .main:hover .sub {
+    height: 150px;
+}
+/* 2nd depth: SUB menu */
+.gnb .sub {
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+    background:rgba(157,170,188,0.5);
+}
+.gnb .sub::before {
+    content: '';
+    display: block;
+    padding-top: 10px;
+}
+.gnb .sub>li>a {
+    display: block;
+    font-size: 14px;
+}
+.gnb .sub>li>a:hover {
+    background: #474ead;
+    color: #fff;
+    text-decoration: underline;
+}
 /* b와 c영역 공통 */
 .container {
     width: 1200px;
@@ -76,9 +112,9 @@ nav a {
     animation: slide 8s infinite;
 }
 
-.slide li {
+/* .slide li {
     height: 25%;
-}
+} */
 
 @keyframes slide {
     0% {top: 0%}
@@ -97,74 +133,90 @@ nav a {
     display: flex;
     padding-top: 10px;
 }
-.contents h2 {
-    margin-bottom: 16px;
-}
-/* 공지사항 */
-.notice {
-    width: 440px;
-}
-.notice a {
-    display: inline-block;
-    width: 340px;
-}
-.notice span {
-    display: inline-block;
-    width: 80px;
-    text-align: right;
-}
-.notice a:hover {
-    text-decoration: underline;
-}
-
-/* 갤러리 */
-.gallery {
+/* Tab */
+.tabs {
     width: 400px;
 }
-.gallery .inner {
+/* 탭 */
+/* 공지사항 */
+.tabs {
+    position: relative;
+    width: 480px;
+    height: 200px;
+}
+.tabs .tab1 li {
     display: flex;
+    justify-content: space-between;
 }
-.gallery a:not(:last-of-type) {
-    margin-right: 10px;
+.tabs .tab1 a {
+    display: inline-block;
+    font-size: 14px;
+    /* line-height: 2; */
+    /* width: 370px; */
 }
-
-/* 바로가기 링크 */
+.tabs .tab1 a:hover {
+    text-decoration: underline;
+}
+/* Gallery */
+.tabs input {
+    display: none;
+}
+.tabs label {
+    display: inline-block;
+    padding: 4px 8px;
+    color: #838383;
+    cursor: pointer;    
+}
+.tabs input:checked+label {
+    color: #eeebeb;
+}
+.tabs .tab-content {
+    position: absolute;
+    display: none;
+    width: 100%;
+    padding: 16px;
+    border-top: 1px solid #333;
+}
+.tabs input:checked+label+.tab-content {
+    display: block;
+}
+/* Galley */
+.tabs .tab2 img {
+    border: 1px solid transparent;
+    padding: 0 10px;
+}
+.tabs .tab2 img:hover {
+    border-color: #000;
+    box-shadow: 2px 12px 12px #333;
+}
+/* BANNER */
+.banner {
+    margin: 0 10px;
+    width: 340px;
+}
+/* LINK */
 .link {
     width: 360px;
 }
 .link img {
-    height: 180px;
+    border: 1px solid #000;
 }
-
-
 /* d영역: 푸터 */
 footer {
     height: 100px;
-    background: #111;
-    color: #777;
+    background: #555;
+   display: flex;
 }
-footer .inner {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-}
-.left {
-    width: 1000px;
-    padding-top: 12px;
-}
-.left p:last-of-type {
-    font-size: 13px;
-}
-.right {
+ /* BLOGO */
+ .blogo {
     width: 200px;
-}   
+    background: lightcyan;
+ }
+ .copy {
+    width: 800px;
+    background: lightgreen;
+ }
 .sns {
-    height: 50px;
-    padding-top: 20px;
-}
-.sns a {
-    color: #777;
-}
-.sns a:hover {
-    color: #fff;
+    width: 200px;
+    background: lightpink;
 }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Tabs with :target</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 15px/1.6 '돋움',sans-serif;
+        }
+        ul {
+            list-style-type: none;
+        }
+
+        .tabs {
+            width: 400px;
+            margin: auto;
+            background: yellow;
+        }
+
+        .tab-links a {
+            padding: 10px 20px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            background: #ccc;
+            color: #000;
+            text-decoration: none;
+            border: 1px solid #aaa;
+            margin-right: -4px;
+            transition: background 0.3s;
+        }
+
+        .tab-links a:hover {
+            background: #ddd;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+        }
+
+        .tab-content:target {
+            display: block;
+        }
+
+        .tqab-content: not(:target) {
+            display: none;
+        }
+
+        #tab1 a {
+            display: inline-block;
+            width: 280px;
+        }
+
+        .tab-content: target {
+            z-index: 1;
+        }
+
+        .tab-content: not(target) {
+            z-index: 0;
+        }
+        /* 기본 탭 표시 (처음 로드 시) */
+        /* .tab-content:first-of-type:target,
+        .tab-content:first-of-type:not(:target)~.tab-content:not(:target) {
+            display: block;
+        } */
+
+        /* 활성 탭 링크 스타일 (선택적으로 추가 가능) */
+        /* .tab-links a:focus,
+        .tab-links a:active {
+            outline: none;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="tabs">
+        <div class="tab-links">
+            <a href="#tab1">공지사항</a>
+            <a href="#tab2">갤러리</a>
+        </div>
+
+        <div id="tab1" class="tab-content">
+            <ul>
+                <li><a href="#">공지사항</a><span>2025-1-1</span></li>
+                <li><a href="#">공지사항</a><span>2025-1-1</span></li>
+                <li><a href="#">공지사항</a><span>2025-1-1</span></li>
+                <li><a href="#">공지사항</a><span>2025-1-1</span></li>
+            </ul>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <p>This is the content for tab 2.<br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+                error omnis consequatur et exercitationem eum voluptas aperiam doloremque, voluptate rem?</p>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

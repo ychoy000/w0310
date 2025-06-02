@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pure CSS Tabs</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .tabs {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* Hide the radio buttons */
+    .tabs input[type="radio"] {
+      display: none;
+    }
+
+    .tab-label {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #eee;
+      margin-right: -4px;
+      cursor: pointer;
+      transition: background 0.3s;
+      border: 1px solid #ccc;
+      border-bottom: none;
+    }
+
+    .tab-label:hover {
+      background: #ddd;
+    }
+
+    .tab-content {
+      display: none;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background: #fff;
+    }
+
+    /* Show tab content and style label when checked */
+    #tab1:checked ~ .content #content1,
+    #tab2:checked ~ .content #content2,
+    #tab3:checked ~ .content #content3 {
+      display: block;
+    }
+
+    #tab1:checked + .tab-label,
+    #tab2:checked + .tab-label,
+    #tab3:checked + .tab-label {
+      background: #fff;
+      border-bottom: 1px solid #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="tabs">
+  <!-- Tabs -->
+  <input type="radio" id="tab1" name="tab-group" checked>
+  <label class="tab-label" for="tab1">Tab 1</label>
+
+  <input type="radio" id="tab2" name="tab-group">
+  <label class="tab-label" for="tab2">Tab 2</label>
+
+  <input type="radio" id="tab3" name="tab-group">
+  <label class="tab-label" for="tab3">Tab 3</label>
+
+  <!-- Content -->
+  <div class="content">
+    <div id="content1" class="tab-content">
+      <h2>Content 1</h2>
+      <p>This is the first tab's content.</p>
+    </div>
+    <div id="content2" class="tab-content">
+      <h2>Content 2</h2>
+      <p>This is the second tab's content.</p>
+    </div>
+    <div id="content3" class="tab-content">
+      <h2>Content 3</h2>
+      <p>This is the third tab's content.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
