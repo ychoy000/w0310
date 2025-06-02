@@ -204,19 +204,18 @@ header {
 /* d영역: 푸터 */
 footer {
     height: 100px;
-    background: #555;
+    background: #d4e2dd;
    display: flex;
+   align-items: center;
 }
  /* BLOGO */
  .blogo {
     width: 200px;
-    background: lightcyan;
  }
  .copy {
     width: 800px;
-    background: lightgreen;
+    padding-left: 30px;
  }
 .sns {
     width: 200px;
-    background: lightpink;
 }
