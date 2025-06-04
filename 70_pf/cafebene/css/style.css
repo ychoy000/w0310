@@ -23,26 +23,107 @@ ul {
     list-style: none;
 }
 /* HEADER */
-.inner {
-    display: flex;
-    width: 1200px;
-    /* margin: 0 auto; This one works easier than below. */
-    margin-left: calc(50% - 1200px / 2);
+/* a영역: 헤더 */
+header {
+    position: relative;
+    height: 100px;
+    background: #f0f0f0;
 }
 header .inner {
+    display: flex;
+    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+    width: 1200px;
     height: 100px;
+    /* background: lightcoral; */
+    position: relative;
 }
-nav {
-    width: 600px;
-    height: 60px;
+
+/* LOGO */
+.logo {
+    width: 200px;
+    height: 40px;
 }
-nav li {
-    display: inline-block;
-    width: 120px;
-    line-height: 120px;
+
+/* NAVIGATION */
+.gnb {
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+    top: 60px;
+    width: 640px;
+    height: 30px;
+    background: darkkaki;
+    text-align: center;
 }
+
+/* 1depth Menu */
+.gnb .main {
+    display: flex;
+}
+
+/* 가상요소로 배경바 삽입 */
+.gnb .main::before {
+    content: "";
+    background: yellow;
+
+    /* 서브 메뉴를 1차메뉴 너비로 할 때 */
+    /* position: absolute; */
+    /* 서브 메뉴를 전체 너비로 할 때 */
+    position: fixed;
+    right: 0px;
+    top: 30px;
+    z-index: -1;
+    /* 서브 메뉴를 1차메뉴 너비로 할 때 */
+    /* width: 1200px; */
+    /* 서브 메뉴를 전체 너비로 할 때 */
+    width: 100%;
+    height: 0px;
+}
+
+.gnb .main>li>a {
+    display: block;
+    width: 160px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #999;
+}
+
+.gnb .main:hover::before {
+    height: 150px;
+}
+.gnb .main:hover .sub {
+    height: 150px;
+}
+
+/* 2nd depth: SUB menu */
+.gnb .sub {
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+    /* background: rgba(157, 170, 188, 0.5); */
+}
+
+.gnb .sub::before {
+    content: '';
+    display: block;
+    padding-top: 10px;
+}
+
+.gnb .sub>li>a {
+    display: block;
+    font-size: 14px;
+}
+
+.gnb .sub>li>a:hover {
+    background: #474ead;
+    color: #fff;
+    text-decoration: underline;
+
+}
+/* CONtainer */
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -143,7 +224,10 @@ footer {
     background: #999;
     margin-top: 10px;
 }
-
+.finner {
+    width: 1200px;
+    display: flex;
+}
 .left_footer {
     display: flex;
     width: 800px;

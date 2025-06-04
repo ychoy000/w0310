@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* 공통 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 15px/1.6 '돋움', sans-serif;
+}
+ul {
+    list-style: none;
+}
+li a {
+    text-decoration: none;
+    color: #333;
+}
+/* 전체  */
+.wrap {
+    display: flex;
+    width: 1000px;
+    background: lightpink;
+}
+/* HEADER */
+header {
+    width: 200px;
+}
+.logo {
+    padding: 30px 0;
+}
+.gnb {
+    margin: 0 auto;
+    width: 160px;
+    text-align: center;
+}
+
+/* 1deoth menu */
+.gnb .main>li>a {
+    display: block;
+    width: 160px;
+    height: 30px;
+    list-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    background: lightgray;
+    border-bottom: 1px solid #000; 
+}
+.gnb .main
+/* RIGHT SIDE */
+.right {
+    width: 800px;
+}
+/* SLIDE */
+.slide {
+    height: 350px;;
+    background: lightgreen;
+}
+/* CONTENTS */
+.contents {
+    display: flex;
+    height: 200px;
+}
+/* TABS */
+.tabs {
+    width: calc(800px - 520px);
+    background: yellow;
+}
+/* NOTICE */
+/* GALLERY */
+/* BANNER */
+.banner {
+    width: 260px;
+    background: pink;
+}
+/* LINKS */
+.link {
+    width: 260px;
+    background: lightcoral;
+}
+/* FOOTER */
+footer {
+    display: flex;
+    height: 100px;
+    background: #d0d0d0;
+}
+/* Bottom LoGO */
+.blogo {
+    width: 200px;
+    line-height: 120px;
+}
+footer .right {
+    width: 800px;
+
+}
+/* BOTTOM MENU */
+.bmenu {
+    height: 50px;
+    background: indigo;
+}
+.copy {
+    height: 50px;
+    background: cyan;
+}
+/* Address and COPYright */
