@@ -11,9 +11,12 @@ body {
 ul {
     list-style: none;
 }
-li a {
+a {
     text-decoration: none;
     color: #333;
+}
+img {
+    vertical-align: top;
 }
 /* 전체  */
 .wrap {
