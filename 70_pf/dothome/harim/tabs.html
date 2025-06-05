@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAB of Harim</title>
+    <script src="script/script.js"></script>
+    <style>
+        li {
+            list-style: none;
+        }
+        .tabs {
+            height: 250px;
+        }
+        .tabs .btn a .active {
+            background: #000;
+            color: #fff;
+        }
+        .btn a {
+            border-top: 1px solid #333;
+            border-left: 1px solid #333;
+            padding: 5px 15px;
+            color: #fff;
+            background: #333;
+        }
+        .btn li.active {
+            background: #fff;
+        }
+        .btn li.active a {
+            color: #333;
+        }
+        .btn li:first-of-type {
+            margin-left: 20px;
+        }
+        .btn li:last-of-type {
+            border-right: 1px solid #333;
+        }
+        /* 공지사항 */
+        #tab1 a:hover {
+            background: #5e0707;
+            color: #fff;
+        }
+        #tab1 {
+            display: inline-block;
+            margin-left: 8px;
+            width: 800px;
+        }
+        #tab2 {
+            display: none;
+            text-align: center;
+        }
+        
+
+        #tab1 li>a {
+            display: inline-block;
+            width: 600px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        #tab2 {
+            width: 800px;
+            display: none;
+        }
+        #tab2 ul {
+            display: flex;
+            text-align: center;
+        }
+        .gallery li>a {
+            text-decoration: none;
+            color: #333;
+            
+        }
+    </style>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+    <!-- <script src="script/jquery-1.12.4.min.js"></script> -->
+    <script>
+        $(document).ready(function(){
+            // 1. 갤러리 버튼을 클릭하면 함수 실행
+            $('.tabs .btn a').click(function(){
+                //2. 갤러리 버튼에 클래스 추가
+                $(this).addClass('active');
+                // 3. 공지사항 버튼에 .active 클래스 제거
+                //this 형제의 .active 클래스 제거
+                $(this).siblings().removeClass('active');
+
+                //4. 클릭한 버튼의 순번을 idc에 저장
+                var idx = $(this).index();
+                //5. idx순번에 해당하는 div를 보여준다.
+                $('.tabs div').eq(idx).show();
+                $('.tabs div').eq(idx).siblings('div').hide();
+            });
+        });
+           
+
+        /* 
+        이벤트 메서드
+            ready(function(){}) -> 준비한다.
+            click(function(){})
+
+        탐색(HTML 요서 선택) 메서드
+            eq(n) -> 0, 1, 2, - -> n번쨰 요소 선택
+            siblings(선택자) -> 형제들을 선택 
+        
+        HTML/CSS 메서드
+            addClass() -> 클래스를 추가
+            removeClass() -> 클래스를 제거
+            index() -> 순번
+            css({
+                속성: 숫자,
+                속성: '문자열',
+                메서드: function(){},
+                ...
+    })  -> CSS의 매개변수는 객체: CSS에 적용
+        */
+    </script>
+</head>
+
+<body>
+    <div class="tabs">
+        <span class="btn">
+            <a ref="#" class="active">공지사항</a>
+            <a href="#">갤러리</a>
+        </span>
+        
+    <!-- 공지사항 -->
+    <div id="tab1">
+        <ul >
+            <li><a href="#">팜스코, 보령 사료공장 본격 가동…국내 최초 5개 사료공장 체제 완성</a><span>2025.04.28</span></li>
+            <li><a href="#">김채영 9단, 하림배 프로여자국수전 우승</a><span>2025.01.08</span></li>
+            <li><a href="#">2025 하림그룹 신년사</a><span>2025.01.07</span></li>
+            <li><a href="#">’NS 푸드페스타 2024 in 익산’</a><span>2024.10.02</span></li>
+            <li><a href="#">하림 삼계탕, 유럽 첫 수출</a><span>2024.05.14</span></li>
+        </ul>
+    </div>
+    <!-- 갤러리 -->
+     <div id="tab2">
+        <ul class="active">
+            <li><a href="#"><img src="images/gallery1.png" alt="gal1"><p>윤리경영1</p></a></li>
+            <li><a href="#"><img src="images/gallery2.png" alt="gal2"><p>윤리경영2</p></a></li>
+            <li><a href="#"><img src="images/gallery3.png" alt="gal3"><p>윤리경영3</p></a></li>
+        </ul>
+     </div>
+    </div>
+
+</body>
+
+</html>

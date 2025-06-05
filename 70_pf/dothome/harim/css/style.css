@@ -51,6 +51,33 @@ nav a:hover {
     padding-left: 8px;
     text-align: center;
 }
+.main li>a:hover {
+    background: darkgreen;
+    color:#fff;
+}
+.sub {
+    display: flex;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: calc(100% - 200px);
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(119,119,119,119.5);
+    transitiojn: .3s;
+    line-height: 2;
+    padding: 9px 30px;
+}
+.sub li a {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    width: 150px;
+}
+.main li>a:hover .sub {
+    display: block;
+}
 .spotmenu a {
     margin-left: 10px;
     color: #555;

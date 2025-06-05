@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KORAIL_TOUR_JSpopup</title>
+    <style>
+               /* 공통 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: #333;
+            font: 15px/1.6 '돋움',sans-serif;
+        }
+        ul {
+            list-style:none;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 모달 팝업창 */
+        .modal {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+        /* 팝업 레이어 */
+        .popup {
+            /* display: none; */
+            margin: 10% auto;
+            position: fixed;
+            width: 500px;
+            padding: 20px;
+            background: rgba(216, 50, 50, 0.5);
+        }
+        .popup a {
+            display: block;
+            margin: 5px 10px 5px 400px;
+            background: #af6f6f;
+        }
+        
+        /* 팝업창 */
+        .popup_content {
+            /* position: relative; */
+            margin: 10% auto;
+            width: 500px;
+            padding: 20px;
+            background: yellow;
+        }
+        /* 닫기 버튼 */
+        .outer_btn {
+            text-align: right;
+        }
+        .close_btn {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 4px 12px;
+            margin-top: 15px;
+            border-radius: 4px;
+        } 
+    </style>
+    <!-- Basic Structure of JQUERRY 
+        $(document).ready(function() {
+            //actions
+        });
+        
+        $(function(){
+        });
+
+        $('제이쿼리선택자') 또는 $("제이쿼리선택자")
+
+        객체
+            순수 자바스크립트(바닐라 스크립트): document
+            제이쿼리: $(document)
+            리액트(=순수자바스크립트)
+        
+        함수데이터: function(){}
+
+        함수
+            1. 익명 함수
+                VARIABLE = function(){}
+            2. 선언적 함수
+                function NAME(){}
+
+        이벤트
+            1. window
+            2. 문서: document
+            2. mouse: click
+            3. key board
+
+        이벤트 메서드(function(){})
+            ready()
+            click()
+        
+        객체는 속성과 메서드()로 구성된다.
+         
+          이벤트
+            .ready(function(){}) ->준비한다.
+            .click(function(){}) -> 클릭한다.
+          효과
+            .show() -> 뵈인다.
+            .hide() -> 숨긴다.
+        객체.메서드([매개변수], [parameter]) -> 객체의 함수를 '메서드'라고 함
+
+    -->
+    <!-- 
+        제이쿼리 라이브러리
+        https://releases.jquerry.com/
+         CDN
+    -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+     <!-- 1. 다운로드한 제이쿼리 라이브러리 연결 -->
+    <script src="./script2/jquery-3.7.1.min.js"></script>
+    <script>
+        // 2. 준비 이벤트 작성
+        //문서가 준비되면 함수 내용을 실행한다.
+        $(document).ready(function () {
+            // 공지사항의 첫번째 요소 클릭
+            $(".li:first-of-type").click(function () {
+            // .modal의 display를 블록으로(보여줌)
+            $(".modal").show();
+            });
+            // 팝업의 닫기 버튼을 클릭하면
+            $(".popup a").click(function () {
+            // .modal 팝업 창을 숨긴다.
+            $(".modal").hide();
+            }); //$(document).ready() end
+    </script>
+</head>
+
+<body>
+    <div class="modal">
+        <div class="popup">
+            <h4>공지사항</h4>
+            <p>기차여행 관련 공지사항은 어디서 확인할 수 있나요?<span>2025-02-24</span></p>
+        <a href="#">&times; 닫기</a>
+        </div>
+    </div>
+            <!-- 공지사항 -->
+            <div class="notice">
+                <ul>
+                    <h4>공지사항</h4>
+                    <li><a href="#">기차여행 관련 공지사항은 어디서 확인할 수 있나요?<span>2025-02-24</span></a></li>
+                    <li><a href="#">남도해양열차 1호차 새마을호 대체운행 알림<span>2025-05-07</span></a></li>
+                    <li><a href="#">단체승차권 이용기준 변경 알림<span>2025-04-30
+                            </span></a></li>
+                    <li><a href="#">승차권 환불 위약금 등 조정 알림<span>2025-04-18</span></a></li>
+                    <li><a href="#">승차권 환불 위약금 등 조정 알림<span>2025-04-18</span></a></li>
+                </ul>
+            </div>
+</body>
+
+</html>

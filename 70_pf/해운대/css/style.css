@@ -42,13 +42,40 @@ header {
     display: block;
     width: 160px;
     height: 30px;
-    list-height: 60px;
+    line-height: 30px;
     font-size: 18px;
     font-weight: bold;
     background: lightgray;
     border-bottom: 1px solid #000; 
 }
-.gnb .main
+.gnb .main>li>a:hover {
+    background: #1aa975;
+    color: #fff;
+}
+.gnb .main>li:hover .sub {
+    height: 150px;
+}
+/* 2nd depth SUB menu */
+.gnb .sub {
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+    background: rgba(107,160,234,0.5);
+}
+
+.gnb .sub::before {
+    display: block;
+    content: '';
+    padding-top: 10px;
+}
+.gnb .sub>li>a {
+    display: block;
+    font-size: 14px;
+}
+.gnb .sub>li>a:hover {
+    background: #474ead;
+    color: #fff;
+}
 /* RIGHT SIDE */
 .right {
     width: 800px;

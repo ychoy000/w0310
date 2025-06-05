@@ -1,104 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>korailtour</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="script/script.js"></script>
 </head>
+
 <body>
     <div class="wrap">
+        <!-- 헤더 -->
         <header>
             <!-- 로고 -->
-             <h1 class="logo"><a href="#"><img src="./images/logo.png" alt=""></a></h1>
+            <h1 class="logo"><a href="#"><img src="./images/logo.png" alt=""></a></h1>
             <!-- navigation -->
-             <nav>
-                <ul>
-                    <li><a href="#">열차승차권</a></li>
-                    <li><a href="#">열차소개</a></li>
-                    <li><a href="#">자유여행</a></li>
-                    <li><a href="#">테마여행</a></li>
-                </ul>
-             </nav>
+            <nav>
+                <nav class="gnb">
+                    <ul class="main">
+                        <li><a href="#">승차권</a>
+                            <ul class="sub">
+                                <li><a href="#">승차권예약</a></li>
+                                <li><a href="#">발권취소</a></li>
+                                <li><a href="#">발권변경</a></li>
+                                <li><a href="#">예약조회</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="#">승차권이용안내</a></li>
+                                <li><a href="#">정차역이용안내</a></li>
+                                <li><a href="#">노선안내</a></li>
+                                <li><a href="#">여객제도안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">회원서비스</a>
+                            <ul class="sub">
+                                <li><a href="#">회원제도</a></li>
+                                <li><a href="#">제휴서비스</a></li>
+                                <li><a href="#">회원가입</a></li>
+                                <li><a href="#">공공할인 이용신청</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">여행상품</a>
+                            <ul class="sub">
+                                <li><a href="#">BEST 여행상품</a></li>
+                                <li><a href="#">지역별 여행상품</a></li>
+                                <li><a href="#">당일 여행상품</a></li>
+                                <li><a href="#">1박2일 여행상품</a></li>
+                                <!-- <li><a href="#">계절 여행상품</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
         </header>
         <!-- 콘텐츠 -->
         <div class="contents">
             <!-- 배너 -->
             <div class="banner"><img src="./images/banner.jpg" alt="banner"></div>
-                <div>
-                    <h4>칙칙폭폭, 가족과 함께 기차여행</h4>
-                    <p>지역축제 기차여행 캘린더 OPEN</p>
-                </div>
+            <div>
+                <h4>칙칙폭폭, 가족과 함께 기차여행</h4>
+                <p>지역축제 기차여행 캘린더 OPEN</p>
+            </div>
             <!-- 공지사항 -->
-            <div class="notice">
-                <ul>
-                    <h4>공지사항</h4> <li><a href="#">기차여행 관련 공지사항은 어디서 확인할 수 있나요?<span>2025-02-24</span></a></li>
-                    <li><a href="#">남도해양열차 1호차 새마을호 대체운행 알림<span>2025-05-07</span></a></li>
-                    <li><a href="#">단체승차권 이용기준 변경 알림<span>2025-04-30
-</span></a></li>
-                    <li><a href="#">승차권 환불 위약금 등 조정 알림<span>2025-04-18</span></a></li>
-                    <li><a href="#">승차권 환불 위약금 등 조정 알림<span>2025-04-18</span></a></li>
-                </ul>
-            </div>
-            <!-- 갤러리 -->
-            <div class="gallery">
-                <h4>갤러리</h4>
-                <ul class="inner">
-                   <li><a href="#"><img src="./images/gallery1.jpg" alt="gal1"><p>중앙선, 동해선 타고 떠나는 부산핫플</p></a></li> 
-                   <li><a href="#"><img src="./images/gallery2.jpg" alt="gal2"><p>지역사랑 철도여행 자유여행상품</p></a></li> 
-                </ul>
-            </div>
-            <!-- 바로가기 -->
-            <div class="link">
-                <a href="#"><img src="./images/link1.jpg" alt=""><p>예매하기</p></a>
-            <a href="#"><img src="./images/link2.jpg" alt=""><p>예약내역·반환</p></a>
-            <a href="#"><img src="./images/link3.jpg" alt=""><p>고객센터</p></a></li>
-            <a href="#"><img src="./images/link4.jpg" alt=""><p>고객센터</p></a></li>
-            </div>
-        </div>
-        <!-- 슬라이드 -->
-        <div class="slide">
-            <ul>
-                <li><a href="#"><img src="./images/slide.jpg" alt="slide1"></a></li>
-            </ul>
-        </div>
-    </div><!-- wrap의 끝 -->
-    <footer>
-       <div class="blogo"><img src="./images/logo_footer.png" alt="footer logo"></div>
-       <div class="center_content">
-        <ul class="bmenu">
-            <li><a ref="#">이용약관
-</a></li>
-            <li><a href="#">여객운송약관 및 부속약관
-</a></li>
-            <li><a href="#">개인정보처리방침
-</a></li>
-            <li><a href="#">
-이메일무단수집거부
-</a></li>
-            <li><a href="#">
-저작권정책지원
-</a></li>
-            <li><a href="#">
-브라우저 안내
-</a></li>
-        </ul>
-        <p>상호 : 한국철도공사사업자등록 : 314-82-10024통신판매업신고 : 대전 동구 - 0233호</p>
-        <p>34618 대전광역시 동구 중앙로 240대표전화 : 1588-7788팩스번호 02-361-8385</p>
-        <p>COPYRIGHT(C) KOREA RAILROAD. ALL RIGHTS RESERVED.</p>
-       </div> 
-       <div class="fs">
-            <form action="#">
-                <select name="fs" id="">
-                    <option value="">관련사이트</option>
-                    <option value="fs1">코레일 유튜브</option>
-                    <option value="fs2">코레일페이스북</option>
-                    <option value="fs3">코레일 인스타</option>
-                    <option value="fs4">코레일블로그</option>
-                    <option value="fs5">코레일트위터</option>
-                </select>
-            </form>
-       </div>
-    </footer>    
+            <div class="popup">
+                <div class="modal">
+                    <div class="notice">
+                        <h4>공지사항</h4>
+                        <ul>
+                            <li>
+                                <p>기차여행 관련 공지사항은 어디서 확인할 수 있나요?<span>2025-02-24</span></p>
+                                <a href="#">&times; 닫기</a>
+                            </li>
+
+                            <li><a href="#">남도해양열차 1호차 새마을호 대체운행 알림<span>2025-05-07</span></a></li>
+                            <li><a href="#">단체승차권 이용기준 변경 알림<span>2025-04-30
+                                    </span></a></li>
+                            <li><a href="#">승차권 환불 위약금 등 조정 알림<span>2025-04-18</span></a></li>
+                            <li><a href="#">승차권 환불 위약금 등 조정 알림<span>2025-04-18</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- 갤러리 -->
+                    <div class="gallery">
+                        <h4>갤러리</h4>
+                        <ul class="inner">
+                            <li><a href="#"><img src="./images/gallery1.jpg" alt="gal1">
+                                    <p>중앙선, 동해선 타고 떠나는 부산핫플</p>
+                                </a></li>
+                            <li><a href="#"><img src="./images/gallery2.jpg" alt="gal2">
+                                    <p>지역사랑 철도여행 자유여행상품</p>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <!-- 바로가기 -->
+                    <div class="link">
+                        <a href="#"><img src="./images/link1.jpg" alt="">
+                            <p>예매하기</p>
+                        </a>
+                        <a href="#"><img src="./images/link2.jpg" alt="">
+                            <p>예약내역·반환</p>
+                        </a>
+                        <a href="#"><img src="./images/link3.jpg" alt="">
+                            <p>고객센터</p>
+                        </a></li>
+                        <a href="#"><img src="./images/link4.jpg" alt="">
+                            <p>고객센터</p>
+                        </a></li>
+                    </div>
+                </div>
+                <!-- 슬라이드 -->
+                <div class="slide">
+                    <ul>
+                        <li><a href="#"><img src="./images/slide.jpg" alt="slide1"></a></li>
+                    </ul>
+                </div>
+            </div><!-- wrap의 끝 -->
+            <footer>
+                <div class="blogo"><img src="./images/logo_footer.png" alt="footer logo"></div>
+                <div class="center_content">
+                    <ul class="bmenu">
+                        <li><a ref="#">이용약관
+                            </a></li>
+                        <li><a href="#">여객운송약관 및 부속약관
+                            </a></li>
+                        <li><a href="#">개인정보처리방침
+                            </a></li>
+                        <li><a href="#">
+                                이메일무단수집거부
+                            </a></li>
+                        <li><a href="#">
+                                저작권정책지원
+                            </a></li>
+                        <li><a href="#">
+                                브라우저 안내
+                            </a></li>
+                    </ul>
+                    <p>상호 : 한국철도공사사업자등록 : 314-82-10024통신판매업신고 : 대전 동구 - 0233호</p>
+                    <p>34618 대전광역시 동구 중앙로 240대표전화 : 1588-7788팩스번호 02-361-8385</p>
+                    <p>COPYRIGHT(C) KOREA RAILROAD. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="fs">
+                    <form action="#">
+                        <select name="fs" id="">
+                            <option value="">관련사이트</option>
+                            <option value="fs1">코레일 유튜브</option>
+                            <option value="fs2">코레일페이스북</option>
+                            <option value="fs3">코레일 인스타</option>
+                            <option value="fs4">코레일블로그</option>
+                            <option value="fs5">코레일트위터</option>
+                        </select>
+                    </form>
+                </div>
+            </footer>
 </body>
+
 </html>

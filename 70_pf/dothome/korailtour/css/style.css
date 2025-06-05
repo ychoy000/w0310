@@ -2,6 +2,7 @@
 /* CSS reset */
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 html, body {
@@ -9,7 +10,6 @@ html, body {
 }
 ul {
     list-style: none;
-    padding: 0;
 }
 body {
     background: #fff;
@@ -21,8 +21,9 @@ a {
     text-decoration: none;
 }
 img {
-    width: 100%;
-    height: 100%;
+    align-items: top;
+    /* width: 100%; */
+    /* height: 100%; */
 }
 .wrap {
     display: flex;
@@ -35,38 +36,73 @@ img {
 header {
     width: 200px;
     background: lightblue;
-    padding: 20px;
+    padding: 20px 0;
 }
 /* LOGO */
 .logo {
+    width: 180px;
     text-align: center;
+    padding-right: 10px;
 }
 /* NAVIGATION */
-nav {
-    text-align: center;
-    padding: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    flex-shrink: inherit;
-}
-nav li {
-    border: 1px solid #000;
-    height: 50px;
-    line-height: 60px;
-    margin-top: 8px;
-    text-align: center;
-}
-nav li a:hover {
-    background: #5e2bbb;
-    color: #fff;
-}
-nav a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    /* 0.3초 지연 */
-    transition: 0.3s;
-}
+/* GNB */
+        /* typo(title, body, 텍스트 간의 위계질서) */
+                
+        /* Main(1-depth) */
+        .gnb .main {
+            
+        }
+        .main li>a {
+            position: relative;
+            background: #9aa788;
+            display: block;
+            visibility: visible;
+            width: 160px;
+            height: 30px;
+            line-height: 30px;
+            margin: 1px 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .main>li>a:hover {
+            background: #1b3b86;
+            color: #fff;
+        }
+        .main li:hover .sub {
+            z-index: 1;
+            left: 160px;
+            opacity: 1;
+        }
+        /* SUBMENU(2-depth) */
+        .sub {
+            z-index: -1;
+            position: absolute;
+            /* top: 100px; */
+            left: 80px;
+            visibility: hidden;
+            /* opacity: 0; */
+            /* visibility:hidden, display:none에는 transition이 적용되지 않음 */
+            transition: .3s ;
+            padding: -10px 0px;
+        }
+        .sub li a {
+            display: block;
+            text-align: center;
+            background: #2496a5;
+            font-size: 14px;
+            line-height: 14px;
+            padding: 16px 32px;
+            color: #fff;
+
+        }
+        .sub li:hover a {
+            color: #fdfdfd;
+            background:  #1b3b86;
+        }
+
+        .gnb .sub a {
+            font-size: 14px;
+        }
 /* 콘텐츠 */
 .contents {
     width: 400px;
