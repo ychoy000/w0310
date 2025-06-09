@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div:nth-child(1){
+            background: red;}
+        
+        div:nth-child(2){
+            background: green;}
+        
+        div:nth-child(3){
+            background: blue;}
+    </style>
+    <script src="../70_pf/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div").eq(0).css({padding: 10, "text-align": "center"  }); /* textAlign으로 쓰면 따옴표 없어도 됨 */
+            $("div").eq(0).css("width", 100); 
+            $("div").eq(1).css("width", 200); 
+            $("div").eq(2).css("width", 300); 
+            /* $("div").css("width", function(index){
+                return index * 100+100;//100, 200, 300
+            }); */
+        });
+    </script>
+</head>
+<body>
+    <div>content1</div>
+    <div>content2</div>
+    <div>content3</div>
+</body>
+</html>
