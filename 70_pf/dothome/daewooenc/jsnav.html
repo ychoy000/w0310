@@ -45,25 +45,25 @@
         }
 
         /* .main>li>a:hover + .sub { */
-        .main:hover .sub { /* sub menu 다 보이게 */
+         .main:hover .sub { /* sub menu 다 보이게 */
             display: block;
-            /* opacity: 1; */
-            /* visibility: visible;  */
-            /* height: 150px; */
-        }
+            opacity: 1;
+            visibility: visible; 
+            height: 150px;
+         }
 
         /* 2 depth sub menu */
         .sub {
             /* display: none; */
             /* opacity: 0; */
-            /* visibility: hidden; */
+            visibility: hidden;
             overflow: hidden;
             background: rgb(0,0,0,0.5);
-            /* height: 0px; */
             height: 150px;
-            /* transition: 0.5s;  */
+            transition: 0.5s; 
             /* display, visibility에는 transition이 적용되지 않음. 대개 수치로 크기를 갖는 것에 적용됨, 따라서 opacity를 사용 */
         }
+
         .sub a {
             color: #fff;
             font-size: 14px;
@@ -119,6 +119,65 @@
     <script>
         //CDN 방식
         src="https://code.jquery.com/jquery-3.7.1.min.js"
+    </script>
+    <script>
+        /* 
+            객체
+                내장 객체: document
+
+                사용자 정의 객체
+                {
+                    속성: 값,
+                    속성: 값,
+                    속성: 값, ...
+                }
+
+            제이쿼리 객체
+                $(document)
+                --------- DOM(Document Object Model)객체-------
+                $('jQ선택자') 또는 $("jQ선택자")
+                $('.main>li')
+                .메서드(매개변수, ...);
+                $(document).ready();
+
+            이벤트 메서드(function(){})
+                ready(function(){}) ->문서가 준비되면
+                mouseenter()
+                mouseleave()
+                mouseover(function(){}) -> 마우스를 올리면
+                mouseout(function(){})  -> 마우스가 나가면
+               
+                HTML/CSS method
+
+                    css({"css속성": "값", "css속성": "값", ...})
+                    css({css속성: "값"}),css({css속성: "값"}) 
+                
+                    addClass('클래스') -> 클래스를 추가
+                    removeClass('클래스') -> 클래스를 제거
+
+                효과메서드
+                    hide()
+                    show()
+                    slideDown(시간, 콜백함수)   transition 효과 있음
+                        단위: 1000ms = 1s -> 기본값은 400
+                    slideUp()       ""
+                    stop()   ->효과를 정지시킨다.
+
+                제이쿼리의 문(statements)의 형식:
+                    객체.메서드();
+                */
+        $(document).ready(function(){
+            $('.main>li').mouseover(function(){
+               // $('.sub').css({"display":"block"});
+                $('.sub').stop().slideDown();
+                // $('.sub').css({"height":150, visibility: 'visible'});
+            });
+            $('.main>li').mouseoout(function(){
+                //  $('.sub').css({"display":"none", "background-color": "red"});
+                $('.sub').stop().slideUp();
+               // $('.sub').css({"height":0, visibility: 'hidden',"background-color": "red"});
+            });
+        });
     </script>
 </body>
 </html>
