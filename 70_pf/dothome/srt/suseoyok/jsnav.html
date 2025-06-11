@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>대우건설NAVJQ</title>
+    <title>수서역NAVJQ</title>
     <style>
         /* 초기화(공통) */
         * {
@@ -27,14 +27,14 @@
         /* Header */
         header {
             position: relative;
-            width: 1200px;
+            width: 1340px;
             height: 100px;
             margin: 0 auto;
             background: darksalmon;
         }
         /* LOGO */
         .logo {
-            padding-top: 24px;
+            padding: 24px;
         }
 
         /* NAVIGATION */
@@ -105,11 +105,11 @@
 <body>
     <!-- header>h1.logo>a>img^^nav.gnb>ul.main>li*4>a[href]+ul.sub>li*4>a[href] -->
     <header>
-        <h1 class="logo"><a href=""><img src="images/logo.png" alt="logo"></a></h1>
+        <h1 class="logo"><a href=""><img src="suseo_station/srt_logo1.png" alt="logo"></a></h1>
         <nav class="gnb">
             <ul class="main">
                 <li>
-                    <a href="#">회사소개</a>
+                    <a href="#">승차권</a>
                     <ul class="sub">
                         <li><a href="#">기업정보</a></li>
                         <li><a href="#">지속가능경영</a></li>
@@ -118,7 +118,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">사업분야</a>
+                    <a href="#">고객안내</a>
                     <ul class="sub">
                         <li><a href="#">토목</a></li>
                         <li><a href="#">플랜트</a></li>
@@ -127,7 +127,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">홍보센터</a>
+                    <a href="#">이용안내</a>
                     <ul class="sub">
                         <li><a href="#">공고</a></li>
                         <li><a href="#">CI/BI</a></li>
@@ -136,7 +136,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">뉴스룸</a>
+                    <a href="#">여행상품</a>
                     <ul class="sub">
                         <li><a href="#">새소식</a></li>
                     </ul>
@@ -163,6 +163,7 @@
 
             제이쿼리 객체
                 $(document)
+                $(this)
                 --------- DOM(Document Object Model)객체-------
                 $('jQ선택자') 또는 $("jQ선택자")
                 $('.main>li')
@@ -192,18 +193,23 @@
                     slideUp()       ""
                     stop()   ->효과를 정지시킨다.
 
+                4. 탐색 메서드
+                    eq()  -n은 0부터, 형제 요소를 찾는다.
+                    siblings()  - 형제 요소를 찾는다.
+                    find() - 하위 요소 찾는다.
+
                 제이쿼리의 문(statements)의 형식:
                     객체.메서드();
                 */
         $(document).ready(function(){
             $('.main>li').mouseover(function(){
                // $('.sub').css({"display":"block"});
-                $('.sub').stop().slideDown();
+                $(this).find('.sub').stop().slideDown();
                 // $('.sub').css({"height":150, visibility: 'visible'});
             });
-            $('.main>li').mouseoout(function(){
+            $('.main>li').mouseout(function(){
                 //  $('.sub').css({"display":"none", "background-color": "red"});
-                $('.sub').stop().slideUp();
+                $(this).find('.sub').stop().slideUp();
                // $('.sub').css({"height":0, visibility: 'hidden',"background-color": "red"});
             });
         });

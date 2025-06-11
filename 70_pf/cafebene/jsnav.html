@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>대우건설NAVJQ</title>
+    <title>CAFFEBENE_NAVJQ</title>
     <style>
         /* 초기화(공통) */
         * {
-            box-sizing: border-box; 
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
         body {
             font: 15px/1.6 '돋움', sans-serif;
             color: #333;
             background: #fff;
         }
+
         a {
             text-decoration: none;
-            color: #333; /* a tag는 글자색이 상속되지 않음 */
+            color: #333;
+            /* a tag는 글자색이 상속되지 않음 */
         }
+
         ul {
-            list-style-type: none;/* ul or li에 지정 */
+            list-style-type: none;
+            /* ul or li에 지정 */
         }
-        
+
         /* Header */
         header {
             position: relative;
-            width: 1200px;
+            width: 1340px;
             height: 100px;
             margin: 0 auto;
             background: darksalmon;
+            padding-top: 10px;
         }
+        .nav_bg {
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            top: 100px;
+            height: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+        }
+
         /* LOGO */
         .logo {
             padding-top: 24px;
@@ -45,10 +62,11 @@
             top: 32px;
 
         }
+
         /* nav * {outline: 1px solid lime;} */
-        
+
         /* 1 depth main menu */
-        
+
         .main {
             display: flex;
             text-align: center;
@@ -61,18 +79,20 @@
             font-weight: bold;
             background: #eee;
         }
+
         .main>li>a:hover {
             background: #1a4975;
             color: #fff;
         }
 
         /* .main>li>a:hover + .sub { */
-         .main:hover .sub { /* sub menu 다 보이게 */
+/*         .main:hover .sub {
+            sub menu 다 보이게
             display: block;
             opacity: 1;
-            visibility: visible; 
+            visibility: visible;
             height: 150px;
-         }
+        } */
 
         /* 2 depth sub menu */
         .sub {
@@ -81,12 +101,13 @@
             /* opacity: 0; */
             /* visibility: hidden; */
             /* overflow: hidden; */
-            background: rgb(0,0,0,0.5);
+            background: rgb(0, 0, 0, 0.5);
             height: 150px;
             /* transition: 0.5s;  */
             /* display, visibility에는 transition이 적용되지 않음. 대개 수치로 크기를 갖는 것에 적용됨, 따라서 opacity를 사용 */
         }
-/*         .sub.on {
+
+        /*         .sub.on {
             visibility: visible;
             height: 150px;
         } */
@@ -97,57 +118,66 @@
             color: #fff;
             font-size: 14px;
         }
+
         .sub a:hover {
             background: darkgreen;
         }
     </style>
 </head>
+
 <body>
     <!-- header>h1.logo>a>img^^nav.gnb>ul.main>li*4>a[href]+ul.sub>li*4>a[href] -->
     <header>
-        <h1 class="logo"><a href=""><img src="images/logo.png" alt="logo"></a></h1>
-        <nav class="gnb">
-            <ul class="main">
-                <li>
-                    <a href="#">회사소개</a>
-                    <ul class="sub">
-                        <li><a href="#">기업정보</a></li>
-                        <li><a href="#">지속가능경영</a></li>
-                        <li><a href="#">R&D</a></li>
-                        <li><a href="#">투자정보</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">사업분야</a>
-                    <ul class="sub">
-                        <li><a href="#">토목</a></li>
-                        <li><a href="#">플랜트</a></li>
-                        <li><a href="#">건축</a></li>
-                        <li><a href="#">주택</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">홍보센터</a>
-                    <ul class="sub">
-                        <li><a href="#">공고</a></li>
-                        <li><a href="#">CI/BI</a></li>
-                        <li><a href="#">정대우가 간다</a></li>
-                        <li><a href="#">브로슈어</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">뉴스룸</a>
-                    <ul class="sub">
-                        <li><a href="#">새소식</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <div class="nav_bg"></div>
+        <div class="inner">
+            <!-- 로고 -->
+            <h1 class="logo">
+                <a href="#"><img src="images/logo.png" alt="로고"></a>
+            </h1>
+            <!-- 내비게이션 -->
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">Caffebene</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드스토리</a></li>
+                            <li><a href="#">베네켓스토리</a></li>
+                            <li><a href="#">카페베네원두</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu</a>
+                        <ul class="sub">
+                            <li><a href="#">신메뉴</a></li>
+                            <li><a href="#">커피</a></li>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">MD상품</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Store</a>
+                        <ul class="sub">
+                            <li><a href="#">국내</a></li>
+                            <li><a href="#">국외</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Membership</a>
+                        <ul class="sub">
+                            <li>
+                                <ul class="sub">
+                                    <li><a href="#">등급&혜택</a></li>
+                                    <li><a href="#">가입방법</a></li>
+                                    <li><a href="#">서비스</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <script>
         //CDN 방식
-        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        src = "https://code.jquery.com/jquery-3.7.1.min.js"
     </script>
     <script>
         /* 
@@ -191,22 +221,28 @@
                         단위: 1000ms = 1s -> 기본값은 400
                     slideUp()       ""
                     stop()   ->효과를 정지시킨다.
+                    animate({속성: 값, 속성: 값,...})
 
                 제이쿼리의 문(statements)의 형식:
                     객체.메서드();
                 */
         $(document).ready(function(){
-            $('.main>li').mouseover(function(){
-               // $('.sub').css({"display":"block"});
+            $('.main>li').mouseover(function () {
+                $('.nav_bg').css({background:"red",
+                    position: 'absolute',
+                    width: 100%
+                });
                 $('.sub').stop().slideDown();
-                // $('.sub').css({"height":150, visibility: 'visible'});
+                // 서브메뉴가 위에서 아래서 나타난다.
+                $('.nav_bg').stop().animate({height: 150});
+                // .nav_bg의 높이가 서서히 커진다.
             });
-            $('.main>li').mouseoout(function(){
-                //  $('.sub').css({"display":"none", "background-color": "red"});
+            $('.main>li').mouseoout(function () {
                 $('.sub').stop().slideUp();
-               // $('.sub').css({"height":0, visibility: 'hidden',"background-color": "red"});
+                $('.nav_bg').stop().animate({height: 0});
             });
         });
     </script>
 </body>
+
 </html>
