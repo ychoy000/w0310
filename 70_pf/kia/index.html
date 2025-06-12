@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIA MOTORS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // navigation submenu 
+            $('.main>li>a').mouseover(function(){
+                $(this).find('.sub').css({display: "block"})
+            });
+            $('.main>li>a').mouseleave(function(){
+                $(this).find('.sub').css({display: "none"})
+            });
+            
+            //Modal popup
+            //공지사항의 첫번째 목록을 클릭하면
+            $('.news>li>p').eq(0).click(function () {
+                $('.modal').show();
+            });
+
+            $('.notice .button').click(function () {
+                $('.modal').hide();
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 기능사시험F-4유형 -->
+    <!-- HEADER -->
+
+    <!-- a영역: 헤더 -->
+    <div class="container">
+    <header>
+            <!-- 로고 -->
+            <h1 class="logo">
+                <a href="#"><img src="images/logo.jpg" alt="로고"></a>
+            </h1>
+            <!-- <div class="nav_bg"></div> -->
+            <!-- 내비게이션 -->
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">고객 지원</a>
+                        <ul class="sub">
+                            <li><a href="#">유지 & 관리</a></li>
+                            <li><a href="#">Kia App</a></li>
+                            <li><a href="#">기아멤버스</a></li>
+                            <li><a href="#">Kia Shop</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul class="sub">
+                            <li><a href="#">고객센터 안내</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">칭찬 알림방</a></li>
+                            <li><a href="#">하자 재발 통보</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">구매 가이드</a>
+                        <ul class="sub">
+                            <li><a href="#">세금</a></li>
+                            <li><a href="#">등록</a></li>
+                            <li><a href="#">유의 사항</a></li>
+                            <li><a href="#">출하 및 탁송정보</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">견적 내기</a>
+                        <ul class="sub">
+                            <li>
+                                <ul class="sub">
+                                    <li><a href="#">카탈로그/가격표</a></li>
+                                    <li><a href="#">시승 신청</a></li>
+                                    <li><a href="#">이 달의 구매 혜택</a></li>
+                                    <li><a href="#">Discover Kia</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+
+
+        <div class="right">
+            <!-- slide -->
+            <div class="slide">
+                <ul>
+                    <li><a href="#"><img src="images/slide1.png" alt="img1"></a></li>
+                    <li><a href="#"><img src="images/slide2.png" alt="img2"></a></li>
+                    <li><a href="#"><img src="images/slide3.png" alt="img3"></a></li>
+                    <li><a href="#"><img src="images/slide1.png" alt="img1"></a></li>
+                </ul>
+            </div><!-- slide end -->
+            <section class="lower">
+                <!-- Modal Popup -->
+            <!--             <div class="modal">
+                    <div class="popup">
+                        <h2>블루링크 시스템 개선 작업</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores at saepe odio, magni labore
+                            corrupti numquam tempore architecto enim voluptas ratione debitis ipsum dicta laborum?
+                            Accusantium vitae hic veniam excepturi cum expedita aliquam, animi aliquid id aspernatur facere
+                            o, dolorum a tempora!</p>
+                        <button>&times; 닫기</button>
+                    </div>
+                </div> -->
+                <!-- 공지사항 -->
+                <div class="notice">
+                    <h2>KIA News</h2>
+                    <ul class="news">
+                        <li><a href="#">
+                                <p>제 17기 정기주주총회 소집 안내</p>
+                            </a><span>2025/03/14</span></li>
+                        <li><a href="#">
+                                <p>제 16기 정기주주총회 소집 안내</p>
+                            </a><span>2024/03/12</span></li>
+                        <li><a href="#">
+                                <p>임시주주총회 소집통지</p>
+                            </a><span>2023/05/03</span></li>
+                        <li><a href="#">
+                                <p>임시주주총회 기준일 공고</p>
+                            </a><span>2023/04/04</span></li>
+                        <li><a href="#">
+                                <p>제 15기 정기주주총회 소집 안내</p>
+                            </a><span>2023/03/15</span></li>
+                    </ul>
+                </div><!-- end of notice -->
+                <div class="link">
+                    <p>SNS link</p>
+                </div><!-- 링크 끝 -->
+                <!-- GALLERY -->
+                <div>
+                    <h2>Models</h2>
+                    <ul class="gallery">
+                        <li><a href="#"><img src="images/gallery1.png" alt=""></a><span>NIRO EV Lorem ipsum dolor sit, amet
+                                consectetur adipisicing elit. Nobis, doloremque incidunt. Accusamus quos architecto sequi
+                                voluptatem aperiam dignissimos odit temporibus!</span></li>
+                        <li><a href="#"><img src="images/gallery2.png" alt=""></a><span>JV5</span></li>
+                        <li><a href="#"><img src="images/gallery3.png" alt=""></a><span>EV3</span></li>
+                    </ul>
+                </div><!-- 갤러리 끝 -->
+            </section><!-- lower SECTIOn end -->
+        </div>
+    </div> <!-- .container end -->
+    <!-- 푸터 -->
+    <footer>
+        <div class="finner">
+            <div class="left_footer"><img src="images/logo.png" alt="logo"></a>
+                <p>copyright</p>
+            </div><!-- left_footer end -->
+            <div class="right_footer">
+                <div class="sns">
+                    <a href="#">FACEBOOK</a> |
+                    <a href="#">INSTAGRAM</a> |
+                    <a href="#">TWITTER</a>
+                </div><!-- SNS end -->
+                <select name="fs" id="fs">
+                    <option value="" selected>family site</option>
+                    <option value="">fs1</option>
+                    <option value="">fs2</option>
+                    <option value="">fs3</option>
+                </select>
+            </div><!-- RIGHT_FOOTER end -->
+        </div><!-- footer.inner end -->
+    </footer>
+</body>
+
+</html>

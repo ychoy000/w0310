@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAFFEBENE_NAVJQ</title>
+    <style>
+        /* 초기화(공통) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 15px/1.6 '돋움', sans-serif;
+            color: #333;
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            /* a tag는 글자색이 상속되지 않음 */
+        }
+
+        ul {
+            list-style-type: none;
+            /* ul or li에 지정 */
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            width: 1340px;
+            height: 100px;
+            margin: 0 auto;
+            background: darksalmon;
+            padding-top: 10px;
+        }
+        .nav_bg {
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            top: 100px;
+            height: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+        }
+
+        /* LOGO */
+        .logo {
+            padding-top: 24px;
+        }
+
+        /* NAVIGATION */
+        .gnb {
+            z-index: 2;
+            position: absolute;
+            right: 25px;
+            top: 32px;
+
+        }
+
+        /* nav * {outline: 1px solid lime;} */
+
+        /* 1 depth main menu */
+
+        .main {
+            display: flex;
+            text-align: center;
+        }
+
+        .main>li>a {
+            display: inline-block;
+            width: 160px;
+            font-size: 18px;
+            font-weight: bold;
+            background: #eee;
+        }
+
+        .main>li>a:hover {
+            background: #1a4975;
+            color: #fff;
+        }
+
+        /* .main>li>a:hover + .sub { */
+/*         .main:hover .sub {
+            sub menu 다 보이게
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            height: 150px;
+        } */
+
+        /* 2 depth sub menu */
+        .sub {
+            display: none;
+            padding-top: 10px;
+            /* opacity: 0; */
+            /* visibility: hidden; */
+            /* overflow: hidden; */
+            background: rgb(0, 0, 0, 0.5);
+            height: 150px;
+            /* transition: 0.5s;  */
+            /* display, visibility에는 transition이 적용되지 않음. 대개 수치로 크기를 갖는 것에 적용됨, 따라서 opacity를 사용 */
+        }
+
+        /*         .sub.on {
+            visibility: visible;
+            height: 150px;
+        } */
+
+        .sub a {
+            /* display: block; */
+            padding: 4px 16px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .sub a:hover {
+            background: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header>h1.logo>a>img^^nav.gnb>ul.main>li*4>a[href]+ul.sub>li*4>a[href] -->
+    <header>
+        <div class="nav_bg"></div>
+        <div class="inner">
+            <!-- 로고 -->
+            <h1 class="logo">
+                <a href="#"><img src="images/logo.png" alt="로고"></a>
+            </h1>
+            <!-- 내비게이션 -->
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">Caffebene</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드스토리</a></li>
+                            <li><a href="#">베네켓스토리</a></li>
+                            <li><a href="#">카페베네원두</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu</a>
+                        <ul class="sub">
+                            <li><a href="#">신메뉴</a></li>
+                            <li><a href="#">커피</a></li>
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">MD상품</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Store</a>
+                        <ul class="sub">
+                            <li><a href="#">국내</a></li>
+                            <li><a href="#">국외</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Membership</a>
+                        <ul class="sub">
+                            <li>
+                                <ul class="sub">
+                                    <li><a href="#">등급&혜택</a></li>
+                                    <li><a href="#">가입방법</a></li>
+                                    <li><a href="#">서비스</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        //CDN 방식
+        src = "https://code.jquery.com/jquery-3.7.1.min.js"
+    </script>
+    <script>
+        /* 
+            객체
+                내장 객체: document
+
+                사용자 정의 객체
+                {
+                    속성: 값,
+                    속성: 값,
+                    속성: 값, ...
+                }
+
+            제이쿼리 객체
+                $(document)
+                --------- DOM(Document Object Model)객체-------
+                $('jQ선택자') 또는 $("jQ선택자")
+                $('.main>li')
+                .메서드(매개변수, ...);
+                $(document).ready();
+
+            이벤트 메서드(function(){})
+                ready(function(){}) ->문서가 준비되면
+                mouseenter()
+                mouseleave()
+                mouseover(function(){}) -> 마우스를 올리면
+                mouseout(function(){})  -> 마우스가 나가면
+               
+                HTML/CSS method
+
+                    css({"css속성": "값", "css속성": "값", ...})
+                    css({css속성: "값"}),css({css속성: "값"}) 
+                
+                    addClass('클래스') -> 클래스를 추가
+                    removeClass('클래스') -> 클래스를 제거
+
+                효과메서드
+                    hide()
+                    show()
+                    slideDown(시간, 콜백함수)   transition 효과 있음
+                        단위: 1000ms = 1s -> 기본값은 400
+                    slideUp()       ""
+                    stop()   ->효과를 정지시킨다.
+                    animate({속성: 값, 속성: 값,...})
+
+                제이쿼리의 문(statements)의 형식:
+                    객체.메서드();
+                */
+        $(document).ready(function(){
+            $('.main>li').mouseover(function () {
+                $('.nav_bg').css({background:"red",
+                    position: 'absolute',
+                    width: 100%
+                });
+                $('.sub').stop().slideDown();
+                // 서브메뉴가 위에서 아래서 나타난다.
+                $('.nav_bg').stop().animate({height: 150});
+                // .nav_bg의 높이가 서서히 커진다.
+            });
+            $('.main>li').mouseoout(function () {
+                $('.sub').stop().slideUp();
+                $('.nav_bg').stop().animate({height: 0});
+            });
+        });
+    </script>
+</body>
+
+</html>

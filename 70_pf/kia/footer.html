@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIA MOTORS</title>
+    <style>
+        .finner {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <!-- 푸터 -->
+    <footer>
+        <div class="finner">
+            <div class="left_footer"><img src="images/logo.png" alt="logo"></a>
+                <p>copyright</p>
+            </div><!-- left_footer end -->
+            <div class="right_footer">
+                <div class="sns">
+                    <a href="#">FACEBOOK</a> |
+                    <a href="#">INSTAGRAM</a> |
+                    <a href="#">TWITTER</a>
+            </div><!-- SNS end -->
+            <select name="fs" id="fs">
+                    <option value="" selected>family site</option>
+                    <option value="">fs1</option>
+                    <option value="">fs2</option>
+                    <option value="">fs3</option>
+                </select>
+            </div><!-- RIGHT_FOOTER end -->
+        </div><!-- footer.inner end -->
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.fs').onClick().slideUp();
+        $('.fs').mouseleave().slideDown();
+
+    });
+</script>
+
+</html>
