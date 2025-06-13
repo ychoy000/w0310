@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>first()</title>
+        <script  src="https://code.jquery.com/jquery-3.7.1.min.js"  ></script>
+</head>
+<body>
+    <ul>
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+    </ul>
+
+<script>
+    $(function(){
+        //ul의 첫번째 li 선택
+        /* 
+            first()
+            last()
+        */
+        // $('ul li:eq(0)')
+        // $('ul li:first-child')
+        // $('ul li:nth-of-child(1)')
+        // $('ul li').eq(0)
+        // $('ul li:first-child').css({'color': 'red'});
+        $('ul li').eq(0).css({color: 'red'});
+        $('ul li').first().css({backgroundColor: 'cyan'});
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>width()</title>
+        <style>
+            div {background: red; width: 300px;}
+        </style>
+        
+        <script  src="https://code.jquery.com/jquery-3.7.1.min.js"  ></script>
+</head>
+<body>
+    <div class="div1">BOX1</div>
+    <div class="div2">BOX2</div>
+    <ul>
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+    </ul>
+
+<script>
+    $(function(){
+        //조작 메서드
+                
+        /* 
+            $(선택자).width()  -> 요소의 가로 크기 가져오기(get)
+            $(선택자).width(200)  -> 요소의 가로 크기를 값(200)으로 지정하기(set)
+
+            $(선택자).height()  -> 요소의  높이 가져오기(get)
+            $(선택자).height(200)  -> 요소의 높이를 값(200)으로 지정하기(set)
+        */
+
+        var divWidth = $('div').width();
+        console.log('divWidth');
+        $('.div2').width(200);
+        $('.div2').height(200);
+    });
+</script>
+</body>
+</html>

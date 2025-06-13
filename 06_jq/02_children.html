@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>children()</title>
+        <script  src="https://code.jquery.com/jquery-3.7.1.min.js"  ></script>
+</head>
+<body>
+    <div>
+        <p>apple입니다</p>
+        <span>banana입니다</span>
+        <p><em>orange</em>입니다</p>
+    </div>
+
+<script>
+    $(function(){
+        //탐색 메서드
+        /* 
+            children()
+        */
+
+        // $('div').children().css({border: '1px solid red'});
+        var child = $('div').children('p').css({border: '1px solid red'});
+        var child = $('div p').children('').css({border: '1px solid blue'});
+        console.log(child);
+        // ;
+        // css({border: '1px solid red'});
+    
+    });
+</script>
+</body>
+</html>

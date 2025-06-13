@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드:우->좌</title>
+    <style>
+        /* 공통 */
+        /* css에서 변수 선언
+        --변수명: 값;
+        예) 속성: var(번수명);
+        예) 속성: url(주소);
+        예) 속성: calc(계산식);
+
+        */
+        /* :root {
+            --slide-width: 1320px;
+        } */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+        }
+
+        /* 슬라이드 이미지 */
+        .slide {
+            overflow:hidden;
+            width: 1320px;
+            /* width: var(--slide-width); */
+            height: 850px;
+            background: yellow;
+        }
+        .slide ul {
+            display: flex;
+            position: relative;
+            width: 600%;
+            /* width: calc(var(--slide-width) * 3); */
+            height: 100%;
+            background: red;
+            /* animation: slide 8s infinite; */
+        }
+        .slide li {
+            width: 25%;
+            /* width: var(--slide-width); */
+            /* font-size: 100px; */
+        }
+
+        /* @keyframes slide {
+            0% {left:0%;}
+            10% {left:-100%;}
+            33% {left:-100%;}
+            43% {left:-200%;}
+            66% {left:-200%;}
+            76% {left:-300%;}
+            99.99% {left:-300%;}
+            100% {left:0%;}
+        } */
+        /* @keyframes slide {
+            0% {up:0%;}
+            10% {up:-100%;}
+            33% {up:-100%;}
+            43% {up:-200%;}
+            66% {up:-200%;}
+            76% {up:-300%;}
+            99.99% {up:-300%;}
+            100% {up:0%;}
+        } */
+    </style>
+    <script src="./script/jquery-3.7.1.js"></script>
+    <script>
+        /* 
+        setInterval 은 매 1초마다     
+
+            산술연산자
+            + 
+            문자열 + 문자열 -> 문자열
+            문자열 + 숫자 -> 문자열
+            이때, +는 문자열 연결 연산자로 사용
+             예 1320 + 'ps' -> 1320px
+        */
+    /* 
+        객체(Object)
+            $(document)
+            $('#slider ul')
+            $(this) - 이벤트가 발새한 객체 자신
+        
+        함수(function)
+            window.setInterval()
+
+
+        탐색 메서드
+            siblings() - 형제 요소
+            find() - 자식, 손자 포함(하위요소)
+            eq(n) - n번째 요소
+            children() - 자식 요소
+            first() - 첫번째 요소
+            last() - 마지막 요소
+
+        조작 메서드
+            append() - 맨 뒤에 추가
+            prepend() - 맨 앞에 추가
+            css()
+
+        이벤트 메서드
+            ready()
+
+        효과 Method(매개변수1, 매개변수2, 매개변수3)
+            hide()
+            show()
+            slideDown()
+            slideUp()
+            stop()
+            animate({속성, 값}, [시간], [function(){})]: call-back function
+    */
+        $(document).ready(function(){
+            var slideWidth = 1320;
+            setInterval(function(){
+                //ul(이미지 목록 전체)의 위치를 오른쪽에서 왼쪽(0에서 -1320px 만큼)으로 이동힌 후
+                $('.slide ul').animate({left: '-=' + slideWidth + 'px'}, 500, function (){
+                    // ul의
+                    $(this)
+                    //ul의 첫번째 자식을 ul의 맨 뒤에 추가한다.
+                    .append($(this).children().first())
+                    // ul의 left 위치를 -1320에서 0으로 위치시킨다.
+                    .css('left', 0)
+                });
+            }, 2000); //매 2초마다 읽기
+        });
+        // JS의 시간 단위는 밀리초(ms)
+    </script>
+</head>
+<body>
+    <div class="slide">
+        <ul>
+            <li><a href="#"><img src="images/slide1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/slide2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/slide3.jpg" alt=""></a></li>
+            <li><a href="#"><img src="https://picsum.photos/id/1015/200/300/" alt=""></a></li>
+            <li><a href="#"><img src="https://picsum.photos/id/1025/200/300/" alt=""></a></li>
+            <li><a href="#"><img src="https://picsum.photos/id/1035/200/300/" alt=""></a></li>
+            <!-- <li><a href="#"><img src="images/slide1.jpg" alt=""></a></li> -->
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나투어 Nav ver.jQ</title>
+    <style>
+        /* 공통 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 15px/1.6 '돋움', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 헤더 */
+        header {
+            width: 200px;
+            height: calc(100vh - 120px);
+            padding-top: 30px;
+            background: pink;
+            text-align: center;
+        }
+
+        /* 내비게이션 */
+        .gnb {
+            width: 160px;
+            margin: 30px auto;
+        }
+
+        /* 1depth: 메인메뉴 */
+        .main>li {
+            position: relative;
+        }
+
+        .main>li>a {
+            display: block;
+            height: 60px;
+            line-height: 60px;
+            border-bottom: 1px solid #ccc;
+            font-size: 18px;
+            font-weight: bold;
+            background: #ddd;
+        }
+
+        .main>li>a:hover {
+            background: #1A4975;
+            color: #fff;
+        }
+
+        /* 2depth: 서브메뉴 */
+        .sub {
+            z-index: 1;
+            position: absolute;
+            top:0;
+            left: 100px;
+            visibility: hidden;
+            opacity: 0;
+            width: 200px;
+            height: 150px;
+            padding-top: 10px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .sub a {
+            line-height: 2;
+            padding: 2px 16px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .sub a:hover {
+            background: #074F51
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <!-- 로고 -->
+        <h1 class="logo">
+            <a href="#"><img src="images/logo.png" alt="로고"></a>
+        </h1>
+        <!-- 내비게이션 -->
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">해외여행</a>
+                    <ul class="sub">
+                        <li><a href="#">동남아/서남아</a></li>
+                        <li><a href="#">일본</a></li>
+                        <li><a href="#">유럽/아프리카</a></li>
+                        <li><a href="#">미주/하와이</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">국내여행</a>
+                    <ul class="sub">
+                        <li><a href="#">제주여행</a></li>
+                        <li><a href="#">울릉도</a></li>
+                        <li><a href="#">섬 여행</a></li>
+                        <li><a href="#">내나라여행</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">테마여행</a>
+                    <ul class="sub">
+                        <li><a href="#">허니문</a></li>
+                        <li><a href="#">크루즈</a></li>
+                        <li><a href="#">밍글링 투어</a></li>
+                        <li><a href="#">트레킹/레저</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">항공+호텔</a>
+                    <ul class="sub">
+                        <li><a href="#">내맘대로</a></li>
+                        <li><a href="#">에어텔</a></li>
+                        <li><a href="#">해외호텔</a></li>
+                        <li><a href="#">국내숙박</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <script src="./script/jquery-3.7.1.js"></script>
+    <script>
+        // 문서(document)가 준비되면
+        $(document).ready(function () {
+            // 메인 메뉴(.main>li)에 마우스를 올리면
+            $('.main>li').mouseover(function () {
+                // 마우스를 올린 메인 메뉴에 해당하는 서브 메뉴(.sub)만 나타난다.
+                $(this).find('.sub').css({visibility: 'visible'});
+                $(this).find('.sub').stop().animate({left: 160, opacity: 1}, 200);
+            });
+            // 메인 메뉴(.main>li)에서 마우스가 나가면
+            $('.main>li').mouseout(function () {
+                // 마우스가 벗어난 메인 메뉴에 해당하는 서브 메뉴(.sub)가 사라진다.
+                $(this).find('.sub').css({visibility: 'hidden'});
+                $(this).find('.sub').stop().animate({left: 100, opacity: 0}, 200);
+            });
+        });
+    </script>
+</body>
+
+</html>

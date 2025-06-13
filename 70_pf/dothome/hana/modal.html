@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나투어 JS 팝업창</title>
+    <style>
+        /* 공통 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 15px/1.6 "돋움", sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 공지사항 */
+        .notice {
+            height: 25%;
+            padding: 16px 13px 13px;
+            background: #ADE4F9;
+        }
+
+        .notice h2 {
+            margin-bottom: 8px;
+        }
+
+        .notice li {
+            display: flex;
+            justify-content: space-between;
+            line-height: 2;
+            border-bottom: 1px dotted #4ab5e7;
+            color: #047db6;
+        }
+
+        .notice li a {
+            color: #047db6;
+        }
+
+        .notice li:hover {
+            border-bottom: 1px dashed #047db6;
+            color: #333;
+        }
+
+        .notice li:hover a {
+            color: #333;
+        }
+
+        /* 팝업창 */
+        .modal {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup {
+            width: 500px;
+            margin: 10% auto;
+            background: #ec8d8d;
+            padding: 20px;
+        }
+
+        .popup p {
+            margin: 16px 0 32px;
+        }
+
+        .popup div {
+            text-align: right;
+        }
+
+        .popup a {
+            padding: 5px 10px;
+            background: #b1b1b1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 팝업창 -->
+    <div class="modal">
+        <div class="popup">
+            <h2>하나투어 리뉴얼 안내</h2>
+            <p>고객님들의 더욱 편리하고 안전한 여행을 위해 하나투어 리뉴얼이 진행됩니다. 리뉴얼 기간 중에는 상품 구매 및 결제가 불가하니 이점 참고 부탁드립니다. 하나투어를 이용해주시는 고객님들께
+                감사드리며, 더 나은 서비스로 다시 찾아뵙겠습니다. 감사합니다.</p>
+            <div><a href="#">&times; 닫기</a></div>
+        </div>
+    </div>
+
+    <!-- 공지사항 -->
+    <div class="notice">
+        <h2>공지사항</h2>
+        <ul>
+            <li>
+                <a href="#">&lt;하나LIVE&gt; 이벤트 당첨자 안내</a>
+                <span>2025.05.08</span>
+            </li>
+            <li>
+                <a href="#">&lt;하나LIVE&gt; 퀴즈 이벤트 당첨자 안내</a>
+                <span>2025.04.28</span>
+            </li>
+            <li>
+                <a href="#">&lt;하나LIVE&gt; 구매 이벤트 당첨자 안내</a>
+                <span>2025.05.02</span>
+            </li>
+        </ul>
+    </div><!-- //.notice end -->
+
+
+    <!-- 
+        제이쿼리 라이브러리
+            https://releases.jquery.com/
+            1. CDN
+                src="https://code.jquery.com/jquery-3.7.1.min.js"
+            2. 다운로드
+
+
+        제이쿼리 기본 구조
+            $(document).ready(function(){
+                // 실행코드;
+            });
+
+            $(function(){
+                // 실행코드;
+            });
+
+
+            객체
+                순수 자바스크립트(바닐라 스크립트): document
+                제이쿼리: $(document)
+
+            $('제이쿼리선택자') 또는 $("제이쿼리선택자")
+                $('li:first-of-type')
+                $('.modal')
+                $('.popup a')
+
+            함수 데이터: function(){}
+
+            함수
+                1. 익명함수
+                    변수1 = function(para, ..){}
+                    변수2 = function(para, ..){}
+                    변수3 = function(para, ..){}
+                2. 선언적함수
+                    function 이름1(para, ..){}
+                    function 이름2(para, ..){}
+                    function 이름3(para, ..){}
+            
+            이벤트
+                1. 윈도우
+                2. 문서: ready
+                2. 마우스: click
+                4. 키보드
+
+            이벤트 메서드(function(){})
+                ready()
+                click()
+
+            객체는 속성과 메서드()로 구성된다.
+
+                메서드([parameter], ..) -> 객체의 함수
+
+                이벤트
+                    .ready(function(){}) -> 준비한다.
+                    .click(function(){}) -> 클릭한다.
+                효과
+                    .show() -> 보인다.
+                    .hide() -> 숨긴다.
+
+            객체.속성;
+            객체.메서드();
+
+    -->
+    <!-- 제이쿼리 CDN -->
+    <!-- <script src="src=" https://code.jquery.com/jquery-3.7.1.js""></script> -->
+    <!-- 다운로드한 제이쿼리 라이브러리 연결 -->
+    <script src="./script/jquery-3.7.1.js"></script>
+    <script>
+        // 준비 이벤트 작성하기
+        // 문서 객체가 준비되면 함수 내용을 실행한다.
+        $(document).ready(function(){
+            // 1. 공지사항의 첫 번째 요소 클릭
+            $('li:first-of-type').click(function(){
+                // 2. .modal을 보여준다.
+                $('.modal').show();
+            });
+            // 3. 팝업의 닫기 버튼을 클릭하면
+            $('.popup a').click(function(){
+                // 4. .modal을 숨긴다.
+                $('.modal').hide();
+            });
+        });
+    </script>
+</body>
+
+</html>

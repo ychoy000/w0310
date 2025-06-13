@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나투어 GNB</title>
+    <style>
+        /* 공통 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 15px/1.6 '돋움', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 헤더 */
+        header {
+            width: 200px;
+            height: calc(100vh - 120px);
+            background: #bebdbd;
+            padding-top: 30px;
+        }
+
+        /* 로고 */
+
+        /* 내비게이션 */
+        .gnb {
+            margin: 20px;
+        }
+
+        /* 1depth */
+        .main>li {
+            position: relative;
+        }
+        .main>li>a {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            border-bottom: 1px solid #111;
+            background: #06D0DA;
+            padding: 8px 0;
+        }
+
+        .main>li>a:hover {
+            color: #fff;
+        }
+
+        .main li:hover .sub {
+            z-index: 1;
+            left: 160px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .sub {
+            z-index: -1;
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            width: 160px;
+            visibility: hidden;
+            opacity: 0;
+            background: rgb(119, 119, 119, 0.5);
+            /* visibility와 display:none은 전환효과가 적용되지 않는다. */
+            transition: .3s;
+            line-height: 2;
+            padding: 16px 0;
+        }
+
+        .sub li a {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .sub li:hover a {
+            color: #fff;
+            background: #5E2BB8;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <!-- 로고 -->
+        <h1 class="logo">
+            <a href="#"><img src="images/logo.png" alt="로고"></a>
+        </h1>
+        <!-- 내비게이션 -->
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">해외여행</a>
+                    <ul class="sub">
+                        <li><a href="#">동남아/서남아</a></li>
+                        <li><a href="#">일본</a></li>
+                        <li><a href="#">유럽/아프리카</a></li>
+                        <li><a href="#">미주/하와이</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">국내여행</a>
+                    <ul class="sub">
+                        <li><a href="#">제주여행</a></li>
+                        <li><a href="#">울릉도</a></li>
+                        <li><a href="#">섬 여행</a></li>
+                        <li><a href="#">내나라여행</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">테마여행</a>
+                    <ul class="sub">
+                        <li><a href="#">허니문</a></li>
+                        <li><a href="#">크루즈</a></li>
+                        <li><a href="#">밍글링 투어</a></li>
+                        <li><a href="#">트레킹/레저</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">항공+호텔</a>
+                    <ul class="sub">
+                        <li><a href="#">내맘대로</a></li>
+                        <li><a href="#">에어텔</a></li>
+                        <li><a href="#">해외호텔</a></li>
+                        <li><a href="#">국내숙박</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

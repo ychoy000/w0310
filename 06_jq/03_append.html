@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>append()</title>
+        <script  src="https://code.jquery.com/jquery-3.7.1.min.js"  ></script>
+</head>
+<body>
+    <ul>
+        <li>apple입니다</li>
+        <li>banana입니다</li>
+    </ul>
+
+<script>
+    $(function(){
+        //HTML/CSS 메서드
+        /* 
+            $(parent).append(child)  -> 부모요소에 자식 요소를 맨 뒤에 추가한다.
+            $(parent).prepend(child)  -> 부모요소에 자식 요소를 맨 앞에 추가한다.
+
+        */
+
+            $('ul').append('<li>orange</li>');
+            $('ul').prepend('<li>watermelon</li>');
+    
+    });
+</script>
+</body>
+</html>

@@ -25,23 +25,32 @@ ul {
 /* HEADER */
 /* a영역: 헤더 */
 header {
-    position: relative;
     height: 100px;
-    background: #f0f0f0;
+    /* background: #f0f0f0; */
+    background: yellow;
 }
 header .inner {
-    display: flex;
+    position: relative;
+    /* display: flex; */
     margin: 0 auto;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     width: 1200px;
     height: 100px;
     /* background: lightcoral; */
     position: relative;
 }
+.nav_bg {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    background: rgba(0,0,0,0.5);
+}
 
 /* LOGO */
 .logo {
+    padding: 30px;
     width: 200px;
     height: 40px;
 }
@@ -49,7 +58,7 @@ header .inner {
 /* NAVIGATION */
 .gnb {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     right: 30px;
     top: 60px;
     width: 640px;
@@ -64,23 +73,21 @@ header .inner {
 }
 
 /* 가상요소로 배경바 삽입 */
-.gnb .main::before {
+ .gnb .main::before {
     content: "";
     background: yellow;
 
     /* 서브 메뉴를 1차메뉴 너비로 할 때 */
-    /* position: absolute; */
-    /* 서브 메뉴를 전체 너비로 할 때 */
-    position: fixed;
+    position: absolute;
+    width: 1200px;
     right: 0px;
     top: 30px;
-    z-index: -1;
-    /* 서브 메뉴를 1차메뉴 너비로 할 때 */
-    /* width: 1200px; */
     /* 서브 메뉴를 전체 너비로 할 때 */
-    width: 100%;
-    height: 0px;
-}
+    /* position: fixed;
+    /* width: 100%; */
+    z-index: -1; 
+    /* height: 0px; */ 
+ }
 
 .gnb .main>li>a {
     display: block;
