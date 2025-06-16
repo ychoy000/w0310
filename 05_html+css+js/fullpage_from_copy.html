@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>jQuery 풀페이지</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            color: blueviolet;
+            background: cyan;
+            transition: .3s;
+        }
+
+        .section {
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            font-size: 3em;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.5s;
+        }
+
+        .section:nth-child(1) {
+            background: #3498db;
+        }
+
+        .section:nth-child(2) {
+            background: #e67e22;
+        }
+
+        .section:nth-child(3) {
+            background: #2ecc71;
+        }
+        .section:nth-child(4) {
+            background: #fc82f2;
+        }
+
+        .footer {
+            height: 300px;
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+<header id="header">상단고정헤더</header>
+    <div class="container">
+        <div class="section">Section 1</div>
+        <div class="section">Section 2</div>
+        <div class="section">Section 3</div>
+        <div class="section">Section 4</div>
+        <div class="footer">Footer Area</div>
+    </div>
+
+    <script>
+        $(function () {
+            //var 변수 선언 키워드
+            // -> let(변경되는 값을 지정), const(변경되지 않는 값을 저장)
+            let now = 0;
+            const headerHeight = $('header').height();
+            const sections = $('.section');
+            const total = sections.length + 1; //+1은 추가(푸터) 갯수
+
+            function scrollTo(index) {
+                let pos = 0;
+                if (index < sections.length) {
+                    pos = sections.eq(index).position().top - headerHeight;
+                 //   pos = sections.eq(index).offset(pos).top - headerHeight;
+                } else {
+                    pos = $('.footer').position().top - headerHeight;
+                 //   pos = $('.footer').offset().top - headerHeight;
+                }
+                //scrollTop은 jQuery 속성이다.
+                $('html,body').stop().animate({ scrollTop: pos }, 500);
+            }
+            
+            $(window).on('wheel', function (e) {
+                // : animated - 에니메이션이 적용된 요소 -> jQuery 선택자
+                // return -> 함수(이벤트) 종료
+                // return 표현식; - > 표현식의 결과를 반환
+
+                // html, body 안에 애니메이션되는 요소가 있으면 이벤트 종료
+
+                if ($('html, body').is(':animated')) return; // 중복 스크롤 방지
+
+                // 마우스 췰ㅇ 이벤트에서 스크롤 방향과 크기를 가져옴
+                // e.originalEvent 객체
+                // deltaY 속성
+                // deltaY >0 보다 크면 아래로 스크롤(휠 내림) and vice versa
+
+                const delta = e.originalEvent.deltaY;
+                if (delta > 0 && now < total - 1) {
+                    now++;
+                } else if (delta < 0 && now > 0) {
+                    now--;
+                }
+                scrollTo(now);
+            });
+            
+            $(window).on('scroll', function(){
+            let windowScrollTop = $(window).scrollTop();
+            $('h1').html(windowScrollTop);
+            if ($(window).scrollTop() >50) {
+                $('#header').addClass('scrolled');
+            
+            } else {
+                $('#header').removeClass('scrolled')
+            }
+        });
+        });
+    </script>
+
+</body>
+
+</html>

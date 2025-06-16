@@ -5,45 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRTfooter</title>
     <style>
+        * {margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         ul {
-            /* list-style-type: none; */
+            list-style-type: none;
+        }
+        img {
+        }
+        footer {
+            width: 100%;
+            background: #999;
         }
     </style>
 </head>
 <body>
-    <h1>SRT Footer</h1>
+
     <footer>
-        <div class="left"><p>대표자 : 이종국 ㅣ 상호: 주식회사 에스알 ㅣ 사업자등록: 305-86-31590 ㅣ 통신판매업신고: 2016-서울강남-03705호<br>
-            (우: 06367) 서울특별시 강남구 광평로 56길 12 희림빌딩 | TEL. 1800-1472 l FAX. 6484-4093<br>
-            Copyright 2018. SR Inc. All rights reserved.</p></div>
-        <div class="right">
-            <div class="sns">
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-                </ul>
+
+        <div class="inner">
+            <div class="fupper">
+                <div class="rule">
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">고객서비스헌장</a></li>
+                        <li><a href="#">여객운송약관/부속약관</a></li>
+                    </ul>
+                </div>
+                <div class="sns">
+                    <ul>
+                        <li><a href="#"><img src="asset/facebook.png" alt=""></a></li>
+                        <li><a href="#"><img src="asset/twitter.png" alt=""></a></li>
+                        <li><a href="#"><img src="./asset/instagram.png" alt=""></a></li>
+                    </ul>
+                </div> <!-- end of .sns -->
+
             </div>
-            <div class="sns">
-                <ul>
-                    <li><a href="#"><img src="asset/facebook.png" alt=""></a></li>
-                    
-                    <li><a href="#"><img src="asset/twitter.png" alt=""></a></li>
-                    
-                    <li><a href="#"><img src="./asset/instagram.png" alt=""></a></li>
-                </ul>
+            <div class="left">
+                <div class="blogo">
+                    <img src="./asset/SRTlogo(190x45).png" alt="blogo">
+                </div> <!-- end of .blogo -->
+                <p>대표자 : 이종국 ㅣ 상호: 주식회사 에스알 ㅣ 사업자등록: 305-86-31590 ㅣ 통신판매업신고: 2016-서울강남-03705호<br>
+                (우: 06367) 서울특별시 강남구 광평로 56길 12 희림빌딩 | TEL. 1800-1472 l FAX. 6484-4093<br>
+                Copyright 2018. SR Inc. All rights reserved.</p>
+            </div> <!-- end of left -->
+            <div class="right">
+                <div class="fs">
+                    <form action="#">
+                        <select name="fs" id="fs">
+                            <option value="">---family site ---</option>
+                            <option value="">코레일</option>
+                            <option value="">국토교통부</option>
+                        </select>
+                    </form>
+                </div> <!-- end of family site -->
+                <div class="ads">
+                    <ul>
+                        <li><a href="#"><img src="./asset/ad1.png" alt=""></a></li>
+                        <li><a href="#"><img src="./asset/sns2.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="./asset/sns3.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+
             </div>
-            <div class="fs">
-                <form action="#">
-                    <select name="fs" id="fs">
-                        <option value="">---family site ---</option>
-                        <option value="">link1</option>
-                        <option value="">link2</option>
-                        <option value="">link3</option>
-                    </select>
-                </form>
-            </div>
-        </div>
+        </div> <!-- end of .inner -->
     </footer>
 </body>
 </html>

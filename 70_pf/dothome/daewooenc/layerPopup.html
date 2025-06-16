@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYER POPUP</title>
+    <style>
+        .popup {
+            display: none;
+            position: absolute;
+            width: 300px;
+            top: 100px;
+            left: 100px;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 100;
+        }
+    </style>
+
+    <script src="../../jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+    <div class="popup">
+        <h2>POPUP TITLE</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sed necessitatibus. Reprehenderit incidunt nulla quibusdam voluptatem dolorum eaque consequuntur aperiam.</p>
+        <button>닫기</button>
+    </div>
+    <h2>first 공지사항</h2>
+    <ul class="notice">
+        <li><a href="#">1st notice</a></li>
+        <li><a href="#">2nd notice</a></li>
+    </ul>
+
+    <script>
+        // ES6 버전에서 화살표 함수
+        // 익명 함수는 화살표 함수로 바꿀 수 있다.
+        $(document).ready(function(){
+            $('.notice li').eq(0).click(function () {
+                $('.popup').show();
+            })
+            // $('.notice li').eq(0).click(() => $('#layer-popup').show());
+            // $('.popup button').click(() => $('#layer-popup').hide());
+            $('.popup button').click(function () {
+                $('.popup').hide();
+            })
+        });
+    </script>
+
+</html>

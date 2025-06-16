@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Page Script</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .section {
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            font-size: 3em;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.5s;
+        }
+        .section:nth-child(1) {
+            background: #3498db;
+        }
+        .section:nth-child(2) {
+            background: #e67e22;
+        }
+        .section:nth-child(3) {
+            background: #2ecc71;
+        }
+        .section:nth-child(4) {
+            background: #d4b13d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">Section 1</div>
+    <div class="section">Section 2</div>
+    <div class="section">Section 3</div>
+    <div class="section">Section 4</div>
+
+</body>
+<script>
+    $(function () {
+        let now = 0;
+        const total = $('.section').length;
+
+        //선언적 함수
+        function scrollToSection(index) {
+            const pos = $('.section').eq(index).position().top;
+            //scrollTop 속성
+            $('html, body').stop().animalte({ scrollTop: pos }, 500);
+        }
+
+        // function(매개변수, ...){실행문;}
+
+        $(window).on('wheel', function (e) {
+
+            if ($('html, body').is(':animated')) return; //중복 스크롤 방지
+
+            //e.originalEvent.deltaY
+            // 휠 이벤트에서 마우스의 수직 스크롤 방향과 양을 나타내는 값
+            const delta = e.originalEvent.deltaY;
+            if (delta > 0 && now < total - 1) {
+                now++;
+            } else if (delta < 0 && now > 0) {
+                now--;
+            }
+            //함수 호출
+            scrollToSection(now);
+        });
+    })
+
+</script>
+
+</html>
