@@ -15,29 +15,75 @@
         footer {
             width: 100%;
             height: 250px;
-            background: cyan;
-        }
-        .inner {
-            width: 1200px;
-            background: #999;
-            margin: 0 auto;
+            background: #333;
         }
         .fupper {
-            display: flex;
+            background: #999;
             height: 70px;
+        }
+        .inner {
+            border: 1px solid red;
+            width: 1200px;
+        }
+        .fupper .inner {
+            display: flex;
+            margin: 0 auto;
         }
         .rule ul{
             width: 800px;
             display: flex;
-            padding: 30px 50px;
-            margin: 0px 100px;
+            justify-content: space-between;
+            padding: 32px 150px;
+            margin: 0px 30px;
         }
         .sns ul {
-            padding-top: 20px;
+            padding-top: 24px;
             display: flex;
-            width: 150px;
+            width: 160px;
             justify-content: space-between;
+            margin-left: 100px;
         }
         .sns img {
             width: 20px;
+        }
+        .flower .inner {
+            display: flex;
+            background: #333;
+            height: 180px;
+            margin: 0 auto;
+        }
+        .flower .left {
+            display: flex;
+            width: 800px;
+        }
+        .flower p {
+            color: #fff;
+            width: 700px;
+            font-size: 14px;
+        }
+        .blogo {
+            width: 150px;
+            padding: 50px 24px;
+        }
+        .flower .left p {
+            padding-top: 50px;
+        }
+        .flower #fs {
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            margin: 12px 120px;
+            border-radius: 50px;
+        }
+        .flower .ads {
+            width: 340px;
+            margin-right: 8px;
+        }
+        .flower .ads li {
+            display: inline-block;
+            padding: 2px 12px;
+            align-items: center;
+        }
+        .flower .ads img {
+            width: 40px;
         }

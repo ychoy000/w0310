@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basic structure</title>
+    <!-- 외부 스크립트 -->
+     <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <script>
+       // 내부 스크립트
+       // 자바스크립트 실행문;
+       /* 
+        적용방법
+            1. 인라인
+            2. 내부 -> script 태그 사이에 기록
+            3. 외부
+       */
+       // 1. 하나의 실행문이 끝나면 마지막에 세미콜론(;)울 븉인다.
+    let num1=10;   
+    var num2=5;
+       document.write('num1=' + num1 + ',' + 'num2=' + num2 + '<br>');
+       // window는 전역 개체로 생략 가능
+       // window는 메서드이면서 함수이다.
+       // 객체마다 정해진 속성과 메서드가 있다.
+      window.alert('Hello, World!' + '<br>');
+      console.log('Gee, World!' + '<br>');
+      confirm('Hello, Jesus!' + '<br>');
+       // 2. 대소문자를 구분한다.
+       // 3. 가독성을 위해 들여쓰기를 사용한다.(alt+shift+f, prettier)
+       // 4. 주석 처리: 한 줄 주석(ctrl+/), 여러줄 주석(shift+alt+a)
+       </script>
+    
+</body>
+<script>
+    document.write('Hello, I am the King!' + '<br>');
+    </script>
+</html>
+<script>
+     window.prompt('Hello, I am NOT the King!' + '<br>');
+    </script>
