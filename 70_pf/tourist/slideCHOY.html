@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide</title>
+    <script>https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js</script>
+    <script>https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jqyery.bxslider.css">
+</head>
+<body>
+    <div class="bxslide">
+        <div><img src="img/copy1.jpg" alt="img1"></div>
+        <div><img src="img/copy2.jpg" alt="img2"></div>
+        <div><img src="img/copy3.jpg" alt="img3"></div>
+    </div>
+    <script>
+        $document.ready(function(){
+            $('.bxslider').bxSlider({
+            mode: "fade", //vertical, horizontal
+            auto:true,
+            autoControls: true, //play-pause button
+            stopAutoOnClick: true,
+            pager: true,
+            slideWidth: 1903
+        });
+    });
+    </script>
+</body>
+</html>

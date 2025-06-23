@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+</head>
+<body>
+    <script>
+    /*
+        1. 단항: ++, --, !
+        2. 이항
+        3. 3항: ? :
+    
+    연산자의 종류
+        1. 산술: +, -, *, /, **, %, ++, --
+        2. 대입(할당): =
+        3. 비교: >, <, >=, <=, ==, ===, !=, !==
+        4. 논리: &&, ||, !
+        5. 비트:
+        6. 삼항: ? :
+    */
+        let subject = 'css';
+        let score = 100;
+        // 숫자 데이터가 아닌 경우 + 는 연결 연산자
+        // 문자열 + 문자열 -> 문자열
+        // 숫자 + 문자열 -> 문자열
+        // 숫자 + 숫자 -> 숫자(덧셈)
+
+        document.write(subject + '과목 성적은 ' + score + '<br>');
+        
+        // `Template ${변수} string` : ES6 버전 이후에는 + 대신 탬플릿 문자열을 사용한다.
+        //  'normal string'
+        // back tick/back quad(`)
+        // 형식: ${변수}
+        document.write(`${subject} 과목 성적은 ${score}` + '<br>');
+        
+        // %(나머지) 연산자
+        //let dividend=prompt('숫자를 입력하면 3의 배수인지 알려줘요', '');
+        let dividend=10;
+        let remainder = dividend % 3;
+        document.write(`${dividend} 를 나눈 나머지는 ${remainder}` + '<br>');
+        let comment;
+        if (remainder ===0) {
+            comment = '3의 배수입니다.';
+        } else {
+            comment='3의 배수가 아닙니다.';
+        }
+
+        document.write(`${comment}` + '<br>');
+
+        // ++, --
+        // ++ 는 1씩 증가
+        // -- 는 1씩 감소
+        // 증가감 연산자가 변수와 단독으로 사용될 때
+        // -> 변수의 앞쪽이나 뒤쪽에서 붙여도 같다.
+
+        let score2=10;
+        document.write(score2 + '<br>');
+        ++score2; 
+        document.write(++score2 + '<br>');
+        score2++;  
+        document.write(score2++ + '<br>');
+        document.write(score2 + '<br>');
+        
+        let score3=10;
+        let result = ++score3;
+
+        // 1증가 후 대입
+        document.write(result + 'result2 is ' + ',' + score3 + '<br>');
+        
+        let score4=10;
+        let result2=score4++;
+        // 대입 후 1 증가
+        document.write(`${result} result2 is ,` + score4 + '<br>');
+        
+        // +, -, *, /
+       let num1=20;
+       let num2=10;
+       let score10=num1+num2;
+       let score11=num1-num2;
+       let score12=num1*num2;
+       let score13=num1/num2;
+       document.write(`${score10}, ${score11}, ${score12}, ${score13}` + '<br>');
+       
+       //%
+       let even0dd=2;
+       let result3=even0dd % 2;
+       let comment2;
+       if (result3==0) {
+           comment2=`${even0dd} '는 짝수입니다.'`;
+        } else {
+            comment2=even0dd
+            comment2=`${even0dd} '는 홀수입니다.'`;
+            document.write(`${comment2}` + '<br>');
+    }
+
+
+
+        </script>
+</body>
+</html>

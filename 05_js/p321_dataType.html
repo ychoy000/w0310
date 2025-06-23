@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataType</title>
+</head>
+<body>
+    <div id="gnb"></div>
+    <script>
+        /* 
+            원시(Primituve) 데이터 타입
+                1. 숫자(number) - 정수, 실수, 지수
+                2. 문자열(string) - ' ' 또는 " "으로 묶는다.
+                3. 불(Boolean) - true, false (should write all in lower cases)
+                4. undefuned - 선언 후 할당하지 않은 값
+                5. null  - 빈 값
+                6. symbol 
+                7. Bigint   etc.
+            객체(Object) 데이터 타입
+                1. 함수(function) -> function(){}
+                2. 객체(object)  -> {}
+                3. 배열(array)  -> []
+        */
+       // 숫자 데이터
+        let num1=10;
+        let num2=10.5;
+        let num3=1e+2;
+        console.log(num1);
+        console.log(num2);
+        console.log(num3);
+
+        // 문자열 데이터
+        let str1='문자1';
+        let str2='"문자2"';
+        console.log(str1);
+        console.log(str2);
+        
+        /* escape sequence
+            \" 
+            \'
+            \\
+            \n  -> 행 바꿈
+            \t  -> 탭 문자
+        
+        */
+        let str3 = "문 자\t\t는 \n\\\n\"문자\"";
+        console.log(str3);
+        
+        // documnet.write()에서는 <br> 태그로 행을 바꾼다
+        // alert()에서는 <br>을 사용할 수 없다(\n 사용 가능).
+        document.write(str3);
+        // alert(str2);
+
+        // Boolean
+        let temp1 = (5>4);
+        document.write('<br>' + temp1);
+        let temp2 = (5<4);
+        document.write('<br>' + temp2);
+        let temp3=0;
+        let temp4=1;
+        document.write('<br>' + temp3);
+        document.write('<br>' + temp4);
+        document.write('<br>' + Boolean(temp3));
+        document.write('<br>' + Boolean(temp4));
+        document.write('<br>' + 'null is ' + Boolean(null));
+        document.write('<br>' + 'undefined is ' + Boolean(undefined));
+        document.write('<br>' + 'string "0" is ' + Boolean("0"));
+        document.write('<br>' + '"{}" is ' + Boolean({}));
+        document.write('<br>' + '"[]" is ' + Boolean([]));
+        document.write('<br>' + '"function(){}" is ' + Boolean(function(){}));
+        
+        // undefined
+        let tmp1=10;
+        let tmp2;
+        document.write('<br>' + 'Undefined cases');
+        document.write('<br>' + tmp1);
+        document.write('<br>' + tmp2);
+        document.write('<br>' + 'Undefined value is ' + Boolean(tmp2));
+        
+        // obj 는 {}로 정의했으므로 개체 데이터 변수임
+        //객체.속성
+        //객체.메서드()
+        let obj1 = {}; //개체.속성에 해당
+        obj1.name11 = '홍길동';
+        obj1.age0;
+        document.write('<br>'+"<br>" + obj1.name11);
+        document.write('<br>'+"<br>" + obj1.age);
+        
+        // null -> 변수를 빈(empty) 상태(초기화)로 만들거나,
+        //      -> 데이터를 저장하였으나 값이 존재하지 않을 때 
+        let obj2 = 10;
+        obj2=null;
+        document.write('<br>' + obj2);
+        
+        // $(document).find('#gnb') -> $('#gnb) -> jQuery expression 
+        let obj3 = document.getElementById('gnb');
+        document.write('<br>' + obj3);
+        
+        // typeof 연산자
+        //  -> 변수에 저장된 데이터의 타입을 확인
+        // typeof variable
+        document.write('<br>' + typeof 10);
+        document.write('<br>' + typeof obj3);
+        document.write('<br>' + typeof tmp2);
+        document.write('<br>' + typeof undefined);
+        document.write('<br>' + typeof null);
+        document.write('<br>' + typeof obj1.name11);
+        document.write('<br>' + typeof document.getElementById);
+        document.write('<br>' + typeof {});
+        document.write('<br>' + typeof []);
+        document.write('<br>' + typeof function(){});
+
+        // 테일위드는 CSS 프레임워크이다.
+        // 부트스트랩: HTML+CSS+JS 프레임워크이다.
+        // 리액트와 제이쿼리는 자바스크립트의 라이브러리이다.
+</script>
+    
+</body>
+</html>

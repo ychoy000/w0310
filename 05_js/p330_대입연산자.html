@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대입연산자</title>
+    <style>
+        table {border-collapse: collapse;} 
+        td {border: 1px solid #000;}
+    </style>
+</head>
+<body>
+    <script>
+        /* 
+            대입연산자
+                =
+
+            복합대입연산자
+                +=     i+1=1 => i=i+1  예) 
+                -=     i-=1  ==> i=i-1
+                /=     i*1=1 => i=i*1     
+                %=      i/1=1
+                **=
+                예) let i=5;
+                    i**=2;
+                     -> i=i**2 = 5**2 = 5*5 = 25
+                     i**=5 -> i=5**5
+
+        */
+       let num=10; //10을 num에 대입
+       let x=0;
+       let y=0;
+       // '=' 연산자는 연속 대입도 가능하다.
+       x=y=num; // y=10, x=10
+       document.write('x is'+ x + ',' + 'y is' + y + ',' + `num is ${num} <br>` );
+
+       let str = 'JAVASCRIPT';
+       str += 'JQUERY';
+       document.write(str + '<br>') ;
+       let num1=5;
+       let num2=15;
+       let num3=5;
+       let num4=20;
+       let num5=10;
+       let num6=2;
+
+        num1 += 10;
+       document.write('num1 is ' + num1 + '<br>') ;
+        num2 -= 10;
+       document.write('num2 is ' + num2 + '<br>') ;
+       num3 *= 10;
+       document.write('num3 is ' + num3 + '<br>') ;
+       num4 /= 10;
+       document.write('num4 is ' + num4 + '<br>') ;
+       num5 %= 10;
+       document.write(`num5 is ` + num5 + '<br>') ;
+       num6 **= 10;
+       document.write('num6 is ' + num6 + '<br>') ;
+       
+       let table = '<table>';
+        table += '<tr>';
+            table += '<td>Java script</td><td>JQuery</td>';
+            table += '</tr>';
+            table += '</table>';
+        document.write(table + '<br>') ;
+
+
+    </script>
+</body>
+</html>

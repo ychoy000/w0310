@@ -19,40 +19,8 @@ a {
     text-decoration: none;
     color:#333;
 }
-
-header, .contents, footer {
-    width: 1200px;
-    margin: 0 auto;
-}
-header {
-    display: flex;
-    justify-content: space-between;/* check these 2 rows */
-    height: 100px;
-}
-nav {
-    width: 800px;
-    height: 60px;
-
-}
-nav li {
-    display: inline-block;
-    width: 120px;
-    line-height: 60px;
-    align-content: center;
-}
-nav a {
-    
-}
-nav .main li>a {
-    font-size: 18px;
-}
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 .slide {
-    height: 350px;
+    height: 550px;
     text-align: center;
     overflow: hidden;
 }

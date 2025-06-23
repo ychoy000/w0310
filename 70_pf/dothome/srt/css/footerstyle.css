@@ -22,7 +22,6 @@
             height: 70px;
         }
         .inner {
-            border: 1px solid red;
             width: 1200px;
         }
         .fupper .inner {
@@ -46,9 +45,12 @@
         .sns img {
             width: 20px;
         }
+        .flower {
+            background: #333;
+
+        }
         .flower .inner {
             display: flex;
-            background: #333;
             height: 180px;
             margin: 0 auto;
         }

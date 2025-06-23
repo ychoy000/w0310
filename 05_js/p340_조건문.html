@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+    
+</head>
+<body>
+    <script>
+        /* 
+            제어문
+                1, 조건문(선택문)   if, switch
+                2, 반복문   for, do, while
+                3. 기타     continue, break
+        
+            if 문 형식
+                형식1;    
+                    if (조건식) {
+                    실행문; 
+                }
+                형식2: 
+                if (조건식){
+                실행문1;}
+                else {실행문2}
+
+                형식3:
+                if (condition1){
+                command1;
+                } else if (condition2) {
+                 command2:
+                 } else {
+                  command3;
+                }
+
+                if 문안에 또 다른 if 문을 중첩하여 사용할 수 있다.
+                -> 중첩if 문
+
+                형식4:
+                if (condition1) {
+                    if (condition2){
+                        command1} command2}
+        */
+
+                 /* let age=10;
+                 let admissionFee = '';
+                 if (age < 13) { 
+                 admissionFee='2,000원';
+                 };
+                  */
+              /*    age=prompt('나이 입력', '');
+                 if (age <13 || age >=65){
+                    admissionFee='2,000원'}
+                    //if else if if ~else
+                    else if (age > 13 && age < 20) {
+                    admissionFee='4,000won';
+                    }  else {
+                        admissionFee = '6,000won';
+                    }
+                    document.write(admissionFee);
+ */
+                /* 
+                요구사항
+                  - 시험과목: html, css, javascript
+                  - 합격기준: 100점 만점 기준, 과목당 40점 이상, 전과목 평균 60이상이면 합격
+                */
+
+                let html = Number(prompt('html 점수 입력', ''));
+                let css = Number(prompt('css 점수 입력', ''));
+                let js = Number(prompt('js 점수 입력', ''));
+                let avg = (html+css+js)/3;
+                let comment;
+
+                if (avg >= 60) {
+                    if (html <40) {
+                        comment = 'HTML' + ' 40점 미만 불합격';
+                    }
+                    else if (css <40) {
+                        comment = 'CSS' + ' 40점 미만 불합격';
+                    }
+                    else if (js <40) {
+                        comment = 'JAVA SCRIPT' + ' 40점 미만 불합격';
+                    }
+                    else {
+                        comment = '평균' + avg + ' 점 합격';
+                    }
+                } else {
+                    comment = '평균' + avg + ' 점 불합격';
+                }
+                document.write(comment);
+    </script>
+</body>
+</html>
