@@ -65,7 +65,7 @@
                   - 합격기준: 100점 만점 기준, 과목당 40점 이상, 전과목 평균 60이상이면 합격
                 */
 
-                let html = Number(prompt('html 점수 입력', ''));
+/*                 let html = Number(prompt('html 점수 입력', ''));
                 let css = Number(prompt('css 점수 입력', ''));
                 let js = Number(prompt('js 점수 입력', ''));
                 let avg = (html+css+js)/3;
@@ -88,6 +88,36 @@
                     comment = '평균' + avg + ' 점 불합격';
                 }
                 document.write(comment);
+ */
+                /* 
+                    switch 형식:
+                        switch (value) {
+                            case value1:
+                                command;
+                                break;
+                            case value2:
+                                command;
+                                break:
+                            ...
+                            default:
+                                command;
+                        }
+                */
+               let subject = 'javascript';
+               switch (subject) {
+                    case 'html':
+                        subject += '은 1학점입니다.'
+                        break;
+                    case 'css':
+                        subject += '은 2학점입니다.'
+                        break;
+                    case 'javascript':
+                        subject += '은 3학점입니다.'
+                        break;
+                        default:
+                            subject ='해당과목이 없습니다.'
+                    }
+                document.write(subject);
     </script>
 </body>
 </html>

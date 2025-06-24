@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRADIENT BACKGROUND</title>
+    <style>
+        /*
+            Gradient란?
+                1. 색상이 부드럽게 변하는 시각 효과
+                2. 단색이 아닌 여러 가지 색상을 원형(radial)과 선형(linear)으로 점진적으로 채워 줄 수 있다.
+                3. 색상의 위치나 영역도 조절할 수 있다.
+        */
+
+        /* 
+            선형 그라디언트 기본형
+                background: linear-gradient(color1, color2, ...)
+                - 방향 : TO TOP
+                        to left
+                        to right
+                        to bottom(기본값)
+                        to bottom right ......
+
+                background: repating-linear-gradient(color1 p%, colo2 p%, ...)
+
+            backgroumd: radial-gradient([circle], [이동기준 at x y], color1 p%, color2 p%, ...)
+              - circle을 쓰면 원, 안쓰면 타원
+              - 이동기준
+                closest-side: 시작점ㅁ에서 가까운 쪽의 면까지 점진적으로 채움
+                closest-corner: 시작점에서 가까운 쪽의 꼭지점까지 점진적으로 채움
+                farthest-side: 시작점ㅁ에서 멀리 떨어진 쪽의 면까지 점진적으로 채움
+                farthest-corner: 시작점에서 멀리 떨어진 쪽의 꼭지점까지 점진적으로 채움
+
+            */
+                div {
+                    width: 200px;
+                    height: 100px;
+                    margin: 30px;
+                    /* background: linear-gradient(to left bottom, red, yellow, green, violet); */
+                }
+                .linear1 {
+                    background: linear-gradient(to top, red 30%, yellow 90%);}
+                .linear2 {
+                    background: linear-gradient(to right, red 30%, yellow 70%);
+                }
+                .linear3 {
+                    background: repeating-linear-gradient(red 10%, yellow 30%);
+                }
+                .radial1 {
+                    background: radial-gradient(circle, red 20%, yellow 60%, green 100%);
+                }
+                .radial2 {
+                    background: repeating-radial-gradient(red , yellow 5%, green 10%);
+                }
+                .radial3 {
+                    background: radial-gradient(farthest-side at 30% 10%, red , yellow 35%, green 70%);
+                }
+                .radial4 {
+                    background: radial-gradient(closest-side at 30% 10%, red , yellow 35%, green 70%);
+                }
+                .radial5 {
+                    background: radial-gradient(farthest-corner at 30% 10%, red , yellow 35%, green 70%);
+                }
+                .radial6 {
+                    background: radial-gradient(closest-corner at 30% 10%, red , yellow 35%, green 70%);
+                }
+    </style>
+</head>
+<body>
+    <div class="linear1">box1</div>
+    <div class="linear2">box2</div>
+    <div class="linear3">box3</div>
+    <div class="radial1">box4</div>
+    <div class="radial2">box5</div>
+    <div class="radial3">box6</div>
+    <div class="radial4">box6</div>
+    <div class="radial5">box6</div>
+    <div class="radial6">box6</div>
+</body>
+</html>

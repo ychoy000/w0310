@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch조건문</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>조건문: switch</h1>
+    <input type="text" id="user_id">
+    <button id="login_btn">로그인</button>
+    <script>
+        /* 
+            switch 형식:
+                switch (value) {
+                    case value1:
+                        command;
+                        break;
+                    case value2:
+                        command;
+                        break:
+                    ...
+                    default:
+                        command;
+                }
+        */
+        /*         let subject = 'javascript';
+                switch (subject) {
+                    case 'html':
+                        subject += '은 1학점입니다.'
+                        break;
+                    case 'css':
+                        subject += '은 2학점입니다.'
+                        break;
+                    case 'javascript':
+                        subject += '은 3학점입니다.'
+                        break;
+                    default:
+                        subject = '해당과목이 없습니다.'
+                }
+                document.write(subject);
+                */
+
+        $(document).ready(function () {
+            
+            //$('#login_btn') -> JQuery 
+            //document.getElementById('login_btn')  -> JS
+            
+            // To change JQUERY -> JS
+            
+            //.click(값) -> .onclick = 값
+            //.click(function(){}) -> .onclick = function(){}
+            // val() -> value
+            // .text(값) -> .textContent = 값
+            // JS : getElementsByClassName, getElementsByTagName
+
+            // JS 에는 .querySelector() .querySelectorAll(): ()에는 '#id', '.class', 'tagname'
+            // document.querySelectorAll('login_btn')[0]
+            // document.querySelectorAll('login_btn').item(0)
+
+
+            $('#login_btn').click(function () {
+                const user_id = $('#user_id').val();
+                console.log(user_id);
+                switch (user_id) {
+                    case 'abc':
+                        $('output').text('abc님이 입장하셨습니다.');
+                        break;
+                    case 'def':
+                        $('output').text('abc님이 아닙니다.');
+                        break;
+                    default: // 안 써도 됨
+                        $('output').text('회원가입하세요.');
+                }
+                console.log(user_id);
+            })
+        })
+        //  let classification = prompt('아동, 청소년, 성인 중 선택 입력', '');
+        switch (classificaiton) {
+            case 'abc':
+                classification += ': 입장료 무료';
+                break;
+            case '청소년':
+                classification += ': 입장료 2,000원';
+                break;
+            case '성인':
+                classification += ': 입장료 $5,000원';
+                break;
+                //default: // 안 써도 됨
+                classification = '입력 값을 다시 확인하세요.';
+        }
+        document.write(classification);
+
+    </script>
+</body>
+
+</html>

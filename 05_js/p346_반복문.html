@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h1>반복문</h1>
+    <h2>while</h2>
+    <div id="sum1">결과 출력</div>
+    <script>
+        /* 
+            반복문
+                1. while
+                2. do-while
+                3. for
+            
+            조건이 만족하는 동안, 실행문을 실행한다.
+            
+        1.    초기값 선언문;
+            while(조건) {
+                실행문;
+                증감식;
+            }
+        
+            // 무조건 1번은 코드가 실행된다.
+        2.  do {
+                실행문;
+            } while (조건식)
+        */
+
+/*         let n = 1;
+        let sum = 0;
+        while (n < 11){
+         sum += n;
+         // n += 1;
+         // n = n + 1;
+         n++;    
+         document.write('n = ' + n + ',' + 'sum = ' + sum + '<br>')    
+         }
+         //JQuery
+         //$('sum1').text(`n = ${n}, sum1 = ${sum}`);
+         document.getElementById('sum1').textContent = `n = ${n}, sum1 = ${sum}`;
+         console.log(sum);
+         */
+        let n = 1;
+        let sum2 = 0;
+        do {
+            sum2 += n;
+            n++;
+            document.write('n = ' + n + ',' + 'sum2 = ' + sum2 + '<br>');    
+        } while (n < 11);
+        
+        let x=0;
+        let y=0;
+        let z=6;
+        let total1=0;
+        let total2=0;
+        while (x <= 10){
+            total1 += x;
+            x++;
+        }
+        document.write('x : ' + total1 + '<br>');
+        
+        do {
+            total2 += y;
+            y++;
+            document.write('y : ' + y + ', total2 = ' + total2 + '<br>');
+        } while (y <= 10);
+        do {
+            document.write('z : before = ' + z + '<br>');
+            z++;
+            document.write('z : after = ' + z + '<br>');
+        } while (z <= 5);
+        document.write('z : final = ' + z + '<br>');
+
+
+
+
+    </script>
+</body>
+
+</html>
