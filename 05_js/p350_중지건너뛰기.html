@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중지와 건너뛰기 문</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h1>제어문</h1>
+    <h2>break, continue</h2>
+    <h3>p350-352</h3>
+    <script>
+        /* 
+            제어문
+                break - 중지
+                continue - 건너뛰기
+
+                let x = 1;
+                let y = 2;
+                switch (x*y){
+                    case value1:
+                        command1;
+                        break;
+                    case value2:
+                        command2;
+                        break;
+                    case value3:
+                        command3;
+                        break;
+                    ....
+                    default:
+                        command;
+                    }
+            {} 안은 블럭 영역
+            // 제어문 끝에는 ;를 찍지 않는다.
+
+            do {
+                command;
+            } while (condition);
+        */
+/*        let flag=true;
+       let i=0;
+       while (flag){
+        document.write(`무한루프${i}<br>`);
+        i++;
+        if (i>10) break;
+        //if (i>10) flag=false;
+        // break는 반복문인 while을 탈출한다.
+       }
+ */
+/*        const limitNum = 5;
+       let sum = 0;
+       for (let i=1; i<=20; i++) {
+           sum +=i;
+           if (i == limitNum) {
+               break;
+            }
+            document.write('i= ' + i +' , ' + 'sum = ' + sum + '<br>');
+        }
+ */
+        /* 
+            for (초기값; 조건식; 증감식) {
+                commnad1;
+                continue ; // command2 건너뛰기
+                command2;
+            }
+        */
+
+        let sum = 0;
+        let num = '3의 배수';
+        for (i=1; i<10; i++) {
+            if ( i % 3 === 0) {
+                num += i + ' , ';
+                continue; // if 조건이 참이면 아래 코드 sum+=i를 건너뛴다.
+            }
+            sum += i;
+        }
+        document.write(`${num} 제외 총합 : ${sum}`);
+    </script>
+</body>
+
+</html>
