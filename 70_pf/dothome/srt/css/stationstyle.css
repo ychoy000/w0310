@@ -20,9 +20,10 @@ a {
     color:#333;
 }
 .slide {
+    display: flex;
     height: 550px;
-    text-align: center;
-    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
 }
 .slide li+li {
     display: none;
