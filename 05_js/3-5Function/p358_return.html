@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return과 매개변수</title>
+</head>
+
+<body>
+    <h1>당신의 성적을 입력하세요</h1>
+    <form action="">
+        <label for="user_name">NAME</label>
+        <input type="text" id="user_name" ><br>
+        <label for="html_lang">HTML</label>
+        <input type="text" id="html_lang" ><br>
+        <label for="css_lang">CSS</label>
+        <input type="text" id="css_lang" ><br>
+        <label for="js_lang">JAVASCRIPT</label>
+        <input type="text" id="js_lang" ><br>
+        <button  type="button" id="result_btn">결과확인</button><br>
+    </form>
+    <div id="result_msg">결과 메시지</div>
+    <script>
+        /* 
+            return
+                함수를 통해 처리된 결과를 반환시켜주는 키워드
+                -> 반환값 전송 및 함수 종료
+
+            함수 선언
+                function 함수(){
+                코드;
+                return 반환값;
+                }
+
+            함수호출
+                함수()
+        */
+
+        /*         function process() {
+                    const kor = 100;
+                    const eng = 90;
+                    const avg = (kor + eng) / 2;
+                    return avg;
+                    document.write(`평균값은 ${process()} <br> return 밑에 코드는 실행 안됨`);
+                    //document.write(`average is ${avg} <br>`);
+                }
+                //process();
+                document.write(`평균값은 ${process()} <br> 줄바꿈`);
+         */
+        /* 
+            매개변수(parameter)
+                - 함수를 호출할 때 전달값을 받는 변수
+            인자(argument)
+                - 매개 변수에 전달할 값
+
+            1. 선언적 함수
+                // 함수 선언
+                function name(parameter1, ...){code;}
+                // 함수 호출
+                name(argument1, ...);
+            2. 익명 함수
+                선언    const NAME = function (param1, ...){code;}
+                호출    NAME(arg1, ...);
+            
+        */
+        /*         function grade(s1, s2) {
+                    const avg = (s1 + s2) / 2;
+                    return avg;
+                }
+                document.write(`점수가 "grade(90, 80)" 일때 평균은 ${grade(90, 80)} <br>`);
+         */
+
+        // 요소 탐색
+        let user_name = document.getElementById('user_name');
+        let html_lang = document.getElementById('html_lang');
+        let css_lang = document.getElementById('css_lang');
+        let js_lang = document.getElementById('js_lang');
+        document.getElementById('result_btn');
+        document.getElementById('result_msg');
+
+        
+        //이벤트
+        result_btn.onclick = function(){
+            const sname=user_name.value;
+            const shtml=html_lang.value;
+            const scss=css_lang.value;
+            const sjs=js_lang.value;
+            
+        if (sname ===""||shtml===""||scss===""||sjs===""){
+            alert('다시 입력해 주세요.');
+        } else {
+            result_msg.textContent = examPass(sname,shtml,scss,sjs);
+        }}
+        document.write('user_name is ' + sname + 'html_lang is ' + shtml + 'css_lang is ' + scss + 'js_lang is ' + sjs);
+        
+        function examPass(name, h, c, j) {
+            let comment = name + ' 학생은';
+            if (h >= 60 && c >= 60 && j >= 60) { comment += '전과목 PASS'; }
+            else {
+                if (h < 60) { comment += 'html failed'; }
+                else {
+                    if (c < 60) { comment += 'css failed'; }
+                    else { if (j < 60) { comment += 'javascript failed'; } }
+                }
+            }
+            return comment;
+        }
+/*         document.write(`${examPass('홍길동', 74, 34, 65)} <br>`);
+        document.write(`${examPass('개똥이', 44, 94, 65)} <br>`);
+        document.write(`${examPass('황당한', 74, 84, 65)} <br>`);
+ */    </script>
+</body>
+
+</html>

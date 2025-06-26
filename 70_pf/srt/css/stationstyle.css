@@ -15,6 +15,9 @@ body {
     margin: 0;
     font: 16px/1.6 "굴림", sans-serif;
 }
+ul {
+    list-style-type: none;
+}
 a {
     text-decoration: none;
     color:#333;
@@ -26,22 +29,52 @@ header {
 }
 .bar_title {
     height: 70px;
-    background: #16061a;
+    background: #572b4c;
     color: #fff;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     text-align: center;
-    padding-top: 12px;
+    padding-top: 28px;
+}
+.station_container {
+    width: 1200px;
+    margin: 0 auto;
 }
 h1 {
     text-align: center;
-    font-size: 48px;
+    font-size: 40px;
+    margin: 32px 0 32px;
+}
+.station_tab ul{
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+}
+.station_tab li {
+    width: 25%;
+    border: 1px solid #d5d5d5;
+    text-align: center;
+    
+    background: #f4f4f4; 
+    padding: 12px;
+    margin-bottom: 20px;
+}
+.station_tab a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #666;
+}
+.station_tab li:first-of-type {
+    background: #572b4c;
+}
+.statiojn_tab li:first-of-type {
+    color: #fff;
 }
 .slide {
     display: flex;
     height: 550px;
     width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 .slide li+li {
     display: none;
@@ -92,5 +125,5 @@ td:nth-of-type(2) {
 footer {
     height: 300px;
     width: 100%;
-    background: #000;
+    background: #ccc;
 }

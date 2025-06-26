@@ -120,8 +120,22 @@ footer .box_inner {
     height: 200px;
     justify-content: space-between;
 }
+.footer_left {
+    /* width: 950px; */
+
+}
 footer .foot_list {
     display: flex;
+    margin: 8px;
+    font-size: 16px;
+}
+.foot_list li:first-of-type::after {
+    content: '|';
+    padding: 16px;
+}
+footer h3 {
+    font-size: 14px;
+    margin-top: 32px;
 }
 .snslink {
     display: flex;

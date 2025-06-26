@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        /* 
+            함수
+                1. 사용자 정의 함수
+                    - 선언적 함수
+                    - 익명 함수
+                2. 내장 함수: 
+                    - alert(): 경고창
+                    - prompt(): 입력창
+                    - confirm() : 확인창
+                    - setInterval() : 일정 시간 후 반복 실행
+                    ....
+
+            var 변수 = 값;
+            let 변수 = 값;
+            const 변수 = 값;
+
+
+            함수(function) ?
+                프로그램에서 반복적으로 사용되는 기능을 만들어 내기 위한 코드들의 집합
+
+            선언적 함수의 형식
+                function(parameter매개변수, ...){
+                    코드;
+                    [return 반환값;] //함수 호출 문장으로 값을 반환, 또는 없으면 함수문 종료 기능
+                }
+        */
+
+        for (let i=1; i<=5; i++) {
+            document.write(`Hello, World! ${i} <br>`);
+            }
+
+        function fn(){
+            document.write(`I am the funtion "fn" <br>`);
+        }
+        /* 
+            선언적 함수의 호출 -> 함수명(인자);
+        */
+       fn();
+
+       let j=1;
+       while(j<=5){
+        fn();
+        j++;
+      }
+
+
+       compute(); //Hoisting: 선언 전에 끌어 올려 사용 가능(선언적 함수 또는 var 변수)
+
+       //example the case of variable 
+
+       console.log(num);
+       var num; // -> no error message
+
+       function compute(){
+        document.write('선언적 함수' + '<br>');
+       }
+
+       function computer() {
+           const x=10;
+           const y=100;
+           const result=x/y;
+           document.write(`result is ${result} <br> `);
+        }
+        computer();
+
+        /* 
+            익명(이름 없는) 함수 생성
+                const 변수 = function(){코드;};
+
+            Hoisting (X)
+
+            함수 호출
+                변수();
+        */
+
+        // click method
+        //객체.click(function(){}); //jquery
+        //click property
+        //객체.onclick=function(){}; //js
+
+        const compute1 = function(){
+            const x=0.5;
+            const y=10;
+            const product=x*y;
+            
+            document.write(`익명 함수 <br>`);
+            document.write(`${product} <br>`);
+        }
+        compute1();
+        
+        /* 
+        즉시 실행 함수 : 익명 함수의 한 가지로, 호출문이 없어 변수 선언이 필요 없음
+        (function(){})();
+        호출문 (x)
+        */
+       
+       (function() {
+           iife();
+        })();
+        
+        function iife() {
+            document.write(`즉시 실행 함수 1 <br>`);
+        }
+        
+        const instatn = (function(){  //[const instatn =] 생략 가능
+            document.write(`즉시 실행 함수 2 <br>`);
+        })();
+        </script>
+</body>
+</html>
