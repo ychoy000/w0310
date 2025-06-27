@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전역변수와 지역변수</title>
+</head>
+<body>
+  <script>
+    /* 
+      전역변수와 지역변수: 변수의 scope(어디서 선언하느냐)에 따라 나뉨
+        1. function level scope -> function(){block}
+          -> var 는 함수 블록에서만 지역 변수가 존재한다.
+        2. block level scope -> {block}
+          -> let, const 는 블록{}이나 제어문 블록{}에서도 지역 변수 선언 가능
+
+
+        - 전역변수는 블ㄹ록 밖에 선언 -> 안에서도 사용 가능
+          -> 변수 이름이 같으면 지역변수가 우선적으로 사용
+        - 지역변수는 블록 안에 선언 -> 밖에서는 사용 불가
+
+      const 변수1;
+      function 함수(){}
+      const 변수2
+      function 함수(){
+        const 변수3;
+        }
+    */
+/*     let i=10;
+    console.log('전역변수',i);
+    for (let i=5; i<6; i++){
+      console.log('지역변수 ' + i);
+    }
+    for (let i=0; i<1; i++){
+      console.log('지역변수 ' + i);
+    } */
+
+    // 함수의 전역 변수
+    var sum1=10;
+    function add1(){
+      console.log('함수 밖의 전역 ' + sum1); // undefined
+      sum1=22;
+      console.log('지역 ' + sum1); // var은 hoisting이 되므로(let, const는 안됨)
+      var sum1=33;
+      console.log('지역 재선언 ' + sum1);
+    }
+    add1();
+    console.log('전역최 ' + sum1);
+    
+    //함수의 지역변수
+    var sum2=30;
+    function add2(){
+      var sum2=47;
+      console.log('지역 '+ sum2);
+    }
+    add2();
+    console.log('전역 ' + sum2);
+
+    //블럭의 지역변수
+    var num1=50;
+    if (num1=== 50){
+      var num1=66;
+    }
+    console.log('전역 ' + num1);
+    let num2 = 70;
+    if (num2 === 70){
+      let num2 = 88;
+      console.log('지역' + num2);
+    }
+    console.log('잔역' + num2);
+
+/*     let kor=90;
+    function getScore(){
+      let kor = 100;
+      console.log('지역변수', kor);
+    }
+    getScore();
+    console.log('전역변수 ' + kor); //함수내에서 let을 안 쓰면 100
+    
+    let eng=90;
+    function getScore2(){
+      let eng = 100;
+      console.log('지역변수 eng is ', eng);
+    }
+    getScore2();
+    console.log('전역변수 eng is ' +eng); //함수내에서 let을 안 쓰면 100
+
+    var num=20;
+    {
+        var num=10; // num은 전역변수
+        console.log('num is ' +num);
+      }
+      console.log(num);
+
+    let num2=20; // num2 는 전역변수
+    {
+        let num2=10; // num2은 지역변수
+        console.log('num2 is ' + num2);
+      }
+      console.log(num2); // 전역변수 출력
+   
+      const num3=20; // num2 는 전역변수
+    {
+        const num3=10; // num2은 지역변수
+        console.log('num3 is ' + num3);
+      }
+      console.log(num3); // 전역변수 출력
+
+/*       var NUM = 10;
+      if (NUM === 10) {
+         var sum = 20; 
+      }
+      console.log('sum is ', sum);
+ */
+/*       let NUM2 = 10;
+      if (NUM2 === 10) {
+         let sum2 = 20; 
+      }
+      console.log('sum2 is ', sum2); // 에러 sum2는 지역 변수이므로 함수 블럭 밖에서 호출이 안된다.
+ */
+  </script>
+</body>
+</html>

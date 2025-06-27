@@ -35,7 +35,7 @@ img {
 .box_inner {
     width: 1050px;
     margin: 0 auto;
-    background: rgb(107, 127, 189);
+    background: rgba(255, 255, 189,0.3);
 }
 /* header */
 header {
@@ -47,6 +47,10 @@ header {
 }
 header .box_inner {
     height: 113px;
+}
+.logo {
+    width: 270px;
+    height: 40px;
 }
 /* section1 */
 .main_rolling_pc {
