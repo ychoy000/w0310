@@ -46,15 +46,14 @@ h1 {
     margin: 32px 0 32px;
 }
 .station_tab ul{
-    width: 1200px;
+    /* width: 1200px; */
     display: flex;
     margin: 0 auto;
 }
 .station_tab li {
-    width: 25%;
+    width: 300px;
     border: 1px solid #d5d5d5;
     text-align: center;
-    
     background: #f4f4f4; 
     padding: 12px;
     margin-bottom: 20px;
@@ -66,40 +65,99 @@ h1 {
 }
 .station_tab li:first-of-type {
     background: #572b4c;
-}
-.statiojn_tab li:first-of-type {
     color: #fff;
+}
+
+/* 역 전경 슬라이드 */
+.slide-container {
+    position: relative;
+    height: 500px;
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto; 
+    border: 1px solid #ccc;
+}
+.slider-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
 }
 .slide {
-    display: flex;
-    height: 550px;
-    width: 1200px;
-    margin: 0 auto; 
+  min-width: 850px;
+  height: 500px;
+  border-right: 1px solid #ccc;
 }
-.slide li+li {
-    display: none;
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  z-index: 1;
 }
-.btn img {
-    padding: 30px 0 0 200px;
-}
+.prev {left: 10px;}
+.next {right: 10px;}
+
+/* 오시는 길 */
 .come2us {
     background: darkblue;
-    display: flex;
-    height: 280px;
     color: #fff;
-}
-.bus_tago, .train_tago, car_tago {
-    width: 180px;
-    height: 180px;
     border: 1px solid red;
 }
+.come2us li span {
+    display: inline-block;
+    height: 180px;
+}
+
 .come2us img {
     width: 40px;
     height: 40px;
 }
+.come2us .tbox {
+  width: 180px;
+  background : #333;
+  color: #fff;   
+}
+.com2us .tcontext {
+    width: 1020px;
+}
+
+/* 주차시설 이용 정보 */
 .park_info {
     height: 400px;
 }
+/* 주차요금 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.intable {
+  margin: 0;
+  padding: 0;
+  
+}
+th, td {
+  width: 16.66%;
+  border: 1px solid #333;
+  text-align: center;
+}
+.c1, th {
+  background: #e0e0e0;
+  font-weight: 500;
+}
+.park_info p {
+  color: #de2a2a;
+  font-size: 12px;
+}
+
+.parkn {
+    margin-top: 50px;
+}
+
+/* 푸터 */
 footer {
     height: 300px;
     width: 100%;

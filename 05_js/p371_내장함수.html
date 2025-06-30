@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내장함수</title>
+  </head>
+  <body>
+    <script>
+      /* 
+      내장함수 : JS에 기본적으로 내장되어 있는 함수 (so 전역함수)
+        전역함수 : alert(), prompt(), setInterval(), confirm()
+
+      enCodeURIComponent() -> URI(Uniform Resource Identifier) encodeing
+        -> 인터넷 상에서 자원의 위치를 식별하는 고유 문자열
+        -> 영문, 숫자와 () - _ . ~ * ! 를 제외한 문자열 인코딩(0, 1)
+      decodeURIComponent() -> URI decodeing
+      
+      isNaN() -> nOT A nUMBER 여부 판별
+        -> 숫자가 아니면 true, 숫자이면 false
+
+      isFinite()
+        -> true if finite, false if infinite
+
+      Number() -> 숫자로 변환
+      parseInt() -> 숫자와 문자가 포함되어 있을 경우, 정수부분만 숫자로 변환
+      parseFloat() -> 숫자와 문자 포함시, 소수 부분까지 숫자로 변환
+      String() -> 문자열로 변환
+
+      eval() -> 문자를 JS code로 변경
+    */
+
+    // encoding/decodeing example
+    const encodeStr = 'javascript#$#345_-=*~';
+    console.log(encodeURIComponent(encodeStr));
+    const decodeStr = encodeURIComponent(encodeStr);
+    console.log(decodeURIComponent(decodeStr));
+
+    // 숫자, 문자 변환 함수
+      const num1 = '10';
+      if (!isNaN(num1)){
+        console.log(`숫자 ${num1}입니다.`);
+      } else {
+        console.log(`숫자 ${num1}는 숫자가 아님.`);
+      }
+
+      const num2=1/0;
+      if (isFinite(num2)){
+        console.log('Finte');
+      } else {
+        console.log('Infinite')
+      }
+
+      // 숫자, 문자 변환 함수
+      const num3 = '10';
+      console.log(Number(num3));
+      const num4='100px';
+      console.log(parseInt(num4));
+      console.log(Number(num4));
+      const num5 = '33.33%';
+      console.log(parseFloat(num5));
+      console.log(parseInt(num5));
+      const num6 = 10;
+      console.log(typeof num6);
+      console.log(typeof String(num6));
+
+      //JS code change function
+      const str1='var num7 = 10';
+      const str2='var num8 = 20';
+      eval(str1);
+      eval(str2);
+      //console.log(str7 + str8);
+      console.log(num7 + num8);
+  
+    
+    </script>
+  </body>
+</html>

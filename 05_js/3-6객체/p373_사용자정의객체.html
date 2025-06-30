@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사용자정의 객체</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <script>
+    /* 
+      객체(Object)
+        데이터 값을 필요한 대로 만들어 사용
+        데이터는 '이름:값'의 쌍으로 이루어져 있다.
+        -> 이것을 속성(properties)이라고 한다.
+
+        사용자 정의 객체 형식: 
+          {이름1: 값1, 이름2: 값2, ....}
+          const 변수 = {
+            속성: 값, 
+            메서드: funciton(){},
+            이름: 값, 이름: 값, ....
+            }
+
+        const person = {
+          name: 'GilDong Hong';
+          age: 20;
+          nationality: 'KOR';
+          ...}
+
+
+          예약어 : this, true, false, if, for, whiel, do, break, continue, 
+
+        1. 사용자 정의 객체
+          object literal 객체 리터럴
+          object constructor function 객체 생성자 함수
+          class(ES6~)
+
+        2. 내장 객체: window, document, console, Number, Array, String, Math, Date, RegExp, ...
+
+      변수
+        데이터 값을 하나 밖에 저장 못한다.
+          변수1=값1;
+
+      객체 생성
+        const person = {
+         name: '홍길동',...
+         }
+
+      객체 사용
+        console.log(person.name);
+        console.log(person.메서드());
+
+    */
+
+    /* const person = { name: '홍길동',
+      age:20,
+    }
+    aboutMe: function(){alert('나는 20살 홍길동입니다.')}
+    console.log(person.aboutMe());
+     */
+
+     const info={
+      subject: 'css',
+      credit: 1,
+      printOut: function(){
+        return this.subject + ',' +info.credit + '학점';
+      }
+     };
+
+     console.log(info.subject);
+     console.log(info.credit);
+     console.log(info.printOut());
+
+
+  </script>  
+</body>
+</html>
