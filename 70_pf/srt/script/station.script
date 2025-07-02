@@ -1,6 +1,6 @@
 $(document).ready(function(){
   let currentIndex = 0;
-  const slideWidth = $('.slide').outerWidth();
+  const slideWidth = $('.slide').width();
   const slideCount = $('.slide').length;
   
   $('.next').click(function(){

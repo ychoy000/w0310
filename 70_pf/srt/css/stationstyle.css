@@ -7,6 +7,7 @@ padding, margin 설정으로 인한 박스 크기 변경시 맞추기 위해 조
 * body {box-sizing: border-box;} */
 body, h1, h2, ul, p {
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -28,35 +29,37 @@ header {
     background: #777;
 }
 .bar_title {
-    height: 70px;
+    height: 50px;
+    line-height: 50px;
     background: #572b4c;
     color: #fff;
     font-size: 24px;
     font-weight: 700;
     text-align: center;
-    padding-top: 28px;
+    margin: 0 auto;
 }
 .station_container {
     width: 1200px;
     margin: 0 auto;
+    background: cyan;
 }
 h1 {
     text-align: center;
     font-size: 40px;
-    margin: 32px 0 32px;
+    margin-top: 32px;
 }
-.station_tab ul{
-    /* width: 1200px; */
+.station_tab>ul {
     display: flex;
-    margin: 0 auto;
+    
 }
 .station_tab li {
-    width: 300px;
+    width: 25%;
+    height: 40px;
+    line-height: 40px;
     border: 1px solid #d5d5d5;
     text-align: center;
     background: #f4f4f4; 
-    padding: 12px;
-    margin-bottom: 20px;
+    margin: 32px 0 20px;
 }
 .station_tab a {
     font-size: 18px;
@@ -69,37 +72,42 @@ h1 {
 }
 
 /* 역 전경 슬라이드 */
+.station_slide {
+    width: 100%;
+}
 .slide-container {
-    position: relative;
-    height: 500px;
-    width: 1200px;
-    overflow: hidden;
-    margin: 0 auto; 
     border: 1px solid #ccc;
+    position: relative;
+    margin: 50px auto; 
+    overflow: hidden;
+}
+.slide_inner {
+    width: 850px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 .slider-track {
     display: flex;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 .slide {
-  min-width: 850px;
-  height: 500px;
-  border-right: 1px solid #ccc;
+    min-width: 850px;
+    height: 500px;
+    border-right: 1px solid #ccc;
 }
 
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0,0,0,0.5);
+  width: 75px;
+  height: 95px;
   color: white;
   cursor: pointer;
   z-index: 1;
 }
-.prev {left: 10px;}
-.next {right: 10px;}
+.prev {left: 30px;}
+.next {right: 30px;}
 
 /* 오시는 길 */
 .come2us {
@@ -159,6 +167,7 @@ th, td {
 
 /* 푸터 */
 footer {
+    position: absolute;
     height: 300px;
     width: 100%;
     background: #ccc;

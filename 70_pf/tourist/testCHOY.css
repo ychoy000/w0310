@@ -32,21 +32,22 @@ img {
     vertical-align: top;
 }
 /* common */
-.box_inner {
-    width: 1050px;
-    margin: 0 auto;
-    background: rgba(255, 255, 189,0.3);
-}
+
 /* header */
 header {
     z-index: 9999;
     width: 100%;
     background: #9c9c9c;
-    position: absolute;
-    background: #8151ce;
+    /* position: absolute; */
+}
+.box_inner {
+    width: 1050px;
+    margin: 0 auto;
+
 }
 header .box_inner {
     height: 113px;
+    background: #8151ce;
 }
 .logo {
     width: 270px;
@@ -54,7 +55,8 @@ header .box_inner {
 }
 /* section1 */
 .main_rolling_pc {
-    height: 650px;
+    margin: 30px auto;
+    height: 600px;
     background: rgb(255, 36, 3);
 }
 /* section2 */
@@ -87,7 +89,7 @@ header .box_inner {
  }
 /* section3 */
 .appbbs_area {
-    height: 256px;
+    height: 356px;
     padding: 10px 0 136px;
     background: orange;
 }

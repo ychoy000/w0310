@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내장객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      /* 
+        내장객체
+          1. Number
+          2. String
+          3. Array(very important)
+          4. Math
+          5. Date
+          6. RegExp
+        ...
+      */
+      /* 
+        Number 객체
+          const 변수 = 객체(값);
+        
+          객체.toFixed(n) -> 반올림한다
+          객체.toString(n) -> n 진수로 변환한다.
+
+        String 객체
+          const 객체 = 객체(값)
+
+        속성
+          length -> 문자열의 갯수
+
+        메서드(index)
+          charAt() -> index에 해당하는 문자 출력
+          indexOf()
+          lastIndexOf()
+          includes()
+          subtring()
+          substr()
+          split()
+          replace()
+          concat()
+          trim()
+          toLowerCae()
+          toUpperCase()
+      */
+
+      const num1 = new Number(328.478);
+      const num2 = 328.875;
+      console.log(num1);
+      console.log(num2);
+
+      num = 328.575;
+
+      //반올림
+      console.log(num1.toFixed());
+      console.log(num2.toFixed(0));
+      console.log(num2.toFixed(1));
+      console.log(num2.toFixed(2)*10000/10000); // 반올림 안됨, check
+      console.log(num1.toString(12));
+      console.log(num2.toString(2));
+      
+      //소수점 계산에 대한 문제점과 해결방법
+      const num4 = 46000*0.7;
+      console.log(num4.toFixed(4));
+      console.log(46000*(0.7*10)/10);
+
+      // 진법 변환
+
+      const str1 = new String('Java script');
+      const str2 = 'java-script';
+
+      console.log(str1);
+      console.log(str2);
+      console.log(str1.length);
+      console.log(str2.length);
+      console.log(str2.toString(12));
+      
+      // chatAt
+      console.log(str2.charAt(4));
+      // indexOf
+      console.log(str1.indexOf('a '));
+      // lastIndexOf
+      console.log(str1.lastIndexOf('av'));
+      // includes() -> (ES6~) if includes true, otherwise false
+      console.log(str1.includes(' '));
+      // substring(index1, [index2])
+      //substr(index, length)
+      //  -> a 만 지정한 경우
+      //  -> idx1로부터 끝까지 문자열 반환
+      str3='http://icoxpublish.com';
+      console.log(str3.substring(11,9));
+      console.log(str3.substr(0,9));
+            //split()
+      const str4='javascript-JQuery';
+      const division = str4.split('-');
+      console.log(division[0] + ', ' +division[1]);
+      
+      /* 
+        배열 생성
+          const 배열 = [값1, 값2, ...];
+
+        배열 참조
+          배열[index]
+          -> index는 0, 1, 2, ...
+      */
+
+      
+      </script>
+  </body>
+</html>

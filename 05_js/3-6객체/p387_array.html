@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+</head>
+<body>
+  <script>
+    /* 
+      Array 객체
+        객체 리터럴 방식으로 변수에 데이터 값을 필요한 대로 저장할 수 있다.
+        객체 리터럴은 데이터 값을 '이름: 값'으로 저장하는 반면
+          const obj = {
+            이름: 값,
+            이름: 값,
+            메서드: function(){},
+            ...
+          }
+        배열은 저장된 값에 자동으로 index를 부여한다.
+          const arr = [값1, 값2, 값3]
+          -> 값에는 모든 변수가능: 문자, 숫자, 객체, Bool, function(), {}, []
+        배열 참조
+          변수[index]
+           -> index는 0, 1, 2, ...
+        속성
+          length -> 배열 값의 개수
+        메서드
+          slice()
+          join()
+          concat()
+          toString()
+          shift()
+          pop()
+          push()
+          splice()
+          reverse()
+          sort()
+
+    */
+
+    // 문자 생성
+    const str1 = new String('Java script'); //new 는 복제본, instance
+      const str2 = 'java-script';
+
+      console.log(str1);
+      console.log(str2);
+      console.log(typeof str1);
+      console.log(typeof str2);
+
+    //배열 생성
+      const arr1 = new Array(10, 30, 'javascript', 'jQuery');
+      const arr2 = [10, 30, 'javascript', 'jQuery'];
+      console.log(arr1);
+      console.log(arr2);
+      console.log(typeof arr1);
+      console.log(typeof arr2);
+      
+      // 배역 참조
+      console.log(arr1[0]);
+      console.log(arr1[1]);
+      console.log(arr1[2]);
+      console.log(arr1[3]);
+
+      const info = [45, 11, 7, 32, 20, 10];
+      info.sort(function(a, b){
+        return a-b;  // a, b 두 개씩 비교하여 빼서 양수면 앞뒤 교체, 음수면 그대로 - 방식으로 진행
+      });
+
+      // 삽입 정렬, 
+      // 오름차순 정렬
+      console.log(info.toString());
+  </script>
+</body>
+</html>
