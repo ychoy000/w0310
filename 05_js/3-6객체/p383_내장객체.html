@@ -37,10 +37,12 @@
           indexOf()
           lastIndexOf()
           includes()
-          subtring()
-          substr()
-          split()
-          replace()
+          subtring(index1, index2)
+          substr(index, length)
+          split('separator')
+            -> 'Javascript jQuery' -> 
+
+          replace(serachValue, replaceValue)
           concat()
           trim()
           toLowerCae()
@@ -98,6 +100,15 @@
       const division = str4.split('-');
       console.log(division[0] + ', ' +division[1]);
       
+      const str5 = 'm_out.png';
+      //replace(serachValue, replaceValue);
+      console.log(str5.replace('out', 'over'));
+      /* 
+       split('separator')
+
+        ex. 'user_id=hong&user_pw=1234'
+        -> split(&) -> [user_id=hong, user_pw=1234]
+      */
       /* 
         배열 생성
           const 배열 = [값1, 값2, ...];
@@ -106,7 +117,22 @@
           배열[index]
           -> index는 0, 1, 2, ...
       */
+      //concat()
+      const str6='NAV';
+      const str7 = 'bg';
+      console.log(str6.concat(str7));
 
+      // trim() -> 앞뒤 공백 제거, 중간공백은 제거 못함
+      let str8 = '   remo   ve';
+      console.log(str8);
+      console.log(str8.length);
+      console.log(str8.trim().length);
+      str8=str8.trim();
+      console.log(str8.trim().length);
+      console.log(str8);
+
+      //toUpperCae()
+      console.log(str8.toUpperCase());
       
       </script>
   </body>

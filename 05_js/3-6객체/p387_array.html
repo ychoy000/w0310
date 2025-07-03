@@ -28,23 +28,99 @@
         메서드
           slice()
           join()
-          concat()
-          toString()
+          concat() -> 배열 연결
+          toString() -> 문자열로 변환
           shift()
           pop()
           push()
           splice()
+
           reverse()
-          sort()
+          sort(){}
 
+          forEach() -> 반복문의 역할
+          map()
+          filter()
+
+        제어문
+          for~of (ES6~)
+
+          iterable 
+            배열, 문자열
+            Set, Map 과 같은 데이터 유형
+
+          for (let 변수 of iterable) {
+            code
+            }
+
+      콜백함수
+        -> 함수의 매개변수로 전달되어 반복적으로 실행되는 함수
+        forEach(function(var,idx,arr){
+        code
+        })
     */
+    //forEach()
 
+    //const nums = ['일','이','삼'];
+    const nums = [1,2,3];
+    nums.forEach(function(value, index, array){
+      console.log('forEach===========');
+      console.log(value);
+      console.log(index);
+      console.log(array);
+    })
+
+    let sum = 0;
+    nums.forEach(function(value) {
+      return sum += value;
+    })
+    console.log(sum);
+
+
+    const str = 'script';
+      for (let i of str){
+        console.log(i);
+      }
+      const city = ['서울', '대구', '대전', '부산'];
+      for (let i of city){
+        console.log(i);
+      }
+
+      for (let i in city){
+        console.log(i); //index numbers
+        console.log(city[i]); //actual vALUES
+      }
+      for (let i of city){
+        console.log(i); //index numbers
+        console.log(city[i]); //actual vALUES
+      }
+
+      const person = {
+        name: '홍길동',
+        age: 20,
+        isBig: false,
+        printOut: function() {
+          console.log(this);
+          console.log(`나는 ${person.name} 입니다.`);
+        }
+      };
+
+      for (let i in person){
+        console.log(i);
+        console.log(person.name);
+        console.log(person['name']);
+      }
+      for (let i of person){
+        console.log(i);
+        console.log(person.name);
+        console.log(person['name']);
+      }
     // 문자 생성
     const str1 = new String('Java script'); //new 는 복제본, instance
       const str2 = 'java-script';
 
       console.log(str1);
-      console.log(str2);
+      console.log(str2.length);
       console.log(typeof str1);
       console.log(typeof str2);
 

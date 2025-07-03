@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Replace</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+</head>
+<body>
+  <div>
+    <img src="https://picsum.photos/id/400/200/300" alt="lorem1">
+    <a href="#">pager1</a>
+    <a href="#">pager2</a>
+    <a href="#">pager3</a>
+  </div>
+  <script>
+    /* 
+      css -> CSS 속성
+      attr -> HTML 속성
+
+      css({속성})
+        getter -> attr({property})
+        setter -> attr({property: value})
+        */
+   let currentPath; //'https://picsum.photos/id/400/200/300';
+   let currentImgNum; //400
+   
+   function pager(i){
+    currentPath = img.attr('src');
+    currentImagNum = currentPath.substr(25,3);
+    for (let i; i<3; i++){replace(currentImgNum, i+400);}
+   }
+   const img = $('img');
+   const btn = $('a');
+   let result = img.attr('src');
+   console.log(result);
+    console.log(str5.replace('400','401'));
+
+    btn.eq(0).click(function(){
+      concole.log('400눌렀나?');
+      str5.replace(num, '400')
+    })
+    btn.eq(1).click(function(){
+      concole.log('401눌렀나?');
+      ;
+      img.attr('src', str5.replace(num, '401'));
+    })
+    btn.eq(2).click(function(){
+      concole.log('402눌렀나?');
+      str5.replace(num, '402');
+      img.attr('src', str5.replace(num, '401'));
+    })
+  </script>
+</body>
+</html>
