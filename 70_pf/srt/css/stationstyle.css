@@ -1,11 +1,14 @@
 @charset "utf-8";
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+@import url("reset.css");
+@import url("sub.css");
+@import url("header.css");
 
 /*
 padding, margin 설정으로 인한 박스 크기 변경시 맞추기 위해 조정
 
 * body {box-sizing: border-box;} */
-body,
+/* body,
 h1,
 h2,
 ul,
@@ -26,9 +29,9 @@ ul {
 a {
   text-decoration: none;
   color: #333;
-}
+} */
 header {
-  height: 140px;
+  height: 400px;
   width: 100%;
   background: #777;
 }
@@ -44,7 +47,7 @@ header {
 }
 .station_container {
   width: 1200px;
-  height: 2400px;
+  height: 2400px;/*  */
   margin: 0 auto;
 }
 h1 {
@@ -57,19 +60,19 @@ h1 {
 }
 .station_tab li {
   width: 25%;
-  height: 40px;
+  height: 50px;
   line-height: 40px;
   border: 1px solid #d5d5d5;
   text-align: center;
   background: #f4f4f4;
-  margin: 32px 0 20px;
+  font-size: 18px;
 }
 .station_tab a {
   font-size: 18px;
   font-weight: 700;
   color: #666;
 }
-.station_tab li:first-of-type {
+.station_tab .on {
   background: #572b4c;
   color: #fff;
 }

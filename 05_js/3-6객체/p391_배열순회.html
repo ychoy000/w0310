@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열순회</title>
+  </head>
+  <body>
+    <script>
+      /* 
+        배열 순회
+
+        반복문
+          for ~of (ES6)
+          for~in
+
+          형식:
+            for(let idx in array){
+              // 배열 요소만큼 반복
+            }
+            for(let value of iterable){
+              // 배열 요소만큼 반복
+            }
+
+            iterable: collection(Set, Map), array, string
+
+        메서드
+          배열, forEach(val, [idx], [arr])
+          map()
+          filter()
+*/
+const city = ['서울', '대구', '대전', '부산'];
+  const str = 'script';
+      for (let i of str){
+        console.log(i);
+      }
+      for (let i of city){
+        console.log(i);
+      }
+
+      for (let i in city){
+        console.log(i); //index numbers
+        console.log(city[i]); //actual vALUES
+      }
+      for (let i of city){
+        console.log(i); //index numbers
+        console.log(city[i]); //actual vALUES
+      }
+    </script>
+  </body>
+</html>

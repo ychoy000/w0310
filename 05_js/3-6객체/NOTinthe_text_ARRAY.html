@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-mail></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input,
+        button {
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+        // copied from class notes
+
+    <h2>이메일 등록</h2>
+
+    <form>
+        <!-- 이메일 입력 필드 -->
+        <input type="email" id="emailInput" placeholder="이메일 입력" required>
+
+        <!-- 등록 버튼 -->
+        <button type="button" onclick="checkEmail()">등록</button>
+    </form>
+
+    <!-- 메시지 출력 -->
+    <div id="message"></div>
+
+    <script>
+        // 클래스 내부 - set, get
+        // 컬렉션 객체 - Set(), Map() -> ver.ES6
+        // 🔹 1. 기존 등록된 이메일 목록을 Set으로 관리
+        const registeredEmails = new Set();
+        console.log('registeredEmails=' + registeredEmails);
+
+        // 🔹 2. 버튼 클릭 시 실행되는 함수
+        function checkEmail() {
+            // 📌 1. 입력값 가져오기
+            const input = document.getElementById("emailInput");
+            const email = input.value.trim().toLowerCase(); // 공백 제거 + 소문자로 통일
+
+            const messageDiv = document.getElementById("message");
+
+            // 📌 2. 입력값이 비었는지 확인
+            if (email === "") {
+                messageDiv.textContent = "이메일을 입력하세요.";
+                messageDiv.style.color = "red";
+                // 현재 함수를 벗어난다.
+                return;
+            }
+
+            // 📌 3. 중복 체크
+            // 객체.has(값) -> 객체가 값을 가지고 있으면 true, 아니면 false
+            if (registeredEmails.has(email)) {
+                messageDiv.textContent = "❌ 이미 등록된 이메일입니다.";
+                messageDiv.style.color = "red";
+            } else {
+                // 객체.add(값) -> 객체에 값을 추가
+                registeredEmails.add(email); // Set에 추가
+                messageDiv.textContent = "✅ 등록되었습니다.";
+                messageDiv.style.color = "green";
+                input.value = ""; // 입력창 초기화
+            }
+
+            // 🔍 콘솔에서도 확인 가능
+            console.log("현재 등록된 이메일 목록:", Array.from(registeredEmails));
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!--     <h2>E-mail 등록</h2>
+    <form>
+      <input type="email" id ="enmailInput" placeholder="input email" />
+      <button type="submit"  onclick="checkEmail" >등록</button>
+    </form>
+    <script>
+      //(ES6~) 컬렉션 객체 - Set(), Map()
+      // 1. 기존 등록된 이메일 목록을 Set으로 관리
+
+      const registeredEmails = new Set();
+
+      // 2. 버튼 클릭 시 실행되는 함수
+      function checkEmail(){
+        // 1. 입력값 가져오기
+        const input = document.getElementById("emailInput");
+        const email = input.value.trim().toLowerCase();
+
+        const messageDiv.style.color = 'red';
+        return;
+
+        //2. 입력값이 비었는지 확인
+        if (email ===""){
+          messageDiv.textContent = '에메일을 입력하세요.';
+          messageDiv.style.color = "blue";
+          return;
+
+          // 3. 중복 체크
+          // OBJ.has(value) -> 객체가 값을 가지고 있으면 true, otherwise false
+          if(registeredEmails.has(email)){
+            messageDiv.tectContent = " 이미 등록되었습니다.";
+            messageDiv.style.color = "green";
+            input.value = ""; // 입력창 초기화
+          }
+        }
+      } 
+    </script>
+  </body>
+</html> -->
