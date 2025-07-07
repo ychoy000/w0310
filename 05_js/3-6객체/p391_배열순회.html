@@ -11,7 +11,7 @@
         배열 순회
 
         반복문
-          for ~of (ES6)
+          for~of (ES6)
           for~in
 
           형식:
@@ -29,7 +29,7 @@
           map()
           filter()
 */
-const city = ['서울', '대구', '대전', '부산'];
+/* const city = ['서울', '대구', '대전', '부산'];
   const str = 'script';
       for (let i of str){
         console.log(i);
@@ -46,6 +46,45 @@ const city = ['서울', '대구', '대전', '부산'];
         console.log(i); //index numbers
         console.log(city[i]); //actual vALUES
       }
-    </script>
+ */
+
+      const base = [10,20,30];
+      base.map(function(value, index, array){
+        console.log(value);
+        console.log(index);
+        console.log(array);
+      });
+      
+      console.log('============map2 ========');
+      let area = base.map(function(value){
+        return value*4;
+      });
+      console.log(area);
+      
+      console.log('============= forEach2 ====');
+      area = base.forEach(function(value){
+        return value*8;
+      })
+      console.log(area);
+      
+      /* 
+      filter()
+      조건에 맞는 배열 요소들만 새로운 배열로 만들어 준다.
+      */
+     console.log('========filter=====');
+     const data = ['javascript', 20, 30, 'jquery'];
+     data.filter(function(value, index, array){
+       console.log(value);
+       console.log(index);
+       console.log(array);
+            });
+      const num = data.filter(function(){
+      // data 의 배열 값 중 숫자 데이터만 num 변수의 배열로 만들어 준다.
+      //const num = data.map(function(){
+        return typeof value === 'number';
+      })
+      console.log(num.toString());
+      console.log(num);
+        </script>
   </body>
 </html>

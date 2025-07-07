@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Object</title>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <h1>Digital Clock</h1>
+    <p id="clock"></p>
+
+    <script>
+      const clock = $('#clock');
+      
+      function digitalClock(){
+        const date = new Date();
+
+        clock.text(date.toLocaleString());
+      }
+
+      /* 
+        Date 객체 : 날짜와 시간에 대한 정보 값을 얻거나 설정한다.
+
+        const date = new Date();
+        const date = new Date('년/월/일'); //예) const date = new Date('2025-07-07'); 
+        const date = new Date('년,월,일,시,분,초,밀리초');
+
+        Method
+          getFullYear()
+          getMonth()
+          getDate()
+          getDay()
+          getHours()
+          getMinutes()
+          getSeconds()
+          getMilliseconds()
+          getTime()
+          ...
+          setTime()
+          ...
+          toString()
+          ...
+      */
+
+      //const dateObj = new Date(2025,5,31,10,30);
+      const dateObj = new Date();
+      const dateInfo = {
+        year: dateObj.getFullYear(),
+        month: dateObj.getMonth() + 1, // start from 0
+        date: dateObj.getDate(),
+        day: dateObj.getDay(), // 0=Sunday, 6=Sat
+        hours: dateObj.getHours(),
+        minutes: dateObj.getMinutes(),
+        nowUTCDate: dateObj.toUTCString(), // UTC  국제표준시
+        nowLocaleTime: dateObj.toLocaleTimeString(), 
+      }
+      for(let i in dateInfo){
+        console.log(i+':'+dateInfo[i]);
+      }
+
+      const today = new Date(2025,9,1);
+      const afterDay = new Date(2026, 9, 1);
+      const diffDay = afterDay.getTime() - today.getTime();
+      console.log(diffDay);
+      const willDay = Math.ceil(diffDay/1000/60/60/24);
+      console.log(willDay + '일');
+  </script>
+  </body>
+</html>
