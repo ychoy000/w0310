@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>탭별 이미지 표시 (Picsum)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 40px;
+    }
+
+    .route_container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      margin-right: 5px;
+      background-color: #f0f0f0;
+      transition: background-color 0.2s ease;
+    }
+
+    .tab:hover {
+      background-color: #ddd;
+    }
+
+    .tab.active {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    .image-container img {
+      display: none;
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    .image-container img.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="route_container">
+    <div class="tab active" data-index="0">경로 1</div>
+    <div class="tab" data-index="1">경로 2</div>
+    <div class="tab" data-index="2">경로 3</div>
+    <div class="tab" data-index="3">경로 4</div>
+    <div class="tab" data-index="4">경로 5</div>
+  </div>
+
+  <div class="image-container">
+    <img src="https://picsum.photos/id/1015/600/300" class="active" alt="이미지 1">
+    <img src="https://picsum.photos/id/1025/600/300" alt="이미지 2">
+    <img src="https://picsum.photos/id/1035/600/300" alt="이미지 3">
+    <img src="https://picsum.photos/id/1045/600/300" alt="이미지 4">
+    <img src="https://picsum.photos/id/1055/600/300" alt="이미지 5">
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const images = document.querySelectorAll('.image-container img');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const index = tab.getAttribute('data-index');
+
+        // 탭 활성화 전환
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // 이미지 표시 전환
+        images.forEach(img => img.classList.remove('active'));
+        images[index].classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
+
