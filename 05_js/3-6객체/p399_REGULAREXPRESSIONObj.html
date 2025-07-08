@@ -48,9 +48,44 @@
             하나의 문자를 검색한다. 만약 '마침표' 문자 그대로의 의미를 사용할 경우 '\.'으로 표현해야 한다.
           \w 알파벳, 숫자, _를 검색한다.
           \W 알파벳, 숫자, _를 제외하고 검색한다.
-          
-
+          \d 숫자를 검색
+          \D 숫자를 제외하고 검색
+          \s 하나의 공백을 검색
+          \S 공백을 제외하고 검색
+          ^  행의 첫 문자가 일치해야 함을 의미
+          $  행의 끝 문자가 일치해야 함을 의미
+          *  앞의 문자가 0번 이상 반복을 의미
+              /a*b/ -> 'b', 'ab', 'aab', 'aaaab'
+          +  앞의 문자가 1번 이상 반복을 의미
+              /a+b/ -> 'ab', 'aab', ....
+          ?  앞의 문자가 0번 또는 1번 의미
+              /a?b/ -> 'b', 'ab'
+          {} /\d{3}/ -> 숫자 3개를 의미
+          {} /\d{3,5}/ -> 숫자 3~5개를 의미
+          {} /\d{3,}/ -> 숫자 3개 이상을 의미
+          a|b a or b
+          (abc) 그룹화를 의미
+       
       */
+     const gum = /(abc)/;
+     bum = 'ab09fg';
+     console.log(gum.test(bum));
+
+      const hpReg = /^\d{10,11}$/;
+      // 행의 첫 문자 일치, 영문자/숫자/!#&^&* 중 하나와 _ - 를 1번 이상 반복(+)
+      const emailReg = /^[A-Za-z0-9!#$%^&*_-]+@[A-Za-z0-9_-]+(\.[A-Za-z0-9_-]+){1,2}$/;
+      const hp1 = '010123456';
+      const hp2 = '01012345678';
+      const email1 = 'abc&1_23&A-BC@icox';
+      const email2 = 'abc&1_23&A-BC@icox.com';
+      const email3 = 'abc&1_23&A-BC@icox.co.kr';
+      const email4 = 'abc&1_23&A-BC@icox.abc.co.kr';
+      console.log(hpReg.test(hp1));
+      console.log(hpReg.test(hp2));
+      console.log(emailReg.test(email1));
+      console.log(emailReg.test(email2));
+      console.log(emailReg.test(email3));
+      console.log(emailReg.test(email4));
     </script>
   </body>
 </html>

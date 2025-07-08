@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Event</title>
+  </head>
+  <body>
+    <button onclick="sum(n);" id="bt">클릭</button>
+   
+    <script>
+
+    
+      function sum(n) {
+        alert(n);
+      }
+      function view() {
+        console.log('view');
+      }
+
+/*       document.getElementById('bt').onclick = function(){
+        sum(10);
+      };
+ */
+      const bt = document.getElementById('bt');
+      //익명 함수
+      /* bt.onclick = function(){
+        console.log('view');
+      };
+ */
+      // 화살표 함수
+      bt.onclick = () => console.log('good');
+      //기본 이벤트 모델로 함수를 호출할 때는 함수에 ()를 붙이지 않는다.
+      bt.onclick=view;
+      /* 
+        기본 이벤트 모델
+          HTML 요소를 취득한 후 
+            document.getElementById('ID')
+            document.querySelector('선택자')
+            document.getElementByClassName('class')
+            document.getElementByTagName('Tag name')
+            document.querySelectorAll('선택자')
+        이벤트를 '객체의 메서드(속성)' 형식으로 연결
+          객체.메서드 = function(){};
+          객체.메서드 = ()=>{};
+
+        JQuery
+          HTML 요소를 취득한 후
+            $('선택자')
+          이벤트를 '객체의 메서드' 형식으로 연결
+            객체.메서드(function(){});
+            객체.메서드(()=>{});
+      */
+/* 
+    이벤트 모델
+      1. 인라인
+        html 요소에 직접 이벤트를 연결하는 방식
+      2. 기본
+        html 요소를 취득한 후
+        이벤트를 객체의 메서드 형식으로 연결하는 방식
+      3. 표준
+        addEventListener() 메서드를 이용하여 연결하는 방식
+ */
+    </script>
+  </body>
+</html>

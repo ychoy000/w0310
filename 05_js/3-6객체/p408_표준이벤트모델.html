@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Standard Event</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <button id="bt";>CLICK</button>
+    <button id="bt2";>CLICK</button>
+
+    <script>
+      /* 
+        표준 이벤트 모델 : 객체에 동일한 이벤트가 여러번 적용할 수 있다.
+          객체.addEventListener('이벤트', 함수);
+      */
+      const bt=document.getElementById('bt');
+      const bt2=document.getElementById('bt2');
+
+      // 기본 이벤트 모델: 객체에 동일한 이벤트가 한번만 적용되는 반면
+      // ,bt.onclick = function(){
+      // console.log('ok');
+      //}
+
+      function view(){
+        console.log('view');
+      }
+
+      bt.addEventListener('click',function(){
+        console.log('ok');
+      })
+
+      bt2.addEventListener('click',view);
+
+      window.onload = function(){
+        console.log('ok1');
+      }
+      window.onload = function(){
+        console.log('ok2');
+      }
+
+      funciton win1(){
+        console.log('ok3');
+      }
+
+      funciton win2(){
+        console.log('ok4');
+      }
+
+      addEventListener('load', win1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Obj</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<style>
+  div {
+    height: 100px;
+    background: #ccc;
+    margin-top: 20px;
+  }
+</style>
+<body>
+  <button id="bt">클릭</button>
+  <div id="area">여기는 마우스 왼쪽, 가운데, 오른쪽 버튼 클릭</div>  
+  <script>
+    const bt = document.getElementById('bt');
+    const area = document.getElementById('area');
+    bt.onclick = function(event){
+      console.log(event.target);
+      console.log(event.type);
+      console.log(event.clientX);
+      console.log(event.clientY);
+      console.log(event.screenX);
+      console.log(event.screenY);
+    };
+
+    area.onmousedown = function(event){
+      console.log(event.button)
+    }
+    /* 
+      이벤트 객체: event
+        익명 함수의 매개 변수(parameter) event가 이벤트 객체이다.
+        event를 줄여서 e 로 많이 쓴다.
+
+        bt.onclick= function(event){
+          event.속성 = 값;
+          event.메서드();
+        };
+
+      속성
+        teget
+        type
+        clientX
+        clientY
+        screenX
+        screenY
+        button
+      
+      메서드
+        preventDefault()
+        stopPropagation()
+    */
+
+
+  </script>
+</body>
+</html>
