@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>노선안내</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/header.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/ticket-1.css" />
+    <link rel="stylesheet" href="../css/routemap.css"/>
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/footerstyle.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="/w0310/70_pf/srt/script/sub.js"></script> -->
+    <script src="../script/routemap.js"></script>
+  </head>
+
+  <body>
+    <!--    헤더  -->
+
+    <!-- 노선 안내 서브 페이지 -->
+    <div class="bar_title">노 선 안 내</div>
+
+    <div class="route_container">
+      <div class="route_tabs">
+        <div class="tab active" data-index="0">전체노선</div>
+        <div class="tab" data-index="1">경부선</div>
+        <div class="tab" data-index="2">호남선</div>
+        <div class="tab" data-index="3">전라선</div>
+        <div class="tab" data-index="4">경전선</div>
+        <div class="tab" data-index="5">동해선</div>
+      </div>
+      <!-- end of .route_tabs -->
+
+      <div class="map_container">
+        <img
+          src="../images/routemap/allroutes.png"
+          class="active"
+          alt="전체노선"
+        />
+        <img src="../images/routemap/kyongbu.png" alt="경부선" />
+        <img src="../images/routemap/Honam.png" alt="호남선" />
+        <img src="../images/routemap/Jolla.png" alt="전라선" />
+        <img src="../images/routemap/kyongjon.png" alt="경전선" />
+        <img
+          src="../images/routemap/EastSeaLine.png"
+          alt="동해선"
+        />
+      </div>
+      <!-- end of .map_container -->
+
+      <!-- MAP LEGEND -->
+      <div class="map_legend">
+        <ul>
+          <li>
+            <img src="../images/routemap/SR.png" alt="SR" />SR
+          </li>
+          <li>
+            <img
+              src="../images/routemap/korail.png"
+              alt="koail"
+            />코레일
+          </li>
+          <li>
+            <img
+              src="../images/routemap/common.png"
+              alt="common"
+            />공용역
+          </li>
+        </ul>
+      </div>
+      <!-- end of .map_legend -->
+    </div>
+    <!-- end of .route_container -->
+
+    <!-- 푸터 -->
+
+  </body>
+</html>
