@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window Obj</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    #popup {
+      position: fixed;
+      top: 96px;
+      left: 520px;
+      width: 400px;
+      height: 500px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 8px #777;
+    }
+    #popup button {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+    }
+  </style>
+  <body>
+    <div id="popup">
+      <iframe src="https://ychoy000.github.io/w0310/70_pf/vgood_travel/draft_very_good_travel.html" ></iframe>
+      <button type="button" id="popup_btn">닫기</button>
+    </div>
+    <script>
+      /* 
+      BOM(Browser Object Model)
+        객체
+          window
+            location
+            screen
+            history
+            navigation
+            document
+      */
+     /* 
+      window 객체
+        메서드
+          alert()   경고창
+          prompt()  입력창
+          confirm() 확인창
+          open()    새로운 창(팝업창)을 만든다
+          setInterval(함수, 시간)
+            -> 시간 간격으로 함수를 반복(자주 사용할 것)
+     */
+
+    //  window.open('URL', '윈도우 이름', '옵션=값, 옵션=값, ...');
+    // 옵션 : width, height, left, top, (다음은 무시됨) location, scrollbars, menubar, toolbar, status
+    //        =숫자   =숫자   =숫자 =숫자 (           )=yes|no =yes|no     =yes|no   =yes|no =yes|no
+     window.open('https://ychoy000.github.io/w0310/70_pf/vgood_travel/draft_very_good_travel.html', '윈도우 이름', 'width=500,height=700,left=100,top=10');
+
+    const popup = document.getElementById('popup');
+    const btn = document.getElementById('popup_btn');
+
+    //Evenet
+    btn.onclick = () => {
+      popup.style.display = 'none';
+    }
+
+    </script>
+  </body>
+</html>

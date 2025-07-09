@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Obj</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    #outer {
+      background: red;
+      padding: 20px;
+    }
+    #inner {
+      background: green;
+      padding: 20px;
+    }
+  </style>
+  <body>
+    <div id="outer">
+      <p id="inner">클릭goqhk</p>
+    </div>
+    <script>
+      const outer = document.getElementById("outer");
+      const inner = document.getElementById("inner");
+      outer.onclick = function () {
+        alert("부모를 클릭하였습니다.");
+      };
+      inner.onlcick = function () {
+        alert("자식을 클릭하였습니다.");
+        event.stopPropagation();
+      };
+
+      /* 메서드 event.preventDefault() -> 기본 이벤트 방지 -> 기본 이벤트란? HTML
+      요소 자체가 가지고 있는 이벤트 -> a, button 태그 event.stopPropagation() ->
+      이벤트 전달(전파) 방지 -> 부모에서 자식 쪽으로(이벤트 캡쳐링), 자식에서 부모
+      쪽으로(이벤트 버블링) -> 자식 요소의 이벤트를 실행하였을 때 부모 요소의
+      이벤트도 같이 실행되는 현상 */
+    </script>
+  </body>
+</html>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>노선안내test0</title>
-
+    <title>노선안내</title>
+    
     <link rel="stylesheet" href="../css/reset.css" />
     <!-- <link rel="stylesheet" href="/w0310/70_pf/srt/css/header.css" /> -->
     <!-- <link rel="stylesheet" href="/w0310/70_pf/srt/css/ticket-1.css" /> -->
@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" href="/w0310/70_pf/srt/css/footerstyle.css" /> -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- <script src="/w0310/70_pf/srt/script/sub.js"></script> -->
-    <script src="../script/routemapX.js"></script>
+    <script src="../script/routemap.js"></script>
   </head>
 
   <body>
@@ -23,12 +23,12 @@
 
     <div class="route_container">
       <div class="route_tabs">
-        <div class="tab active" data-index="0">전체노선</div>
-        <div class="tab" data-index="1">경부선</div>
-        <div class="tab" data-index="2">호남선</div>
-        <div class="tab" data-index="3">전라선</div>
-        <div class="tab" data-index="4">경전선</div>
-        <div class="tab" data-index="5">동해선</div>
+        <a href="#" id="tab_btn1" class="tab" data-index="0">전체노선</a>
+        <a href="#" id="tab_btn2" class="tab" data-index="1">경부선</a>
+        <a href="#" id="tab_btn3" class="tab" data-index="2">호남선</a>
+        <a href="#" id="tab_btn4" class="tab" data-index="3">전라선</a>
+        <a href="#" id="tab_btn5" class="tab" data-index="4">경전선</a>
+        <a href="#" id="tab_btn6" class="tab" data-index="5">동해선</a>
       </div>
       <!-- end of .route_tabs -->
 
@@ -37,14 +37,6 @@
           src="../images/routemap/allroutes.png"
           class="active"
           alt="전체노선"
-        />
-        <img src="../images/routemap/kyongbu.png" alt="경부선" />
-        <img src="../images/routemap/Honam.png" alt="호남선" />
-        <img src="../images/routemap/Jolla.png" alt="전라선" />
-        <img src="../images/routemap/kyongjon.png" alt="경전선" />
-        <img
-          src="../images/routemap/EastSeaLine.png"
-          alt="동해선"
         />
       </div>
       <!-- end of .map_container -->
@@ -76,4 +68,4 @@
     <!-- 푸터 -->
 
   </body>
-</html>
+  </html>

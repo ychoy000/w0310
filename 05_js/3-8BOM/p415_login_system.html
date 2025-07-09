@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>location객체</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <style></style>
+  <body>
+   <input type="text" id="user_pw">
+   <button id="login_btn">LOG IN</button>
+    <script>
+      const user_pw = $('#user_pw');
+      const login_btn = $('#login_btn');
+
+
+      login_btn.click(()=>{
+        const pw_val = user_pw.val();
+        console.log(user_pw).val();
+
+      })
+        if (user_pw === "1234"){
+          /* my_site_go2.onclick = () => (location.href = "https://ychoy000.github.io/w0310/70_pf/vgood_travel/draft_very_good_travel.html")*/
+          location.replace(
+            "https://ychoy000.github.io/w0310/70_pf/vgood_travel/draft_very_good_travel.html"
+          );
+//          my_site_go.onclick = () => (location.href = "https://naver.com");
+
+        } else {
+          alert("잘못 입력하셨습니다. 다시 입력해 주세요.")
+        }
+
+      refresh.onclick = () => location.reload();
+   
+    </script>
+  </body>
+</html>

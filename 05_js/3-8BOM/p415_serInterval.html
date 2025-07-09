@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window Obj</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+
+  </style>
+  <body>
+    <button type="button" id="stop">setInterval 멈춤</button>
+    <button type="button" id="play">setInterval 재시작</button>
+    <script>
+      /* 
+      BOM(Browser Object Model)
+        객체
+          window
+            location
+            screen
+            history
+            navigation
+            document
+      */
+      /* 
+      window 객체
+        메서드 -> 타이머 함수
+          setInterval(함수, 시간)
+            -> 일정 시간 간격으로 함수를 반복(자주 사용할 것)
+          clearInterval()
+            -> 반복(setInterval)제거
+          setTimeout()  -> 한번 실행
+          clearTimeout  -> setTimeout 제거
+     */
+
+     /* 
+        setInterval(function(){},밀리초);
+     */
+
+     let i=0;
+    const increase = setInterval(() => {
+    // setTimeout(() => {
+      i++;
+      console.log('2초 마다 실행'+i);
+
+     }, 2000);
+
+     const stop = document.getElementById('stop');
+
+     stop.onclick = () => {
+      clearInterval(increase);
+     }
+    </script>
+  </body>
+</html>

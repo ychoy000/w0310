@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>location객체</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <style></style>
+  <body>
+    <a href="https://ychoy000.github.io/w0310/70_pf/vgood_travel/"></a>
+    <a href="#" id="my_site_go">naver로 이동하기</a>
+    <a href="#" id="my_site_go2">나의 사이트로 이동하기</a>
+    <span id="refresh">새로고침</span>
+
+  <script>
+    const my_site_go = document.getElementById('my_site_go');
+    const my_site_go2 = document.getElementById('my_site_go2');
+    const refresh = document.getElementById('refresh');
+    my_site_go.onclick = ()=> location.href = "https://naver.com";
+    my_site_go2.onclick = ()=> location.replace("https://ychoy000.github.io/w0310/70_pf/vgood_travel/draft_very_good_travel.html");
+    refresh.onclick = () => location.reload();
+    /* 
+      location 객체
+        웹브라우저의 주소 URL 관련 객체이다.
+
+      URL : Uniform Resource Locator 통합자원위치자
+        인터넷 상에서 웹페이지, 이미지, 파일 등 리소스의 위치를 나타내는 주소
+        
+      URL
+        형식 -> https://icoxpublish.com:8080/search?book=5#icox
+                프로토콜://도메인:포트번호/경로?쿼리문자열#해시
+            -> history 가 남음, 뒤로 가기 가능
+        href ->  https://icoxpublish.com:8080/search?book=5#icox
+        protocol -> http:, https:
+        host -> 주소의 호스트명과 포트 번호 반환 -> https://icoxpublish.com:8080 
+        port -> 8080
+        pathname -> 주소의 패스명 반환 -> /
+        search -> 주소의 쿼리 문자열 반환 -> ?book=5
+        hash -> 주소의 앵커명(#)을 반환 -> icox
+
+      메서드
+        reload()
+        replace(URL)
+          URL로 교체
+            -> 히스토리가 남지 않음 -> 뒤로 가기 불가능
+            -> 로그인 후 이동
+    */
+
+   </script>
+  </body>
+</html>

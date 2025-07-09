@@ -9,25 +9,29 @@
 <style>
   div {
     height: 100px;
-    background: #ccc;
+    background: #a62fc4;
     margin-top: 20px;
   }
 </style>
 <body>
   <button id="bt">클릭</button>
+  <button id="bt2">arrow function 클릭</button>
   <div id="area">여기는 마우스 왼쪽, 가운데, 오른쪽 버튼 클릭</div>  
   <script>
     const bt = document.getElementById('bt');
+    const bt2 = document.getElementById('bt2');
     const area = document.getElementById('area');
-    bt.onclick = function(event){
-      console.log(event.target);
-      console.log(event.type);
+    //bt.onclick = function(event){
+    bt2.onclick = event =>{
+      //console.log(event.target); //버튼 태그 자신
+      console.log(this.target); //버튼 태그 자신
+      console.log(event.type); //
       console.log(event.clientX);
       console.log(event.clientY);
       console.log(event.screenX);
       console.log(event.screenY);
     };
-
+    
     area.onmousedown = function(event){
       console.log(event.button)
     }
@@ -42,20 +46,43 @@
         };
 
       속성
-        teget
-        type
-        clientX
-        clientY
-        screenX
-        screenY
-        button
+        event.target 이벤트를 발생시킨 객체 반환
+        type  이벤트 이름
+        clientX (브라우저 기준) 이벤트가 발생한 x 좌표
+        clientY (브라우저 기준) 이벤트가 발생한 y 좌표
+        screenX (모니터 기준) 이벤트가 발생한 x 좌표
+        screenY (모니터 기준) 이벤트가 발생한 y 좌표
+        button 마우스 외쪽 버튼 -> 0 , 가운데 버튼 -> 1, 오른쪽 버튼 -> 2
       
       메서드
-        preventDefault()
-        stopPropagation()
+        event.preventDefault() -> 기본 이벤트 방지
+          -> 기본 이벤트란? HTML 요소 자체가 가지고 있는 이벤트
+          -> a, button 태그
+        event.stopPropagation() -> 이벤트 전달(전파) 방지
+          -> 부모에서 자식 쪽으로(이벤트 캡쳐링), 자식에서 부모 쪽으로(이벤트 버블링)
+          -> 자식 요소의 이벤트를 실행하였을 때 부모 요소의 이벤트도 같이 실행되는 현상 
     */
+  </script>
 
-
+  <div>
+    <a href="https://ychoy000.github.io/w0310" id="pf">Portfolio</a>
+    <!-- <p>BUTTON</p> -->
+    <!-- <button type="submit">전송</button> -->
+    <!-- <button type="button">임의버튼</button> -->
+    <!-- <button>전송</button> -->
+  </div>
+  <script>
+    const pf = document.getElementById('pf');
+    const pBtn = document.getElementById('p')[0];
+    pf.onclick = function(){
+      alert('PORTFOLIO');
+     // event.preventDefault();
+     return false;
+    }
+    pBtn.onclick = function(event){
+      alert('Portfolio');
+      e.target.style.cursor = "pointer";
+    }
   </script>
 </body>
 </html>

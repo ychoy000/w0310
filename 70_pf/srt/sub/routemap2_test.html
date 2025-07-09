@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>노선안내</title>
+    <title>노선안내test</title>
+
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/header.css" />
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/ticket-1.css" />
     <link rel="stylesheet" href="../css/routemap.css"/>
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/footerstyle.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../script/routemapX.js"></script>
     <!-- <script src="/w0310/70_pf/srt/script/sub.js"></script> -->
-    <script src="../script/routemap.js"></script>
   </head>
 
   <body>
@@ -36,6 +37,14 @@
           src="../images/routemap/allroutes.png"
           class="active"
           alt="전체노선"
+        />
+        <img src="../images/routemap/kyongbu.png" alt="경부선" />
+        <img src="../images/routemap/Honam.png" alt="호남선" />
+        <img src="../images/routemap/Jolla.png" alt="전라선" />
+        <img src="../images/routemap/kyongjon.png" alt="경전선" />
+        <img
+          src="../images/routemap/EastSeaLine.png"
+          alt="동해선"
         />
       </div>
       <!-- end of .map_container -->
@@ -66,44 +75,6 @@
 
     <!-- 푸터 -->
 
-    <script>
-      const maps = [
-        "../images/routemap/allroutes.png",
-        "../images/routemap/kyongbu.png",
-        "../images/routemap/Honam.png",
-        "../images/routemap/Jolla.png",
-        "../images/routemap/kyongjon.png",
-        "../images/routemap/EastSeaLine.png"
-      ];
 
-      const tab_btn1 = $('#tab_btn1');
-      const tab_btn2 = $('#tab_btn2');
-      const tab_btn3 = $('#tab_btn3');
-      const tab_btn4 = $('#tab_btn4');
-      const tab_btn5 = $('#tab_btn5');
-      const tab_btn6 = $('#tab_btn6');
-      const map_img = $('.map_container img');
-
-      tab_btn1.click(function(){
-        map_img.attr('src', maps[0]);
-        addClass
-      });
-      tab_btn2.click(function(){
-        map_img.attr('src', maps[1]);
-      });
-      tab_btn3.click(function(){
-        map_img.attr('src', maps[2]);
-      });
-      tab_btn4.click(function(){
-        map_img.attr('src', maps[3]);
-      });
-      tab_btn5.click(function(){
-        map_img.attr('src', maps[4]);
-      });
-      tab_btn6.click(function(){
-        map_img.attr('src', maps[5]);
-      });
-      
-    </script>
   </body>
 </html>
