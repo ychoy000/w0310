@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page1</title>
+  </head>
+  <body>
+      <h1>Page1</h1>
+  <button type="button" id="page2_go_btn" >Move to Page2</button>
+  <button type="button" onclick="javascript:history.back()">back</button>
+  <button type="button" onclick="javascript:history.forward()>forward</button>
+  <button type="button" onclick="javascript:history.go(2)>GO(2)</button>
+  <button type="button" onclick="javascript:history.go(-2)>GO(-2)</button>
+  
+  <script>
+    const page2_go_btn = document.getElementById('page2_go_btn');
+
+    page2_go_btn.onclick = ()=>location.href="page2.html";
+      /* 
+    history 객체
+      back()    이전 페이지로 이동
+      forward() 다음 페이지로 이동
+      go(n)     n이 양수이면 이후 페이지로, 음수이면 이전 페이지로 이동      
+
+*/
+    </script>
+  </body>
+</html>
