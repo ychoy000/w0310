@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOM-navigator객체</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <h1>장치 구분하기</h1>
+    <p id="userAgent_info">여기에 표시됩니다.</p>
+    <script>
+      /*  navigator 객체
+      브라우저의 버전이나 브러우저 이름 등 브라우저 정보에 관한 객체
+
+    속성
+      appCodeName   브라우저의 코드명 반환
+      appName       브라우저 이름을 반환
+      appVersion    브라우저의 버전을 반환
+      platform      플랫폼명을 반환
+      userAgent     브라우저와 코드명과 버전을 반환
+*/
+      const browser = navigator.userAgent;
+      console.log(browser);
+      const browserName = "";
+
+      const userAgent_info = document.getElementById("userAgent_info");
+      userAgent_info.textContent = browser;
+    </script>
+  </body>
+</html>
