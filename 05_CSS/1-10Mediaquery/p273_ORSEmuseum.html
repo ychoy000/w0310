@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오르세 미술관</title>
+ 
+    <style>
+      body {
+        color: red;
+      } /* 모든 장치 */
+ 
+ 
+      @media (orientation: portrait) {
+        body {
+          color: purple;
+          background: cyan;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        body {
+          color: blue;
+        }
+        /* 768 이상은 테블릿 */
+      }
+      @media screen and (min-width: 1200px) {
+        body {
+          color: green;
+        }
+        /* 768 이상은 테블릿 */
+      }
+
+ 
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>오르세 미술관</h1>
+    </header>
+    <div id="container">
+      <div id="lnb">
+        <ul>
+          <li><a href="#"></a>작가의 작품</li>
+          <li><a href="#"></a>작가의 시대</li>
+          <li><a href="#"></a>작가의 일생</li>
+        </ul>
+      </div>
+      <div class="content">
+        <h2>PICTURES</h2>
+        <p>
+          <a href="#">피리부는 소년</a>
+          <a href="#">고흐의 방</a>
+          <a href="#">황색 그리스도가 있는 화가의 자화상</a>
+          <a href="#">호페라좌의 관현악단</a>
+          <a href="#">만종</a>
+          <a href="#">제비꽃 장식을 단 베르트모리조</a>
+        </p>
+      </div>
+      <div class="aside">
+        <ul class="ext">
+          <li>
+            <h2>Workshop</h2>
+            <a href="#">Life Drawing Workshop</a>
+          </li>
+          <li>
+            <h2>Summer Exibition</h2>
+            <a href="#">A-level Summer Exhibition Online 2010</a>
+          </li>
+          <li>
+            <h2>RA Collaboration</h2>
+            <a href="#">RA Collection</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <p>&copy;2018 Les Amis du Musee d'Orsay. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>

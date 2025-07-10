@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 웹</title>
+  <!-- 보통 아래와 같이 쓰지 않고 css 안에 쓴다.  -->
+  <!-- 576 이하 -->
+  <!-- <link rel="stylesheet" media="(max-width:576px)" href="phone.css"> -->
+  <!-- 576 이상 992 이하는 태블릿 -->
+  <!-- <link rel="stylesheet" media="(min-width:576px) and (max-width: 992px)" href="tablet.css"> -->
+  <!-- 992 이상 -->
+  <!-- <link rel="stylesheet" media="(min-width:992px)" href="desktop.css"> -->
+
+  <style>
+    body {color: red;}/* 모든 장치 */
+/* 아래와 같이 쓰더라도 다른 css와 충돌이 일어날 수 있다.
+    순서는 필요 없음
+
+  */
+    /* 미디어 쿼리: desktop, tablet, phone */
+    /* @media screen and (max-width: 768px) { */
+    /* 모든 기기에서 해상도가 최대 576px 인 경우 적용할 속성들 
+    }
+    @media screen and (min0width: 768px) and (max-width: 1199px) { */
+  /* 모든 기기에서 해상도가 576px 이상 ~ 992px 이하인 경우 적용할 속성들 */
+  /* }
+  @media screen and (min0width: 1200px) {
+    모든 기기에서 해상도가 최소 992px 인 경우 적용할 속성들 
+  }*/ 
+  
+@media (orientation: portrait){
+  body {color: purple;
+  background: cyan;}
+}
+
+  @media screen and (min-width: 768px) {
+     body {color: blue;}
+    /* 768 이상은 테블릿 */
+  }
+  @media screen and (min-width: 1200px) {
+     body {color: green;}
+    /* 768 이상은 테블릿 */
+  }
+
+
+    /*
+    반응형 웹 사이트 제작시 반드시 설정해야 
+    1. 미디어쿼리(Media Query)
+      link rel='stylesheet' media=' media="all and (min-width:992px)" href="desktop.css"
+
+      중단점(breakpoint) 기준
+        Bootstrap framework: 576,768,992,1200, 1400
+        크롬 개발자 : 320, 375, 425, 768, 1024, 1440, 2560 
+        -> 3개 장치 : phone 576 > tablet 992 > desktop
+
+        1. 화면 너비에 따라
+        min-width
+        max-width
+        2. 화면 방향에 따라 지정
+        orientation: landscape(default), portrait
+
+
+    2. View Port
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    */
+
+
+  </style>
+</head>
+<body>
+  <h1>반응형 웹</h1>
+  <p>미디어 쿼리와 뷰포트를 설정해야 한다.</p>
+</body>
+</html>

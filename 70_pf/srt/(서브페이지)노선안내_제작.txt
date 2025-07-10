@@ -1,0 +1,5 @@
+노선안내 페이지 제작
+
+1, HTML, CSS, JQuery 활용 
+  -  JQuery 적용 : 노선안내도(route map) 전환시
+2. 노선안내도와 범례(legend) 도식은 SRT 홈페이지에서 다운받아 사용

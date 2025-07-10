@@ -27,11 +27,20 @@
       const userAgent_info = document.getElementById("userAgent_info");
       const small_text = browser.toLowerCase();
     
-      if (small_text.includes('windows')){
+      // 교재에서 긁어오기
+      function (isMobile()){
+        return /Mobi|Android|iPhone|iPad|iPod/i.test;
+        test.navigator.userAgent();
+      }
+      if (isMobile)
+      location.href = "destktop.html";
+      location.href = "mobile.html";
+      
+      //if (small_text.includes('windows')){
        // userAgent_info.textContent = '출력되나?';
         location.href = "destktop.html";
         
-      } else {
+      //} else {
         location.href = "mobile.html";
       }
       
