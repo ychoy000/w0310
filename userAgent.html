@@ -25,7 +25,17 @@
       const browserName = "";
 
       const userAgent_info = document.getElementById("userAgent_info");
-      userAgent_info.textContent = browser;
+      const small_text = browser.toLowerCase();
+    
+      if (small_text.includes('windows')){
+       // userAgent_info.textContent = '출력되나?';
+        location.href = "destktop.html";
+        
+      } else {
+        location.href = "mobile.html";
+      }
+      
+   //   userAgent_info.textContent = browser.toLowerCase();
     </script>
   </body>
 </html>
