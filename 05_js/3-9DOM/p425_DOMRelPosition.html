@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="gnb">
+      <ul>
+        <li class="first">내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+      </ul>
+    </div>
+    <script>
+      /* 
+        상대 위치로 선택
+        DOM의 탐색 - 부모, 자식, 형제 관계
+          -> 상대 위치로 선택
+          -> 선택한 요소의 현재 위치를 기준으로 요소를 선택
+          요소.parentNode -> (요소+텍스트)의 부모 노드 선택
+          요소.parentElement -> 요소의 부모 노드 선택
+          요소.childNodes -> 요소의자식 노드들(요소 노드, 텍스트 노드) 선택
+          요소.children -> 요소의 자식 노드들(요소 노드만) 선택
+          요소.nextElementSibling -> 요소의 다음 노드 선택
+          요소.previousSibling -> 요소의 이전 노드 선택
+          요소.firstChild -> 요소의 자식 노드 중 첫번째 노드 선택
+          요소.firstElementChild -> 요소(만)의 자식 노드 중 첫번째 노드 선택
+          요소.lastChild -> 요소의 자식 노드 중 마지막 노드 선택
+          요소.lastElementChild -> 요소(만)의 자식 노드 중 마지막 노드 선택
+
+          요소.tagName -> 요소의 태그명 반환
+          요소.id  -> 요소의 아이디 값 반환
+          요소.className -> 요소의 클래스 값 반환
+          요소.nodeValue -> 요소의 value 값 반환
+          요소.nodeType -> 요소의 type 값 반환
+            1 -> 요소, 2 -> 속성, 3 -> 텍스트
+          */
+      const gnb = document.getElementById('gnb');
+        console.log(gnb.id);
+        console.log(gnb.parentNode);
+        console.log(gnb.children);
+        console.log(gnb.childNodes[1]);
+        console.log(gnb.children[0]);
+        console.log(gnb.children.item(1));
+        console.log(gnb.children[0].children[0]);
+        console.log(gnb.children[0].children[0].nextElementSibling);
+        console.log(gnb.children[0].children[1]);
+        console.log(gnb.children[0].children[2].previousElementSibling);
+        // #text -> 줄바꿈이나 공백 도 텍스트로 인식
+        console.log(gnb.children[0].firstElementChild);
+        console.log(gnb.children[0].firstChild);
+
+        console.log(gnb.children[0].lastChild);
+        console.log(gnb.children[0].tagName);
+        console.log(gnb.children[0].children[1].firstChild.nodeValue);
+        console.log(gnb.children[0].children[2].firstChild.nodeType);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/* reset */
+* {
+  box-sizing: border-box;
+}
+h1, h2, ul, p {
+  margin: 0;
+  padding: 0;
+  }
+li {
+  list-style-type: none;
+}
+a {
+  line-height: 1.5;
+  color: #333;
+}
+body {
+  background: #f1f1f1;
+  font-size: 13px;
+}
+
+/* /header/ */
+header {
+  background: coral;
+}
+h1 {
+  font-size: 25px;
+  color: #fff;
+  padding: 10px;
+}
+
+/* mobile phone */
+@media screen and (min-width: 768px) {
+        body {
+          color: blue;
+        }
+        /* 768 이상은 테블릿 */
+        #container { 
+          display: flex;
+          flex-wrap: wrap;
+        }
+        #lnb {
+          width: 25%;
+        }
+        #lnb li {
+          margin: 10px;
+          padding: 10px;
+          background: lightgreen;
+        }
+        /* content */
+        .content {
+          padding: 20px; 
+          background: yellow;
+          width: 75%;
+        }
+        h2 {
+          font-size: 20px;
+        }
+        .ext {
+          margin: 10px;
+          padding: 20px;
+          background: lightgreen;
+        }
+        .aside {
+          width: 100%;
+        }
+        /* footer */
+        footer {
+          padding: 10px;
+          background: #aaa;
+        }
+      }
+
+
+/* PC Desktop */
+@media screen and (min-width: 1200px) {
+        body {
+          color: green;
+        }
+        /* 768 이상은 테블릿 */
+        
+        #container { 
+          display: flex;
+          flex-wrap: nowrap;
+        }
+        #lnb {
+          width: 20%;
+        }
+        #lnb li {
+          margin: 10px;
+          padding: 10px;
+          background: lightgreen;
+}
+/* content */
+.content {
+ padding: 20px; 
+ background: yellow;
+ width: 50%;
+}
+h2 {
+  font-size: 20px;
+}
+.ext {
+  margin: 10px;
+  padding: 20px;
+  background: lightgreen;
+}
+.aside {
+  width: 30%;
+}
+/* footer */
+footer {
+  padding: 10px;
+  background: #aaa;
+}
+}
