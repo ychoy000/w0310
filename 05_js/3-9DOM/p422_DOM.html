@@ -32,16 +32,18 @@
       querySelectorAll('선택자').[idx] -> 모든 요소를 선택한다.
       querySelectorAll('선택자').item(idx)
    */
+  window.onload = function(){
   const list1 = document.querySelector('#box1>ul>li');
   const list2 = document.querySelectorAll('#box2>ul>li');
   console.log(list1);
   console.log(list2);
 
-  list1.style.background = "#cce711";
-  list2[0].style.background = "#add000";
-  list2.item(1).style.background = "#add";
-
+  list1.style.background = "#333fff";
+  list2[0].style.background = "#aaa000";
+  list2.item(1).style.background = "#aaddcc";
+  }
   </script>
+
 </body>
   <div id="box1">
     <ul>

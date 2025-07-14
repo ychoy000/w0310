@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:flex;</title>
+    <style>
+      * {box-sizing: border-box;}
+      .container {
+        display: flex;
+        flex-direction: row;/* row이면 주축이 가로, 교차축이 세로 and vice versa */
+        border: 2px solid red;
+        height: 300px;
+        margin-bottom: 20px;
+        font-size: 30px;
+        justify-content: center; /* 주축 정렬, 기본값은 flex-start=normal */
+        align-items: center; /* default=stretch 한 줄 아이템*/
+        align-content: space-between; /* 전체 아이템 */
+        flex-wrap: wrap;
+        flex-shrink: 1; /* 기본값이 1, 이 경우 자식의 너비 무시 */
+      }
+      .item {
+        background: lightseagreen;
+        padding: 5px;
+        margin: 5px;
+        width: 400px;
+      }
+      .item:nth-of-type(1) {font-size: 30px;}
+      .item:nth-of-type(2) {font-size: 50px;}
+      .item:nth-of-type(3) {font-size: 40px;}
+ /*        .flexbox {
+            /* display: flex; 부모 요소에 지정하면 부모는 플렉스 컨테이너가 되고, 자식 요소는 플렉스 아이템이 된다. 그리고, 플렉스 아이템은 가로 배치된다. */
+            display: flex; /* df */
+            /* row: 행 -> 가로, column: 열 -> 세로 */
+            flex-direction: row; /* fxd */
+            /* 플렉스 아이템의 높이가 부모 크기만큼 늘어난다. */
+            align-items: stretch; /* 한 줄 아이템 */
+            background: #ccc;
+            height: 200px;
+
+            /* 
+                flex-direction: row; -> 주축이 가로
+                    justify-content -> 주축(가로)
+                    align~ -> 교차축(세로)
+
+                flex-direction: column; -> 주축이 세로
+                    align~ -> 주축(가로)
+                    justify-content -> 교차축(세로)
+
+                주축/교차축 정렬
+                    justify-content
+                        값: flex-start, flex-end, center
+                            space-between, space-around, space-evenly
+                    align-content
+                        값: flex-start, flex-end, center
+                            space-between, space-around, space-evenly
+                            stretch
+                    align-items
+                        값: flex-start, flex-end, center,
+                            stretch, baseline
+                    align-self
+                        값: flex-start, flex-end, center,
+                            auto, stretch, baseline
+            */
+
+        
+        .flexbox div {
+            background: darkcyan;
+            margin: 10px;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 블록레벨 요소(div)는 세로배치 -->
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

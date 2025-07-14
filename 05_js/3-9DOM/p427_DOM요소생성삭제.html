@@ -6,19 +6,31 @@
     <title>DOM요소 생성과 삭제</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
     <style>
-      div {
-        position: fixed;
-        left: 100px;
-        top: 10px;
+      .div {
+        position: absolute;
+        left: -200px;
+        top: 100px;
         width: 200px;
         height: 200px;
         background: #718c00;
+        margin: 20px;
+        transition: .3s;
       }
+      .active {
+        left: 0;
+      }
+/*       .div:hover {
+        left: 0;
+      } */
     </style>
 
   </head>
   <body>
     <!-- <button id="bt">요소생성</button> -->
+    <button >HTML속성 set</button>
+    <button >HTML get</button>
+    <button >HTML remove</button>
+    <div class="div">BOX</div>
   <script>
       /* 
         DOM 요소 추가/삭제
@@ -29,7 +41,26 @@
             appendChild() -> 부모 요소에 자식 요소를 연결 까지 해야 생성됨
             부모요소.appendChild(자식요소)
       */
-      const btn = document.createElement('button');
+      
+      //p430.
+/*       function createEle() {
+          const bt = document.getElementById('bt');
+          function popup(){
+            const div = document.createElement('div');
+            const a = document.createElement('a');
+            const txt = document.createTextNode('자바스크립트');
+            a.appendChild(txt);
+            a.setAttribute('href', 'http://icoxpublish.com');
+            a.setAttribute('target', '_blank');
+            a.setAttribute('title', '새창');
+            div.appendChild(a);
+            document.body.appendChild(div);
+          }
+          bt.onclick = popup();
+      }
+      createEle();
+ */    
+     /*  const btn = document.createElement('button');
       const btn_name = document.createTextNode('요소생성버튼');
 
       document.body.appendChild(btn);
@@ -53,8 +84,25 @@
       /* 
         요소 삭제
       */
-     document.body.removeChild('p');
-      
+   //  document.body.removeChild('p');
+
+      const bt0 = document.querySelectorAll('button')[0];
+      const bt1 = document.querySelectorAll('button')[1];
+      const bt2 = document.querySelectorAll('button')[2];
+      const div = document.querySelector('div');
+
+    // Event
+    bt0.onclick = ()=>{
+      div.setAttribute('class','div active');
+    };
+    bt1.onclick = ()=>{
+      const result = div.getAttribute('class');
+      console.log(result);
+    };
+    bt2.onclick = ()=>{
+      div.removeAttribute('class');
+      div.setAttribute('class', 'div');
+    };
     </script>
   </body>
 </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM요소 생성과 삭제JQ</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .div {
+        position: absolute;
+        left: -200px;
+        top: 100px;
+        width: 200px;
+        height: 200px;
+        background: #718c00;
+        margin: 20px;
+        transition: 0.3s;
+      }
+      .active {
+        left: 0;
+      }
+      /*       .div:hover {
+        left: 0;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <button id="bt">요소생성</button> -->
+    <button>HTML속성 set</button>
+    <button>HTML get</button>
+    <button>HTML remove</button>
+    <div class="div">BOX</div>
+      <a >요소 추가하기</a>
+    <script>
+      /* 
+        DOM 요소 추가/삭제
+
+          객체.onclick = 함수;  //JS
+          객체.click(함수);     //JQuery
+
+          document.getAttribute('속성', '값')  -> attr('속성', '값')
+          setAttribute('속성', '값')            -> attr('속성')
+            -> attr({key: value, key: value,.. })
+          removeAttribute('속성')               -> removeAttr('속성')
+          $()
+      */
+     
+      /* 
+        요소 삭제
+      */
+
+      const bt0 = $("button").eq(0);
+      const bt1 = $("button").eq(1);
+      const bt2 = $("button").eq(2);
+      const div = $("div");
+      const a = $("a");
+
+      // Event
+      bt0.click(() => {
+        div.attr("class", "div active");
+        a.attr({href:'https://m.naver.com', target:'_blank', title:'클릭하면 네이버로 이동'});
+      });
+      bt1.click(() => {
+        const result = div.attr("class");
+        console.log(result);
+      });
+      bt2.click(() => {
+        div.removeAttr("class");
+        div.attr("class", "div");
+      });
+    </script>
+  </body>
+</html>

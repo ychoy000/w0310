@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-form객체</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <form action="#" method="post" name="login">
+      <div><label for="id">ID</label><input type="text" name="id" id="id"></div>
+      <div><label for="pw">PW</label><input type="password" name="pw" id="pw"></div>
+      <div><input type="submit" value="확인"></div>
+    </form>
+    <script>
+      const login = document.login;
+      //전송버튼을 눌렀을 때
+      // -> submit 동작이 발생했을 때
+      login.onsubmit = function(){
+        if (!login.id.value){
+          alert('아이디를 입력해 주세요.');
+          login.id.focus();
+          return false;
+        }
+        if (!login.pw.value){
+          alert('패스워드를 입력해 주세요.');
+          login.pw.focus();
+          return false;
+        }
+
+      }
+    </script>
+  </body>
+</html>

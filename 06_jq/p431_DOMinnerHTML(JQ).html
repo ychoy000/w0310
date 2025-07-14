@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM요소 생성과 삭제JQ</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .div {
+        /* position: absolute; */
+        left: 0px;
+        top: 0px;
+        width: 200px;
+        height: 200px;
+        background: #718c00;
+        margin: 20px;
+        /* transition: 0.3s; */
+      }
+      .active {
+        left: 0;
+      }
+      .m1 {
+        background: #fff;
+      }
+      /*       .div:hover {
+        left: 0;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <button id="bt">요소생성</button> -->
+    <button>textContent</button>
+    <button>innerHTML</button>
+    <div class="content">BOX</div>
+
+  <script>
+    // DOM 객체 찾기
+/*       const bt0 = document.querySelectorAll('button')[0];
+      const bt1 = document.querySelectorAll('button')[1];
+      const content = document.querySelectorAll('content');
+
+      // function createEle(){
+        bt0.onclick = function(){
+        content.textContent = '<p class="m1">자바스크립트</p>';
+      };
+        bt1.onclick = function(){
+        content.innerHTML = '<p class="m1">자바스크립트</p>';
+      };
+      */
+      const bt0 = document.querySelectorAll('button')[0];
+      const bt1 = document.querySelectorAll('button')[1];
+      const content = document.querySelectorAll('content');
+
+      // function createEle(){
+        bt0.click(()=>{
+        content.textContent('<p class="m1">자바스크립트</p>');
+      });
+        bt1.onclick = function(){
+        content.innerHTML = '<p class="m1">자바스크립트</p>';
+      };
+ */
+
+/*  
+      <태그 속성=값>내용</태그>
+
+      textContent
+      innerHTML
+
+*/
+    </script>
+  </body>
+</html>
