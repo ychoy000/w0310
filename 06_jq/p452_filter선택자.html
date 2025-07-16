@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY Filter Selector</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+    <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script>
+    <!--     <script>
+      $(document).ready(function () {
+        $('button').eq(0).click(function(){
+          document.write("Hello!" + "<br>" + "DOM 객체를 사용할 경우, 헤드에 기록하려면 반드시 준비 이벤트를 사용한다." +"<br>");
+        });
+      });
+    </script> -->
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td {
+        border: 1px solid #333;
+      }
+      li {
+        color: white;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TITLE1</h1>
+    <h2>TITLE2</h2>
+    <table>
+      <caption>Basic Filter Selector</caption>
+      <colgroup>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li class="bg">CONTENT1</li>
+      <li class="bg">CONTENT2</li>
+      <li class="bg">CONTENT3</li>
+      <li>CONTENT4</li>
+    </ul>
+    <script>
+      /* 
+         일반 필터 선택자
+          :even     $('tr:even')
+          :odd      $('tr:odd')
+          :first    $('td:first')
+          :last
+          :header
+          :eq()
+          :gt()
+          :lt()
+          :not()
+          :root
+          :animated
+
+      */
+      $(() => {
+        $("tr:even").css("background", "red");
+        $("tr:odd").css("background", "orange");
+        $("td:first").css("background", "yellow");
+        $("td:last").css("background", "green");
+        $(":header").css("background", "blue");
+        $("li:eq(0)").css("background", "navy");
+        $("li:gt(0)").css("background", "purple");
+        $("li:lt(3)").css("border", "4px solid gray");
+        $(":root").css("background", "lightgray");
+        (function upDown(){            //즉시 실행함수(p.356) (function(){})();
+          // slideDown(), slideUp() 를 번갈아 반복 -> slideToggle(time,function_name)
+          $('h2').slideToggle(2000,upDown);
+        })();
+/*         $(function upDown(){            //즉시 실행함수(p.356) (function(){})(); 변형
+          $('h2').slideToggle(2000,upDown);
+        }); */
+
+        $(":animated").css("border", "4px solid darkred");
+      });
+    </script>
+  </body>
+</html>

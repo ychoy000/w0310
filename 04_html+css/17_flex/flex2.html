@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 공통 스타일 */
+    .container {
+    display: flex;
+    border: 2px solid #999;
+    height: 200px;
+    margin-bottom: 40px;
+    }
+    
+    .item {
+      width: 200px;
+      height: 40px;
+    background: lightseagreen;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+  }
+  .item:nth-child(1){flex-grow: 1;}
+  .item:nth-child(2){flex-grow: 2;}
+  .item:nth-child(3){flex-grow: 1;}
+
+  .item:nth-child(1){flex-shrink: 5;}
+  .item:nth-child(2){flex-shrink: 0;}
+  .item:nth-child(3){flex-shrink: 1;}
+  
+  .item:nth-child(1){flex-basis: 100px;}
+  .item:nth-child(2){flex-basis: 200px;}
+  .item:nth-child(3){flex-basis: 100px;}
+
+  .item:nth-child(1){align-self: flex-start;}
+  .item:nth-child(2){align-self: center;}
+  .item:nth-child(3){align-self: flex-end;}
+
+    /* order 값은 정수, 기본값, 작을 수록 앞에 배치 */
+    .item:nth-child(1){order: 3; background: blue;}
+    .item:nth-child(2){order: -1;}
+    .item:nth-child(3){order: 2; background: red;}
+    /* 768 이상 */
+    @media (min-width:768px){
+    .item:nth-child(1){order: 1;}
+    .item:nth-child(2){order: 2;}
+    .item:nth-child(3){order: 3;}
+    }
+
+    /* 
+    dispaly: flex; -> 이때의 flex는 속성값
+    묶음 속성
+      속성명 
+      flex : grow shrink basis -> 축약형
+        flex: 0 1 auto;
+      flex-grow: 숫자; -> 늘어남 1 -> 늘어남, 0 -> 고정
+      flex-shrink: 숫자;  -> 줄어듬  1 -> 줄어듬, 0 -> 고정
+      flex-basis: 숫자px; -> 너비 초기값
+
+      
+      flex-direction: column -> 가로 (row);
+      주축 정렬
+        justify-content 
+      교차축 정렬       -> 세로
+        align-items
+        align-content
+        align-self 셋 중에서 우선적으로 적용
+
+    */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+</body>
+</html>
