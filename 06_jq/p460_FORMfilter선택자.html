@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY CONTENT Filter Selector</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+    <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script>
+    <!--     <script>
+      $(document).ready(function () {
+        $('button').eq(0).click(function(){
+          document.write("Hello!" + "<br>" + "DOM 객체를 사용할 경우, 헤드에 기록하려면 반드시 준비 이벤트를 사용한다." +"<br>");
+        });
+      });
+    </script> -->
+    <style>
+/*       * {
+        margin: 5px;
+      }
+      #m1 > p:last-child {
+        height: 20px;
+      }
+      span {
+        display: inline-block;
+        height: 20px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div><input type="text"></div>
+    <div><input type="password"></div>
+    <div><button>확인</button></div>
+    <div><input type="button" value="check">확인</input></div>
+    <div><input type="submit" value="submit">확인</input></div>
+    <div><input type="checkbox" id="css" checked="checked"><label for="css">css</label></div>
+    <div>
+      <select>
+        <option>SELCT SUBJECT</option>
+        <option>javascript</option>
+        <option selected="selected">JQuery</option>
+      </select>
+      <textarea cols="20" rows="5" disabled="disabled">javascript</textarea>
+    </div>
+
+    <script>
+      /* 
+        :text
+        <input type="text"> 요소 선택
+        :password
+        <input type="password"> 요소 선택
+        :checkbox
+        <input type="checkbox"> 요소 선택
+        :button -> button 태그 뿐 아니라 type="button" 도 선택됨
+          <input type="button">
+          <button>
+          <button type="submit">
+          <button type="buttpn">
+          <button type="reset">
+        :reset
+        :input  -> 모든 input 요소
+        :focus  -> 포커스를 가진 요소
+        :checked  -> 체크된 요소
+        :disabled -> 사용할 수 없는 요소
+        :enabled  -> 사용할 수 있는 요소
+      */
+     
+      $(() => {
+        $("input:text").css("background", "red");
+        $(":password").css({background: 'purple'}); //표기 방법 확인
+        $("input:password").css("border", "4px solid orange");
+        $(":button").css("border", "4px solid yellow");
+        $(":submit").css("background", "yellow");
+        $("input:checked +label").css("border", "4px solid green");
+        $("option:selected").css("color", "blue");
+        $("textarea:disabled").css("background", "pink");
+      });
+    </script>
+  </body>
+</html>

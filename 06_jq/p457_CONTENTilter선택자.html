@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY CONTENT Filter Selector</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+    <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script>
+    <!--     <script>
+      $(document).ready(function () {
+        $('button').eq(0).click(function(){
+          document.write("Hello!" + "<br>" + "DOM 객체를 사용할 경우, 헤드에 기록하려면 반드시 준비 이벤트를 사용한다." +"<br>");
+        });
+      });
+    </script> -->
+    <style>
+      * {
+        margin: 5px;
+      }
+      #m1 > p:last-child {
+        height: 20px;
+      }
+span {
+        display: inline-block;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="m1">
+      <p>html, css, javascript</p>
+      <p>html5 and web standards</p>
+      <p></p>
+    </div>
+    <div id="m2">
+      <span></span>
+      <span>CONTENT1</span>
+      <strong>CONTENT2_3</strong>
+    </div>
+    <div id="m3">
+      <section>
+        <article>CONTENT2_1</article>
+      </section>
+      <section>
+        <div>
+          <article>CINTENT2_2</article>
+        </div>
+      </section>
+    </div>
+
+  <script>
+      /* 
+        <태그>콘텐츠</태그>
+          :contains()   
+            예) $("p:contains('html')") -> p 요소 중 'html' 텍스트를 포함하는(내용이 있는) p 요소
+          :empty
+            예) $("div:empty") -> div 요소 중 자식 요소가 없는 div 요소 선택
+          :parent
+            예) $("span:parent") -> span요소 중 자식 요소가 있는 span 요소 선택
+          :has()  
+           ex) $("section:has(article)") -> section 요소 중에서 articel을 하위요소로 가지고 있는 것
+
+      */
+      $(() => {
+        // html 문자열(태그 아님)을 포함하고 있으면
+        $("#m1 > p:contains('html')").css("border", "4px solid red");
+        $("#m1 > p:empty").css("border", "4px solid orange");
+        // span 이 부모요소이면 선택
+        // span이 콘텐츠가 있으면 선택
+        $("#m2 > span:parent").css("border", "4px solid yellow");
+        $("#m3 > section:has(article)").css("border", "4px solid green");
+      });
+    </script>
+  </body>
+</html>

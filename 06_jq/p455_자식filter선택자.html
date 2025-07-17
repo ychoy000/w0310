@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY Filter Selector</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+    <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script>
+    <!--     <script>
+      $(document).ready(function () {
+        $('button').eq(0).click(function(){
+          document.write("Hello!" + "<br>" + "DOM 객체를 사용할 경우, 헤드에 기록하려면 반드시 준비 이벤트를 사용한다." +"<br>");
+        });
+      });
+    </script> -->
+    <style>
+      span {
+        margin: 5px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="m1">
+      <span>CONTENT1_1</span>
+      <span>CONTENT1_2</span>
+      <span>CONTENT1_3</span>
+    </div>
+    <div id="m2">
+      <strong>CONTENT2_1</strong>
+      <span>CONTENT2_2</span>
+      <strong>CONTENT2_3</strong>
+      <span>CONTENT2_4</span>
+    </div>
+    <div id="m3">
+      <span>CONTENT3_1</span>
+      <span>CONTENT3_2</span>
+      <span>CONTENT3_3</span>
+    </div>
+    <div id="m4">
+      <strong>CONTENT4_1</strong>
+      <span>CONTENT4_2</span>
+      <strong>CONTENT4_3</strong>
+      <span>CONTENT4_4</span>
+      <strong>CONTENT4_5</strong>
+      <span>CONTENT4_6</span>
+    </div>
+      <span>CONTENT5_1</span>
+    <div id="m5">
+    </div>
+    <div id="m6">
+      <strong>CONTENT6_1</strong>
+      <span>CONTENT6_2</span>
+    </div>
+    <script>
+      /* 
+         일반 필터 선택자
+          :even     $('tr:even')
+          :odd      $('tr:odd')
+          :first    $('td:first')
+          :last
+          :header
+          :eq()
+          :gt()
+          :lt()
+          :not()
+          :root
+          :animated
+
+      */
+      $(() => {
+        $("#m1 > span:first-child").css("border", "2px solid red");
+        $("#m1 > span:first-child").css("border", "2px solid red");
+        $("#m1 > span:first-child").css("border", "2px solid red");
+        $("#m1 > span:first-child").css("border", "2px solid red");
+        $("#m1 > span:first-child").css("border", "2px solid red");
+        $("#m1 > span:first-child").css("border", "2px solid red");
+        $("#m1 > span:first-child").css("border", "2px solid red");
+        $("#m1 > span:first-child").css("border", "2px solid red");
+        $("#m1 > span:first-child").css("border", "2px solid red");
+        $("#m1 > span:first-child").css("border", "2px solid red");
+
+        /*         $(function upDown(){            //즉시 실행함수(p.356) (function(){})(); 변형
+          $('h2').slideToggle(2000,upDown);
+        }); */
+
+        $(":animated").css("border", "4px solid darkred");
+      });
+    </script>
+  </body>
+</html>
