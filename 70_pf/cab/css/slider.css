@@ -11,7 +11,7 @@
 
 /* Title */
 #slideWrap .title {
-    z-index: 999;
+    z-index: 99;
     position: absolute;
     left: 50%;
     top: 0%;
