@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY 탐색 Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+    <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script>
+
+    <style>
+      * {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="m1">
+      <a href="#">CONTNENT1_1</a><span>CONTENT1_2</span>
+    </div>
+    <div id="m2">
+      <div>
+        <a href="#">CONTENT2_1</a><span>CONTENT2_2</span>
+      </div>
+    </div>
+    <div id="m3">
+        <div><span>OCNTENT3_1</span></div>
+    </div>
+    <div id="m4">
+      <span class="m">CONTENT4_1</span><span>CONTENT4_2</span><span>OCNTENT4_3</span><em>CONTENT4_4</em>
+    </div>
+    <div id="m5">
+      <span class="m">OCNTENT5_1</span><span>CONTENT5_2</span><span>CONTENT5_3</span>
+    </div>
+    <div id="m6">
+      <div><span>CONTENT6_1</span></div>
+      <div>CONTENT6_1</div>
+    </div>
+    <div>CONTENT2</div>
+
+    <script>
+      
+            $(() => {
+              $('#m1').children().css({border: '2px solid red'});
+              $('#m2').children().children('span').css({border: '2px solid orange'});
+              $('#m2').children().parent().css({background: 'lightgray'});
+              $('#m3 span').closest('div').css({border: '2px solid yellow'});
+              $('#m4>span.m').nextUntil('em').css({border: '2px solid green'});
+              $('#m5>span').filter('.m').css({border: '2px solid blue'});
+              $('#m6>div').has('span').css({border: '2px solid navy'});
+            });
+      /* 
+      객체
+      선택자 
+        children('선택자') -> 선택자를 가지는 모든 자식
+      메서드
+        1. 탐색메서드
+          children() -> 모든 자식
+          parent()  -> 바로 밑의 자식
+          parents() -> 모든 부모
+          closest()
+          next()
+          nextAll()
+          nextUntil()
+          prev()
+          prevAll()
+          prevUntil()
+          siblings()
+          find()
+          filter()
+          not()
+
+
+        2. HTML/CSS메서드
+          text()
+          html()
+          addClass()
+          removeClass()
+          toggleClass()
+          hasClass()
+          attr()
+          prop()
+          css()
+        3. 이벤트메서드
+        4. 효과메서드
+          show()
+          hide()
+          toggle()
+          slideDown()
+          slideToggle()
+          fadeIn()
+          fadeOut()
+          fadeTo()
+          fadeToggle()
+
+          animate()
+
+        children()
+      */
+    </script>
+  </body>
+</html>
