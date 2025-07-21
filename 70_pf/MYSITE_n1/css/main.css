@@ -23,5 +23,5 @@ p, footer a {
 #sec1 {
   height: 100vh;
     /* background image parallex scrolling */
-  background: url(../image/parallax1.jpg) no-repeat 50% 50%/cover fixed;
+  background: url("../image/parallax1.jpg") no-repeat 50% 50%/cover fixed;
 }

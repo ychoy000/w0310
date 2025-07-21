@@ -1,0 +1,110 @@
+@charset "utf-8";
+@import url("reset.css");
+@import url("common.css");
+
+/* tabs */
+/* tab menu button */
+
+/* section 2 area */
+#section2 {
+  position: relative;
+  /* background: lightcoral; */
+  padding: 80px;
+}
+.inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#section2 h2 {
+  text-align: center;
+}
+
+#section2 p{
+  text-align: center;
+  color: var(--gray2);
+  margin: 36px 0 60px 0;
+}
+
+#tabs {
+  position: relative;
+  width: 1128px;
+  margin: 0 auto;
+  /* background: cyan; */
+}
+
+/* tab button menu */
+#tabs_btn {
+  position: absolute;
+  left: 643px;
+  top: 0px;
+}
+
+/* li 중 마지막 제외 li 종료 앞 삽입 */
+#tabs_btn li:not(li:last-child)::after {
+  content: "|";
+  margin: 0 8px ;
+  color: var(--gray2);
+}
+
+#tabs_btn li {
+  display: inline-block;
+}
+
+#tabs_btn a {
+  color: var(--gray2);
+}
+#tabs_btn li:first-child a {
+  color: var(--main);
+}
+
+/* tab contents */
+/* top 1 */
+#tabs >div > div:first-of-type div {
+  width: 580px;
+  height: 433px;
+  /* flex-shrink: 0; */
+  border: 1px solid #ccc;
+}
+#tabs>div>div:first-of-type div::after {
+  content: "1위";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  /* border: 1px solid #333; */
+  background: var(--main);
+  text-align: center;
+  line-height: 60px;
+}
+
+/* top 1 title */
+#tabs>div>div:nth-of-type(1) h3 {
+  position: absolute;
+  left: 645px;
+  top: 48px;
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+/* top 2 & 3 */
+#tabs >div>div:first-of-type ~ div {
+  position: absolute;
+  left: 645px;
+  top: 210px;
+}
+#tabs >div>div:first-of-type ~div div {
+  width: 225px;
+  height: 170px;
+  padding: 0px 27px 0px 26px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+}
+
+/*  top 3 */
+#tabs >div>div:nth-of-type(3) {
+  /* display: flex; */
+  left: 903px !important;
+}

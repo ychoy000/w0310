@@ -9,8 +9,8 @@
     <!-- https://jquery.com/download/ -->
     <!-- <script src="jquery-3.7.1.min.js"></script> -->
     <!-- 2. CDN -->
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
-    <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
 
     <style>
       * {
@@ -32,16 +32,20 @@
         <div><span>OCNTENT3_1</span></div>
     </div>
     <div id="m4">
-      <span class="m">CONTENT4_1</span><span>CONTENT4_2</span><span>OCNTENT4_3</span><em>CONTENT4_4</em>
+      <span class="m">CONTENT4_1</span>
+      <span>CONTENT4_2</span>
+      <span>OCNTENT4_3</span>
+      <p>I am P</p>
+      <em>CONTENT4_4</em>
     </div>
     <div id="m5">
       <span class="m">OCNTENT5_1</span><span>CONTENT5_2</span><span>CONTENT5_3</span>
     </div>
     <div id="m6">
       <div><span>CONTENT6_1</span></div>
-      <div>CONTENT6_1</div>
+      <div>CONTENT6_2</div>
+      <div>CONTENT6_3</div>
     </div>
-    <div>CONTENT2</div>
 
     <script>
       
@@ -50,9 +54,15 @@
               $('#m2').children().children('span').css({border: '2px solid orange'});
               $('#m2').children().parent().css({background: 'lightgray'});
               $('#m3 span').closest('div').css({border: '2px solid yellow'});
-              $('#m4>span.m').nextUntil('em').css({border: '2px solid green'});
+              $('#m4').html('여기서부터 #m4입니다.');
+              $('#m4 > span.m').nextUntil('em').css('border', '2px solid green');
               $('#m5>span').filter('.m').css({border: '2px solid blue'});
+              $("#m5:not('span')").css({background: 'red'});
               $('#m6>div').has('span').css({border: '2px solid navy'});
+              $('#m6>div').not('span').css({border: '2px solid red'});
+              $('#m6>div').eq(2).css({border: '2px solid green'});
+              $('#m6>div:eq(-3)').css({background: 'cyan'});
+              $('#m6>div:lt(-1)').css({background: 'yellow'});
             });
       /* 
       객체
@@ -63,16 +73,16 @@
           children() -> 모든 자식
           parent()  -> 바로 밑의 자식
           parents() -> 모든 부모
+          부모요소.find()  -> 부모 요소의 하위 요소 중 선택자에 해당하는 요소 선택
+          요소.filter()  -> 요소 중 선택자를 가지는 요소 선택
           closest()
-          next()
-          nextAll()
-          nextUntil()
-          prev()
-          prevAll()
-          prevUntil()
-          siblings()
-          find()
-          filter()
+          next()  -> 다음 요소 하나
+          nextAll() -> 다음 모든 요소
+          nextUntil('요소n') -> 다음 요소부터 '요소n' 전까지의 요소 
+          prev()  -> 바로 직전 요소
+          prevAll() -> 이전 모든 요소
+          prevUntil('요소i') -> 이전 '요소i' 직후까지의 요소 
+          siblings()  -> 형제 요소 모두 선택
           not()
 
 
