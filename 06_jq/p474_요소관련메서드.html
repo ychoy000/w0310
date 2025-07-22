@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY 탐색 Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+
+    <style>
+      * {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="m1"><strong>JQuery</strong></div>
+    <div id="m2">
+      <div><em>html</em></div>
+      <div><em>css</em></div>
+      <div><em>javascript</em></div>
+    </div>
+
+    <script>
+      $(()=>{
+        // get(가져오기)
+        const txt = $('#m1').text();
+        console.log(txt);
+        //console.log($('#m1').text());
+        // text()는 태그를 인식 못한다.
+        //$('#m1').text('제이쿼리');
+        $('#m1').text('<p>자바스크립트</p>');
+
+        
+        console.log($('#m1').html());
+        //html()는 태그를 인식한다.
+        $('#m1').html('<p>자바스크립트</p>');
+
+        $('#m2>div').html(function(index, text){
+          //return "div 요소의 텍스트는 "+ text + ", index는" + index;
+          return `div 요소의 텍스트는 ${text}, index는 ${index}`;
+        })
+        //
+      });
+      /*
+      객체
+        1. 콭넽츠 조작 메서드
+        HTML/CSS 메서드
+          요소.text()    -> 내용을 가져온다.
+          요소.text(text) -> 내용을 지정한다. html 태그 인식 못함
+            -> text = 'string', number, boolean
+          text(function(idx, currentText){...}) <- 콜백 함수
+          html()    -> 컨텐츠를 가져온다.
+          html(HTMLstring) -> 내용을 지정한다. html tag 인식함
+          val()
+
+        속성 조작 메서드
+          attr()
+          prop()
+          removeAttr()
+
+        클래스 조작 메서드
+          addClass()
+          remove()
+          toggleClass()
+          hasClass()
+
+        스타일 조작 메서드
+          css()
+          offset()
+
+
+        1. 탐색메서드
+          add()
+            추가
+              예) $('div').add('p')
+              dP) $('div, p')
+              -> div요소와 p요소를 선택한다.
+          addBack()
+            $('div').children('p').addBack()
+            -> p요소와 이전 선택요소 div를 선택
+          end()
+            예) $('div').find('span').css(...).end().find('em').css(...) -> 성능면에서 아래 것보다 빠름
+            동일 예) $('div').find('span').css(...)
+                      $('div').find('em').css(...)
+            -> $('div').find(span).css(...) 실행이 끝나면, 처음 선택자 $('div')로 돌아와 $('div').find('em').css(...)실행
+
+        2. Filter Method
+          is()
+            ex) if(('div').children().is('p')){...}
+            -> div 자식 요소에 p가 있으면 true, false otherwise.
+
+      */
+    </script>
+  </body>
+</html>

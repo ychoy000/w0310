@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import url("reset.css");
+@import url("common.css");
+
+/* tabs */
+/* tab menu button */
+
+/* section 2 area */
+#section3 {
+  width: 100%;
+  margin: 50px;
+  position: absolute;
+  background: lightcoral;
+  padding: 80px;
+  background: url("../images/michael-c-A3K6lKG4yKY-unsplash.jpg") no-repeat 50% 50%/cover fixed ;
+}
+ .inner3 {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.intromsg {
+  position: relative;
+  top: 0px;
+  color: #fff;
+  text-align: right;
+}
+.intromsg h2:first-of-type {
+  font-weight: 500;
+}
+.intromsg h2:last-of-type {
+  font-weight: 400;
+  letter-spacing: 7px;
+}
+.intromsg h3 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin-bottom: 30px;
+}
+.intromsg p:first-of-type {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.flyer img {
+  width: 170px;
+  height: 170px;
+  border: 8px solid #fff;
+}
+.intromsg button {
+  background: transparent;
+  color: #fff;
+  margin-top: 30px;
+  padding: 8px;
+  border-radius: 12px;
+  border-color: #fff;
+}
+.flyer img:nth-of-type(1) {
+  position: relative;
+  transform: rotate(-30deg);
+  top: 50px;
+  z-index:2;
+  /* transform: matrix(1, , 0, 0, 20, 20); */
+}
+.flyer img:nth-of-type(2) {
+  position: relative;
+  z-index: 9;
+}
+.flyer img:nth-of-type(3) {
+  position: relative;
+  transform: rotate(30deg);
+  top: 80px;
+  width: 200px;
+  height: 200px;
+  z-index:9;
+}
