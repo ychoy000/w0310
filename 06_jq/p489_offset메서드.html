@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #outer {
+      width: 500px;
+      height: 500px;
+      margin: 50px;
+      position: relative;
+      background: #f60;
+    }
+    #inner {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 80px;
+      top: 50px;
+      background: #ccc;
+    }
+  </style>
+
+  <body>
+    <div id="outer">
+      <div id="inner">CONTENTE</div>  
+    </div>
+
+    <script>
+      $(() => {
+        console.log($('#inner').offset().left);
+        console.log($('#inner').offset().top);
+        console.log($('#inner').position().left);
+        console.log($('#inner').position().top);
+      });
+
+      /*
+      스크롤 모션(Scroll Motion)
+
+      위치
+          offset().left
+          offset().top
+          position()
+
+          p.494
+          scrollTop()
+          scrollLeft()
+      */
+    </script>
+  </body>
+</html>

@@ -3,17 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메가커피</title>
-    <style>
-        * {
-            margin: 0;
-        }
-        img {
-            width: 100%;
-        }
-    </style>
+    <title>FullPage메가커피</title>
+    <link rel="stylesheet" href="css/fullpage.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.js" integrity="sha512-qXOOK+f3BCMGxKkNBRpJIrIB3jBNl/nyMnxFC/zffcTNKodRG7KgIoBjXQbcpssVrbHvuqVlX3iW9sZN81T0+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/fullpage.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.css" integrity="sha512-DdLq8mFhfN4GtvLwX+p4ajHfbKAfAivaAP9zwjMARinZS53ASFB0unNbbKAnYZaEvxeC5W9iBzJaZM9xvM/SOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 <body>
-    <img src="./draft.png" alt="시안">
+ <ul id="menu">
+    <!-- 'data-이름'은 사용자가 만든 속성 -->
+  <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Section1</a></li>
+  <li data-menuanchor="secondPage"><a href="#secondPage">Section2</a></li>
+  <li data-menuanchor="thirdPage"><a href="#thirdPage">Section3</a></li>
+  <li data-menuanchor="fourthPage"><a href="#fourthPage">Section4</a></li>
+</ul>
+<div id="fullpage">
+  <div class="section">
+    <div id="slide">
+      <div class="slide">slide1</div>
+      <div class="slide">slide2</div>
+      <div class="slide">slide3</div>
+    </div>
+  </div>
+  <div class="section">Section 2</div>
+  <div class="section section3" id="section3">
+    <h2>section3</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="section">Section 4</div>
+  <div class="section fp-auto-height" id="footer">footer</div>
+</div>
+
 </body>
 </html>

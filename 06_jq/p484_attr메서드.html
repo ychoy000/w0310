@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    div:nth-child(1) { background: red;}
+    div:nth-child(2) { background: green;}
+    div:nth-child(3) { background: blue;}
+  </style>
+
+  <body>
+    <div>내용1</div>
+    <div>내용2</div>
+    <div>내용3</div>
+
+    <div id="site">
+      <a href="https://www.daum.net" target="_blank">다음</a>
+      <a href="https://www.naver.com" target="_blank">네이버</a>
+      <a href="https://www.nate.com" target="_blank">네이트</a>
+    </div>
+    <!-- p.487 -->
+    <script>
+        $(() => {
+          $('div').eq(0).css({padding:10, 'text-align':'center'});
+          $('div').css('width',function(index){
+            return index * 100 + 100; //100, 200, 300
+          });
+
+          /*             console.log($('#site>a:eq(0)').attr("href"));
+            $('#site>a:eq(1)').attr("href", "http://m.naver.com").text("네이버모바일");
+            $('#site a').attr("title", function(){
+              return "새창";
+            });
+ */
+        });
+      /*
+        선택자 {속성: 값;}
+
+        <태그 속성="값"> 콘텐츠</태그>
+
+        attr('속성')
+        attr('속성', 값)
+        attr('속성', function(index, attr){})
+        attr({속성: 값, 속성: 값, ...})
+        css('속성')
+        css('속성', 값)
+        css('속성', function(index, property){})
+        css({속성: 값, 속성: 값, ...})
+      */
+    </script>
+  </body>
+</html>

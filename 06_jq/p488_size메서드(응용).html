@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    div {
+      padding: 15px;
+      border: 10px solid #000;
+      background: #f60;
+      margin: 20px;
+    }
+  </style>
+
+  <body>
+
+    <div>BOX</div>
+
+    <script>
+      $(() => {
+        $('div').width(300).height(200).html(`
+        width ${$('div').width()}<br>
+        height ${$('div').height()}<br>
+        innerwidth ${$('div').innerWidth()}<br>
+        innerheight ${$('div').innerHeight()}<br>
+        outerwidth ${$('div').outerWidth()}<br>
+        outerheight ${$('div').outerHeight()}<br>
+        outerwidth ${$('div').outerWidth(true)}<br>
+        outerheight ${$('div').outerHeight(true)}<br>
+        `);
+      });
+
+      /*
+        크기
+          width()
+          height()
+          innerWidth() --> padding include
+          innerHeight()
+          outerWidth()  --> padding+border included
+          outerHeight()
+          // 읽기(가져오기)전용, 지정은 못함
+          outerWidth(true)  --> padding+border+margin included
+          outerHeight(true)
+
+      */
+    </script>
+  </body>
+</html>

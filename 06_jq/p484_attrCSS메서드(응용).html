@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+  <style>
+    * {
+      margin: 20px;
+      padding: 0;
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #000;
+      margin: 20px;
+    }
+  </style>
+
+  <body>
+    <button type="button">red</button>
+    <button type="button">green</button>
+    <button type="button">blue</button>
+    <div>BOX</div>
+
+    <script>
+      $(() => {
+        //Event
+        $('button').eq(0).click(function(){
+          // 버튼의 이름 가져오기
+          const txt = $('button').eq(0).text();
+          // text on boc\x
+          $('div').text(txt);
+          console.log(txt);
+          
+          // background of box
+          $('div').css({background: txt});
+        });
+        $('button').eq(1).click(function(){
+          // 버튼의 이름 가져오기
+          const txt = $('button').eq(1).text();
+          console.log(txt);
+          // background of box
+          $('div').text(txt);
+          $('div').css({background: txt});
+        });
+        //$('button').eq(2).click(function(){
+        $('button').click(function(){
+          // 버튼의 이름 가져오기
+          //const txt = $('button').eq(2).text();
+          const txt = $(this).text();
+          console.log(txt);
+          $('div').text(txt);
+          // background of box
+          $('div').css({background: txt});
+        });
+        });
+
+   
+      /*
+       조건
+        - 3가지 color 이름의 버튼
+        - 버튼의 이름 가져오기
+        - 하나의 박스에 지정한다.
+      */
+    </script>
+  </body>
+</html>

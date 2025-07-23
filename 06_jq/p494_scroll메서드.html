@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #outer {
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      border: 1px solid #333;
+      overflow: auto;
+    }
+    #inner {
+      width: 1000px;
+      height: 1000px;
+      background: #f60;
+    }
+    #info {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      width: 300px;
+      margin-left: -550px;
+      text-align: right;
+    }
+  </style>
+
+  <body>
+    <div id="outer">
+      <div id="inner">CONTENTE</div>
+    </div>
+    <div id="info">
+      <span></span>
+      <button type="button">클릭</button>
+    </div>
+
+    <script>
+      $(() => {
+        let top = $('#outer').scrollTop();
+        let left = $('outer').scrollLeft();
+        console.log(top);
+        console.log(left);
+        $('#info span').text(`scrollTop): ${top} / scrollLeft: ${left}`);
+        $('#outer').scroll(function(){
+          top = $('#outer').scrollTop();
+          left = $('#outer').scrollLeft();
+          $('#info span').text(`scrollTop: ${top} / scrollLeft: ${left}`);
+        });
+        $('button').click(function(){
+          $('#outer').scrollTop(250).scrollLeft(250);
+        });
+      });
+
+      /*
+      스크롤 모션(Scroll Motion)
+
+      위치
+          
+        scrollTop()
+          scrollLeft()
+      */
+    </script>
+  </body>
+</html>
