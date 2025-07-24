@@ -21,9 +21,9 @@
     }
 
     .carousel-slide img {
-      width: 1920px;
+      width: 100vw;
       height: 1042px;
-      flex-shrink: 0;
+      flex-shrink: 1;
     }
 
     .caption {
@@ -34,7 +34,6 @@
       background-color: transparent;
       color: #fff;
       padding: 10px 20px;
-      border-radius: 5px;
       font-size: 54px;
       font-weight: 700;
       white-space: nowrap;
@@ -47,7 +46,7 @@
 
     @keyframes captionMove {
       0% {
-        left: 50%;
+        left: 30%;
         transform: scale(0.6);
         opacity: 0;
       }
@@ -55,7 +54,7 @@
         opacity: 1;
       }
       70% {
-        left: 60%;
+        left: 50%;
         transform: scale(1);
         opacity: 1;
       }

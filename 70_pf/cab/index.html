@@ -9,114 +9,124 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
-
-    <!-- <script src="js/slider.js"></script> -->
     <script src="js/carousel2.js"></script>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.css"
-    />
-
-    <!-- <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-    crossorigin="anonymous"
-    /> -->
+    <script src="js/top.js"></script>
+    <script src="js/gnb.js"></script>
 
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/carousel2.css" />
-    <!-- <link rel="stylesheet" href="css/slider.css"> -->
   </head>
 
   <body>
     <header>
       <div class="logo">
-        <img src="image/Earth(White).png" alt="" />
+        <img src="image/CABlogo100.png" alt="" />
       </div>
-      <nav>
-        <div class="nav">
-          <!-- q부트스트랩에서 row는 display flex -->
-          <ul class="depth1">
+      <nav class="gnb">
+          <ul class="main">
             <li>
-              인증 앵거스 비프
-              <ul class="depth2">
-                <li>브랜드 스토리</li>
-                <li>10가지 품질 기준</li>
-                <li>브랜드 약속</li>
-                <li>브랜드 프라임&내추럴</li>
+              <a href="#">인증 앵거스 비프</a>
+              <ul class="sub">
+                <li><a href="#">브랜드 스토리</a></li>
+                <li><a href="#">10가지 품질 기준</a></li>
+                <li><a href="#">브랜드 약속</a></li>
+                <li><a href="#">브랜드 프라임&내추럴</a></li>
               </ul>
             </li>
             <li>
-              목장 이야기
-              <ul class="depth2">
-                <li>미국의 목장</li>
-                <li>소고기 바로 알기</li>
+              <a href="">목장 이야기</a>
+              <ul class="sub">
+                <li><a href="#">미국의 목장</a></li>
+                <li><a href="#">소고기 바로 알기</a></li>
               </ul>
             </li>
-            <li>부위정보</li>
+            <li><a href="#">부위정보</a></li>
             <li>
-              구매처
-              <ul class="depth2">
-                <li>구매체&취급처</li>
-                <li>더 알아보기</li>
+              <a href="#">구매처</a>
+              <ul class="sub">
+                <li><a href="#">구매체&취급처</a></li>
+                <li><a href="#">더 알아보기</a></li>
               </ul>
+            </li>
+            <li class="lang">
+              <a href="#"><img src="image/Earth(White).png" alt="" /></a>
+              <ul class="sub">
+                <li><a href="#">English</a></li>
+                <li><a href="#">Chinese</a></li>
+                <li><a href="#">Japanese</a></li>
+              </ul>
+
             </li>
           </ul>
-        </div>
       </nav>
     </header>
 
-    <!-- section1: CAB carousel -->
-    <!-- <div class="main_rolling_pc">
-      <div id="slideWrap">
-        <div class="slide">
-          <div><img src="image/slide1.jpg" alt="이미지1" /></div>
-          <div><img src="image/slide2.jpg" alt="이미지2" /></div>
-          <div><img src="image/slide3.jpg" alt="이미지3" /></div>
-          <div><img src="image/slide4.jpg" alt="이미지4" /></div>
-        </div>
-
-        <div class="title">
-          <h2>최고만이<br>받을 수 있는 인증</h2>
-        </div>
+    <!-- Carousel -->
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img
+          src="image/slide1.jpg"
+          alt="Image 1"
+          data-caption="최고만이 받을 수 있는 인증"
+        />
+        <img
+          src="image/slide2.jpg"
+          alt="Image 2"
+          data-caption="최고만이 받을 수 있는 인증"
+        />
+        <img
+          src="image/slide3.jpg"
+          alt="Image 3"
+          data-caption="최고만이 받을 수 있는 인증"
+        />
+        <img
+          src="image/slide4.jpg"
+          alt="Image 4"
+          data-caption="최고만이 받을 수 있는 인증"
+        />
+        <img
+          src="image/slide1.jpg"
+          alt="Image 1"
+          data-caption="최고만이 받을 수 있는 인증"
+        />
       </div>
+      <div class="caption"></div>
     </div>
- -->
-<!-- Carousel -->
- <div class="carousel-container">
-  <div class="carousel-slide">
-    <img src="image/slide1.jpg" alt="Image 1" data-caption="최고만이 받을 수 있는 인증">
-    <img src="image/slide2.jpg" alt="Image 2" data-caption="최고만이 받을 수 있는 인증">
-    <img src="image/slide3.jpg" alt="Image 3" data-caption="최고만이 받을 수 있는 인증">
-    <img src="image/slide4.jpg" alt="Image 4" data-caption="최고만이 받을 수 있는 인증">
-    <img src="image/slide1.jpg" alt="Image 1" data-caption="최고만이 받을 수 있는 인증">
-  </div>
-  <div class="caption"></div>
-</div>
-    <footer>
-      <div class="container">
-        <div class="totheTOP"><a href="#top">To the TOP</a></div>
-        <ul>
-          <p>
-            Copyright 2023 &copy; Certified Angus Beed LLC. All rights reserved.
-            Any unauthorized use is strictly prohibited.
-          </p>
-          <li><a href="">twitter</a></li>
-          <li><a href="">facebook</a></li>
-          <li><a href="">Instagram</a></li>
-          <li><a href="">LinkedIn</a></li>
-          <li><a href="">Youtube</a></li>
-        </ul>
-      </div>
-    </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
+    <section class="sec1">SECTION1</section>
+    <section class="sec2">SECTION2</section>
+    <section class="sec3">SECTION3</section>
+    <section class="sec4">
+      <div class="left">
+        <h2>최고만이 받을 수 있는<br>인증을 확인하세요</h2>
+        <p>인증 앵거스 비프<em>(Certified Angus Beef)</em>는<br>10가지 품질 기준을 통해<br>최고급 미국산 앵거스 비프를 선별 제공하는 브랜드입니다.</p>
+        <div><img src="image/slogan.svg" alt="cab"></div>
+        <button type="button"><a href="#">구매처 확인하기<img src="image/arrow2right.svg" alt=""></a></button>
+      </div>
+      <div class="right">
+        <img src="image/rib_big.jpg" alt="rib">
+        <!-- <img src="image/rewardlogo.svg" alt="award"> -->
+      </div>
+    </section><!-- end of section 4 -->
+    <section class="sec5">SECTION5</section>
+    <footer>
+      <div id="up">
+        <a href="#"><img src="image/toTOP.png" alt="toTheTop" /></a>
+      </div>
+      <div class="container">
+        <span class="copy">
+          &copy; 2023 Certified Angus Beed LLC. All rights reserved. Any
+          unauthorized use is strictly prohibited.
+        </span>
+        <span class="sns">
+          <a href="#">twitter</a>
+          <a href="#">facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Youtube</a>
+        </span>
+      </div>
+      <!-- end footer/container -->
+    </footer>
   </body>
 </html>
