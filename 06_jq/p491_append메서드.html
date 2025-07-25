@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+
+  <body>
+    <div id="m1"><strong>CONTENT1</strong></div>
+    <div id="m2"><strong>CONTENT2</strong></div>
+    <script>
+      $(() => {
+        $("#m1").prepend("<b>삽입1_1</b>");
+        $("#m1").append("<i>삽입1_2</i>");
+        $("#m1").before("<b>삽입1_3</b>");
+        $("#m1").after("<i>삽입1_4</i>");
+        $("<b>삽입2_1</b>").prependTo("#m2");
+        $("<i>삽입2_2</i>").appendTo("#m2");
+        $("<em>삽입2_3</em>").insertBefore("#m2");  
+        $("<i>삽입2_4</i>").insertAfter("#m2");
+      });
+
+    /*
+      syntax:
+    $(selector).append(content,function(index,html))
+
+      DOM 조작 메서드
+        1) 삽입
+        2) 삭제
+        3) 복제
+
+      삽입관련 메서드
+
+      before<tag>prepend내용append</tag>after
+      
+        부모.append(자식)
+      - append() : 선택한 요소의 마지막 자식으로 삽입 -> ::before -> :before
+      - prepend() : 선택한 요소의 첫번째 자식으로 삽입  -> ::after -> :after
+      - before() : 선택한 요소의 앞에 삽입
+      - after() : 선택한 요소의 뒤에 삽입
+
+        자식.appendTo(부모)
+      prependTo()
+      appendTo() : 선택한 요소를 다른 요소의 첫번째 자식으로 삽입
+      insertBefore()
+      insertAfter() : 선택한 요소를 다른 요소의 뒤에 삽입
+    */
+    </script>
+  </body>
+</html>

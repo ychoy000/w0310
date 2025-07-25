@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+
+  <body>
+    <button type="button">TOGGLE</button>
+    <!-- <button type="button">IGNORE</button> -->
+    <input type="checkbox"id="html" checked><label for="html">html</label>
+    <input type="checkbox"id="css"><label for="html">css</label>
+
+  <script>
+      $(() => {
+        const chk = $('input:checkbox'); 
+        const chk1 = chk.eq(0); // 첫 번째 체크박스  
+        const chk2 = chk.eq(1); // 두 번째 체크박스 
+
+        //출력
+
+        console.log(chk1.attr('checked')); // checked 속성 가져오기
+        console.log(chk2.prop('checked')); // checked 속성 가져오기
+
+        let flag = true;
+        
+        $('button').click(() => {
+          if (flag === true) {
+            chk1.attr({checked: 'checked'}); 
+            chk2.prop({checked: true}); 
+          } else {
+            console.log(chk1.attr('null')); 
+            console.log(chk2.prop(false)); 
+          }
+          console.log(chk1.attr('checked')); 
+          console.log(chk2.prop('checked')); 
+        });
+          
+        });
+        // 속성 지정하기
+ /*        $('button').eq(0).click(() => {
+          chk1.attr({checked: 'checked'}); 
+          chk2.prop({checked: true}); 
+  */       // 속성 지정하기
+ /*        $('button').eq(1).click(() => {
+          chk1.attr({checked: checked}); // checked 속성 지정
+          chk2.prop({checked: true}); // checked 속성 지정
+          
+          console.log(chk1.prop('checked')); 
+          console.log(chk2.prop('checked')); 
+        });
+  */       // 속성 지정하기
+        //const chk2 = $chk.attr('checked');
+        //chk1.attr('checked', 'checked'); // checked 속성 지정
+        //chk2.attr('checked', 'checked'); // checked 속성 지정
+        
+        // 속성 제거하기
+        //chk1.removeAttr('checked'); // checked 속성 제거
+        //chk2.removeAttr('checked'); // checked 속성 제거
+
+        // 속성 지정하기 - prop() 사용
+        //$('input:checkbox').eq(0).attr('checked', 'checked'); // checked 속성 지정 
+        //$('input:checkbox').eq(1).attr('checked'); // checked 속성 지정
+        //console.log($('input:checkbox').eq(0).attr('checked'));
+        //console.log($('input:checkbox').eq(1).attr('checked'));
+      });
+
+      /*
+      HTML 속성 가져오기/지정하기
+       attr('속성명') -> 가져오기
+       attr('속성명', '값') -> 지정하기
+       attr({속성명: '값', 속성:값, ....}) -> 지정하기
+       removeAttr()
+      
+       prop() -> 자바스크립트 속성(property)
+      
+       css() --> CSS 속성
+
+       animate({속성: 값}, 시간)
+        시간은 밀리초(ms)
+
+      */
+    </script>
+  </body>
+</html>
