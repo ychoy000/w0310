@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+  <style>
+    .* {
+      margin: 0;
+      padding: 0;
+    }
+    .pic {
+      background: #ccc;
+    }
+    .pic img {
+      transform: translate(-200px);
+      transition: all 0.5s ease
+      vertical-align: top;
+    }
+    .pic img.on {
+      transform: translateX(0);
+    }
+    button {
+      width: 200px;
+      height: 50px;
+      border: none;
+      background: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+  <div class="pic"><img src="../반응형웹실전프로젝트가이드/04 jQuery/4.jpg" alt="4"></div>
+  <button>hover EVENT</button>
+    <script>
+      $(() => {
+        $('button').hover(function(){
+          $('.pic img').toggleClass('on');
+        }, function(){
+          $('.pic img').toggleClass('on');
+        });
+      });
+      /*
+         EVENT 작성 방법
+          //이벤트명(function(){});
+          객체.이벤트(function(){});
+          // on() 메서드를 이용한 기록
+          객체.on('이벤트1 이벤트2 ...', function(){});
+
+      */
+    </script>
+  </body>
+</html>

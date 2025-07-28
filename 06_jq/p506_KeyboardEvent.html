@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+    }
+    textarea {
+      width: 300px;
+      height: 200px;
+      border: 1px solid #000;
+    }
+    textarea.on {
+      background: #f60;
+      color: #fff;
+    }
+    #display {
+      width: 300px;
+      height: 100px;
+      word-break: break-all;
+      border: 1px solid #000;
+      overflow: auto;
+      }
+</style>
+  <body>
+    <textarea></textarea>
+    <div id="display"></div>
+    <script>
+      $(() => {
+        $("textarea").keydown(function () {
+          $(this).addClass("on"); 
+        }).keyup(function () {
+          $('#display').text($(this).val());
+        });
+      });
+
+      /*
+         EVENT 작성 방법
+          //이벤트명(function(){});
+          객체.이벤트(function(){});
+          // on() 메서드를 이용한 기록
+          객체.on('이벤트1 이벤트2 ...', function(){});
+
+      */
+    </script>
+  </body>
+</html>

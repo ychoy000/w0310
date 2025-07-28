@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+  <style>
+    .bg {
+      padding: 40px;
+      margin-bottom: 40px;
+      background: #CCC;
+    }
+    .inner {
+      padding: 20px;
+      background: #999;
+      border: 1px solid #000;
+    }
+  </style>
+  <body>
+    <div class="wrap1 bg">
+      <div class="inner">mouseover</div>
+    </div>
+    
+    <div class="wrap2 bg">
+      <div class="inner">mouseenter</div>
+      <div class="display"></div>
+    </div>
+
+    <script>
+         $(() => {
+          $('.wrap1').mouseover(function() {
+            $('.display').append('strong>mouseover</strong> ');
+          });
+         });
+      /*
+         EVENT
+          click
+          dbclick
+
+          mouseover
+          mouseout
+            -> 이벤트 버븝링
+          mouseenter
+          mouseleave
+          mousedown
+          mouseup
+          mousemove
+          hover
+        
+        이벤트 전파(event propagation)
+         이벤트 버블링(bubblimg)
+          -> 상위요소에서 한위 요소로 전파
+         이벤트 갭쳐링(capturing))
+          -> 하위요소에서 상위 요소로 전파
+
+      */
+    </script>
+  </body>
+</html>

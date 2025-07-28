@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+
+  <body>
+    <div id="m1"><a href="#">LINK</a></div>
+    <div id="m2"><span>CONTENT1</span></div>
+    <div id="m3"><span>CONTENT2</span></div>
+    <div id="m4"><span>CONTENT3</span></div>
+    <button>DELETE</button>
+    <button>DETACH</button>
+    <script>
+      $(() => {
+        let detachDiv;
+        $('button:eq(0)').click(function(){
+          $('m1 a').removeAttr('href');
+          $('#m2').empty();
+          $('#m3').remove();
+          detachDiv = $('#m4').detach();
+        });
+        $('button:eq(1)').click(function(){
+          detachDiv.insertAfter('#m2');
+        }); 
+ 
+      });
+
+    /*
+      삭제
+      1. remove('속성') 메서드
+         - 선택한 요소를 DOM에서 제거합니다.
+         - 선택한 요소의 자식 요소도 함께 제거됩니다.
+         - 선택한 요소의 이벤트 핸들러도 제거됩니다.
+      2. empty() 메서드
+         - 선택한 요소의 자식 요소를 모두 제거합니다.
+      3. detach() 메서드
+         - 선택한 요소를 DOM에서 제거하지만, 선택한 요소의 이벤트 핸들러는 유지됩니다.
+         - 나중에 다시 추가할 수 있습니다.
+      4. removeAttr() 메서드
+         - 선택한 요소의 속성을 제거합니다.
+   */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <!-- https://jquery.com -->
+    <!-- 1. Download -->
+    <!-- https://jquery.com/download/ -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <!-- 2. CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://ychoy000.github.io/w0310/70_pf/jquery-3.7.1.min.js"></script> -->
+  </head>
+    <style>
+      li {
+        display: inline-block;
+      }
+    </style>
+  <body>
+    
+    <ul class="m1">
+      <li><img src="../반응형웹실전프로젝트가이드/04 jQuery/1.jpg" alt="1"></li>
+      <li><img src="../반응형웹실전프로젝트가이드/04 jQuery/2.jpg" alt="2"></li>
+      <li><img src="../반응형웹실전프로젝트가이드/04 jQuery/3.jpg" alt="3"></li>
+      <li><img src="../반응형웹실전프로젝트가이드/04 jQuery/4.jpg" alt="4"></li>
+    </ul>
+    <div id="m1">
+      <strong>CONTENT1</strong>
+      <strong>CONTENT2</strong>
+    </div>
+    <div id="m3"><strong>CONTENT3</strong><strong>CONTENT4</strong></div>
+    <div id="m4">CONTENT5</div>
+    <div id="m5">CONTENT6</div>
+    <div id="m6">CONTENT7</div>
+    <script>
+      $(() => {
+        $('#m1').clone().insertAfter('#m1');
+        $(#m2 strong).wrap('<div></div>');
+        $('#m3 strong').wrapAll('<div></div>');
+        $('#m4').wrapInner('<div></div>');
+        $('#m5').replaceWith('<p>REPLACE6</p>');
+        $('<p>REPLACE7</p>').replaceAll('#m6');
+      });
+   /*
+      복제/감싸기
+        요소.clone() -> 요소 복제
+        요소.wrap('부모요소') -> 요소를 개별적으로 부모 요소로 감싼다.
+        wrapInner()
+        replaceWith()
+        replaceAll()
+   */
+    </script>
+  </body>
+</html>
