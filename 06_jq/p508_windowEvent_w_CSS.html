@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY attr Method</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+ 
+
+      .header {
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+      }
+      
+      #navbar {
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      #navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      #navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      #navbar a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+      
+      .content {
+        padding: 16px;
+      }
+      #quick {
+        position: sticky;
+        top: 150px;
+        width: 100px;
+        height: 200px;
+        background: #ff6600;
+        color: #fff;
+        text-align: center;
+        left: 100%;
+        margin-left: -100px;
+      }
+
+
+      @media screen and (max-width: 960px) {
+        header {
+          background: cyan;
+        }
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h2>Scroll Down</h2>
+      <p>Scroll down to see the sticky effect.</p>
+    </div>
+    
+    <div id="navbar">
+      <a class="active" href="#">Home</a>
+      <a href="#">News</a>
+      <a href="#">Contact</a>
+    </div>
+    <div id="quick">QUICK</div>
+
+<div class="content">
+  <h3>Sticky Navigation Example</h3>
+  <p>The navbar will stick to the top when you reach its scroll position.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui consequuntur illo aliquid nisi eaque praesentium harum vitae doloribus molestiae saepe distinctio, corporis pariatur repellat, ullam, maxime nam commodi reprehenderit blanditiis sed aut eos hic iure laudantium nesciunt. Unde voluptates modi quod quas, consequuntur asperiores placeat dolore sunt aliquid laboriosam tempora. Aut maxime blanditiis ducimus vel. Eum laboriosam molestias fuga repellat voluptates ad incidunt placeat possimus vero, exercitationem, assumenda ipsam soluta aliquam provident harum totam quasi nam aut culpa veritatis eaque adipisci? Aliquid ab culpa provident magnam blanditiis, ad consectetur autem error dolorum non dicta? Eius enim odit exercitationem, rerum perferendis alias culpa architecto recusandae inventore incidunt in harum itaque omnis adipisci quam impedit natus atque ab consequuntur temporibus quis? Voluptatum maiores laboriosam commodi dolore praesentium vero similique perspiciatis in deleniti atque! Quia voluptatibus illo rerum quo, quos iste nostrum totam fuga cumque veniam, quod laudantium blanditiis dolorum, iure praesentium eaque deserunt! Placeat veritatis dolore blanditiis molestias eius ipsam repellendus! Nesciunt mollitia adipisci a, repellendus error saepe consectetur ipsam iusto maiores tenetur sit placeat modi eaque. Inventore tempora deserunt pariatur beatae nam sunt maiores possimus soluta rerum nemo? Maxime tempora eius commodi culpa ullam itaque error esse quia sed ab? Iusto deleniti, eos ipsa inventore, facere excepturi, voluptatem officia aperiam recusandae mollitia laudantium doloremque. Nemo maiores neque ab ipsam, veniam quibusdam error fuga minima, nulla corporis numquam ea, rem eveniet assumenda. Nobis, in nam ullam nostrum esse labore dolor pariatur maiores molestias ipsum quia amet fugit excepturi ea nihil itaque omnis vitae nulla iste repellendus error! Alias quibusdam nisi atque architecto ea ab dolorum quidem adipisci deleniti aliquid praesentium fugit nobis totam accusamus dolorem veritatis eos, accusantium assumenda officiis impedit rem tempora neque consequuntur. A odio perferendis cum dolorem voluptate debitis autem asperiores earum, minus cumque? Illum nisi ad similique inventore!</p>
+</div>
+
+ <!--    <script>
+      $(document).ready(function () {
+        if ($(this).width() < 960) {
+          console.log(this);
+          $("header").addClass("bg");
+        } else {
+          $("header").removeClass("bg");
+        }
+        $(window)
+          .scroll(function () {
+            // 창의 세로 스크롤한 값이 헤더의 높이보다 크면
+            if ($(this).scrollTop() > $("header").height()) {
+              $("#quick").addClass("on");
+              console.log($("header").height());
+              console.log($("#quick").scroll().top);
+            } else {
+              $("#quick").removeClass("on");
+              console.log($("header").height());
+            }
+          })
+          .resize(function () {
+            // resize를 활용하면 media query를 JS로 작성할 수 있다.
+            // 창의 크기가 960px보다 작으면 헤더에 bg 클래스를 추가
+            // 창의 크기가 960px보다 크면 헤더에 bg 클래스를 제거
+            console.log($(this).width());
+            console.log($(this).height());
+            if ($(this).width() < 960) {
+              $("header").addClass("bg");
+            } else {
+              $("header").removeClass("bg");
+            }
+          });
+      });
+ -->
+      /*
+         Window EVENT
+          문서 관련 이벤트
+            $(document).ready();  -> 문서가 준비되었을 때
+          윈도우(창) 관련 이벤트
+            $(window).load();
+            $(window).resize();  -> 창 크기 변경
+            $(window).scroll();  -> 스크롤바를 움직일 때
+            $(window).unload();
+            $(window).beforeunload();
+      */
+    <!-- </script> -->
+  </body>
+</html>

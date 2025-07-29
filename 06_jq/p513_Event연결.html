@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 연결</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      * { margin: 5px;}
+      .on {
+        background: #ff6600;
+        color: #fff;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="m1">
+      <button>CLICK1</button>
+    </div>
+    <div class="m2">
+      <button>CLICK2</button>
+    </div>
+    <div class="m3">
+      <button>CLICK3</button>
+    </div>
+    <div class="m4">
+      <button>CLICK4</button>
+    </div>
+    <div class="m5">
+      <button>CLICK5</button>
+    </div>
+    <div class="m6">
+      <button>CLICK6</button>
+    </div>
+    <div class="m7">
+      <p>CLICK7</p>
+    </div>
+
+    <script>
+      $(() => {
+        // 이벤트 연결
+        $('.m1 button').on('click', ()=> alert('이벤트 연결1'));
+      
+
+        $('.m2').on('click', 'button', ()=> alert('이벤트 연결2'));
+      
+        
+       /*  $('.m3 button').on('mouseenter mouseleave', ()=> {
+          $(this).toggleClass('on');
+        });
+ */
+        function showEvent(){
+          alert('이벤트 연결3');
+        }
+        // 함수 이름에 괄호()를 사용하면 함수가 바로 호출된다.      
+        $('.m4 button').on('click', showEvent);
+
+        $('.m5 button').on('click', function () {
+          alert('이벤트 제거');
+        }).off();
+
+        $('.m6 button').one('click', function () {
+          alert('이벤트 한번만 연결');
+        });
+
+        $('.m7').on('click', function () {
+          $('p', this).css({background: '#ff6600', color: '#fff'});
+        });
+      });
+/*       $(document).ready(function() {
+        $('button').click(function(){
+        $('p').text('이벤트 테스트 추가');
+        });
+      });
+       */
+      /*  이벤트 연결 방식
+        1) 직접 연결
+        2) 이벤트 메서드
+           on() : 이벤트 연결
+           off() : 이벤트 해제
+           one() : 이벤트 연결 후 한 번만 실행
+           
+        $(selector).event(function);
+        $(document).ready(function() {});
+
+        // 형식1
+        $(선택자).on('속성 속성 ...' 값);
+        $(selector).on('event1 event2 ...', function);
+        $(selector).on('event1 event2 ...', function(){});
+
+        // 형식2
+        $(선택자).on({
+          event1: function() {},
+          event2: function() {}
+        });
+
+        function fn()
+
+        이벤트
+          1) 마우스 : click, mouseenter, mouseleave, mousemove, mousedown, mouseup
+          2) 키보드 : keydown, keyup, keypress
+          3) 폼 : submit, change, focus, blur, input,focusin, focusout,select
+          4) 윈도우 : load, resize, scroll, unload
+      */
+    </script>
+  </body>
+</html>
