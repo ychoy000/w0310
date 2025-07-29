@@ -52,6 +52,10 @@ header {
     right: 24px;
     text-align: center;
 }
+.nav_bg {
+  width: 100%;
+  background: #222;
+}
 
 /* 1depth: 메인메뉴 */
 .gnb .main {
@@ -70,17 +74,11 @@ header {
 }
 
 .gnb .main>li>a:hover {
-    background: #333;
-    color: #999;
+    background: #e24848;
+
 }
 
 /* 2depth: 서브메뉴 */
-.gnb .sub {
-    padding-top: 10px;
-    background: #999;
-    color:#fff;
-}
-
 .gnb .sub>li>a {
     padding: 2px 8px;
     font-size: 1.2rem;
@@ -89,7 +87,7 @@ header {
 
 .gnb .sub>li>a:hover {
   display: block;
-    /* background: #474ead; */
+  background: #cf2e2e;
     color: #fff;
 }
 
