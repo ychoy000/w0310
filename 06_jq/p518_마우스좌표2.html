@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+
+      .tip {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        background: #22d389;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        transition: opacity 0.3s ease;
+      }
+      .tip.on {
+        /* opacity: 0.8; */
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="tip"></div>
+
+    <script>
+      $(() => {
+  // .tip 요소를 선택합니다. 마우스를 따라다닐 DOM 요소입니다.
+  const tip = $('.tip');
+
+  // 마우스 실제 좌표(mouseX, mouseY)와
+  // .tip 요소의 현재 좌표(tipX, tipY)를 저장할 변수 선언
+  let mouseX = 0, mouseY = 0;
+  let tipX = 0, tipY = 0;
+
+  // 마우스를 따라 움직이도록 계속 호출되는 애니메이션 함수
+  function mouseMove() {
+    // 현재 마우스 위치(mouseX, mouseY)와 .tip 위치(tipX, tipY)의 차이를 점진적으로 반영
+    // → 부드럽게 따라오는 효과 (이동 거리의 10%씩 점진적으로 이동)
+    tipX += (mouseX - tipX) * 0.1;
+    tipY += (mouseY - tipY) * 0.1;
+
+    // 계산된 좌표로 .tip 요소의 위치를 CSS로 적용
+    tip.css({
+      left: tipX,
+      top: tipY
+    });
+
+    // 다음 프레임에 다시 이 함수(mouseMove)를 호출 (재귀 호출)
+    // requestAnimationFrame은 CPU 효율이 좋고 부드러운 애니메이션을 제공합니다.
+    requestAnimationFrame(mouseMove);
+  }
+
+  // 최초 한 번 실행해서 애니메이션 루프 시작
+  mouseMove();
+
+  // 마우스가 움직일 때마다 이벤트 발생
+  // 마우스의 현재 위치를 mouseX, mouseY 변수에 업데이트
+  $(window).on('mousemove', function(e) {
+    mouseX = e.pageX; // 브라우저 전체 기준의 X 좌표
+    mouseY = e.pageY; // 브라우저 전체 기준의 Y 좌표
+  });
+});
+
+      /*
+
+      */
+    </script>
+  </body>
+</html>

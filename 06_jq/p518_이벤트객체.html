@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0;
+      }
+      .display {
+        border: 1px solid #000;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <button>이벤트 객체 보기</button>
+    <div class="display">이벤트 객체</div>
+    <script>
+      $(() => {
+        $('button').click(function(event){
+          $.each(event, function(properties, value){
+            $('.display').append(`<p>${properties}:value</p>);
+          });
+        });
+
+    /* 
+        이벤트 객체
+          event
+
+        메서드
+          event.preventDefault()
+            -> 기본 이벤트 방지
+          event.stopPropagation()
+            -> 이벤트 전파 방지/제거
+        속성
+          event.target -> 이벤트가 발생한 객체 자신, this
+          event.type -> 이벤트 종류
+    */
+    </script>
+  </body>
+</html>

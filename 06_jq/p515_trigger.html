@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 연결</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      * {
+        margin: 0px;
+      }
+      body {
+        overflow: hidden;
+      }
+      #con1 {
+        height: 100px;
+        background: #718c00;
+        transform: translateX(-98%);
+        transition: all 0.5s ease;
+      }
+      #con2 {
+        height: 100px;
+        background: #c30;
+        transform: translateX(98%);
+        transition: all 0.5s ease;
+      }
+      #con1.on #con2.on {
+        transform: translateX(0);
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="con1"></div>
+    <div id="con2"></div>
+    <button>CLICK1</button>
+    <button>CLICK2</button>
+    <button>all</button>
+    <script>
+      $(() => {
+        $('button').eq(0).click(()=>$('#con1').toggleClass('on')).trigger('click');
+        $('button:eq(1)').on('click', function(){
+        $('#con2').toggleClass('on');
+      }).trigger('click');
+        $('button:eq(2)').on('click', function(){
+        $('button:eq(0)').trigger('click');
+        $('button:eq(1)').trigger('click');
+      });
+
+      });
+      /*       
+      이벤트 강제 실행
+        객체.이벤트().trigger('이벤트')
+      */
+    </script>
+  </body>
+</html>
