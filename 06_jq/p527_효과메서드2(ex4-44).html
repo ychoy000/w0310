@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>효과메서드2</title>
+    <style>
+      * {
+        margin: 5px;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background: #ff6600;
+        position: relative;
+      }
+      .m1 {
+        overflow: hidden;
+      }
+      .m1 span {
+        position: relative;
+        top: -50px;
+      }
+    </style>
+    <!-- jquery main source -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jquery UI CDN -->
+    <!-- background color, easing 지정하려면 ui library가 필요하다. -->
+    <!-- <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script> -->
+  </head>
+  <body>
+    <button>animate1</button>
+    <div class="m0"></div>
+    <button>animate2</button>
+    <div class="m1"><span>애니메이션</span></div>
+    <button>animate3</button>
+    <div class="m2"></div>
+    <button>animate4</button>
+    <div class="m3"></div>
+  </body>
+  <script>
+    $(() => {
+      //transform, box-shadow, text-shadow, z-index, display, visibility, position, font-family
+      // 등은 animate로 작동이 안된다. - > ui library 사용 필요
+      $("button:eq(0)").click(function () {
+        $(".m0")
+          .animate({ left: 500 }, "fast", "swing")
+          .animate({ left: 0 }, "slow", "swing");
+      });
+      $("button:eq(1)").click(function () {
+        $(".m1 span").css("top", -50);
+        $(".m1")
+          .animate({ left: 500 }, "fast", "swing")
+          .animate({ left: 0 }, "slow", "swing", function () {
+            $(this).find("span").animate({ top: 30 }, "fast", "swing");
+          });
+      });
+      //버튼을 누를 때마다 left가 200px 씩 증가
+      //left += 200;
+      //left = left + 200;
+      $("button:eq(2)").click(function () {
+        $(".m2").animate({ left: "+=200" }, "fast", "swing");
+      });
+      // $("button:eq(2)").mouseleave(function() {$(".m2").animalte({left: 0}, 'slow');
+      $("button:eq(3)").click(function () {
+        $(".m3").animate({ width: "toggle" }, "fast", "swing");
+      });
+    });
+    /* 
+    효과메서드
+      animate()
+      clearQueue()
+      stop()
+    */
+  </script>
+</html>

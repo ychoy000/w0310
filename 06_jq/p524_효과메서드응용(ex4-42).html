@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>캐로셀일부</title>
+      <style>
+     * {
+            margin: 0;
+            padding: 0;
+        }        
+        li {
+            list-style: none;
+        }       
+        a {
+            font-family: "돋움";
+            font-size: 12px;
+            color: #000;
+            text-decoration: none;
+        }        
+        #visual {
+            width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+         #pic {
+            height: 563px;
+            overflow: hidden;           
+            position: relative;
+            box-shadow: 1px 5px 10px 2px #666;
+        }        
+        #pic > div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        #control {
+            position: absolute;    
+            width: 100%;
+            left: 0;
+            bottom: 30px;          
+            text-align: center;            
+        }
+        #control a {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            background: #000;            
+            color: #fff;           
+            line-height: 26px;
+            font-size: 0.8em;
+            border-radius: 14px;
+            margin: 0 2px
+        }
+        #control a.on {
+            background: #ff6600;
+        }
+        /* 
+          vw: viewport width
+          vh: viewport heifght
+          vmax: higher one of vw and vh
+          vmin: lower one of vw and vh
+        */
+    </style>
+    <!-- jquery main source -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jquery UI CDN -->
+    <!-- <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script> -->
+  </head>
+  <body>
+     <div id="visual">
+        <div id="pic">            
+                <div><a href="#"><img src="images/ui-icons_444444_256x240.png" alt="1"></a></div>
+                <div><a href="#"><img src="images/ui-icons_555555_256x240.png" alt="2"></a></div>
+                <div><a href="#"><img src="images/ui-icons_777777_256x240.png" alt="3"></a></div>
+                <div><a href="#"><img src="images/ui-icons_cc0000_256x240.png" alt="4"></a></div>            
+        </div>        
+        <div id="control">
+            <a href="javascript:;">1</a>
+            <a href="javascript:;">2</a>
+            <a href="javascript:;">3</a>
+            <a href="javascript:;">4</a>
+        </div>
+    </div>
+
+      
+    
+  </body>
+  <script>
+      $(() => {
+        $('#control a').click(function(){
+          //Num() 함수는 가져온 '1', '2', '3', '4'를 숫자로 반환
+          const num = Number($(this).text()) -1 ;
+          // pagination 버튼 중에 클릭한 것만 색 변경
+          $(this).addClass('on').siblings().removeClass('on');
+          //기존 이미지는 서서히 사라진 후
+          $('#pic >div').filter(':visible').stop(true).fadeOut(350).end()
+          // 사용자가 누른 버튼에 해당하는 이미지가 서서히 나타남
+            .eq(num).stop(true).fadeIn(350);
+        });
+        // 문서가 준비되는 시작점에서
+        // pagination 첫번째 버튼을 색 변경 그리고, 첫번째 이미지를 보이기
+        $('#control a:first').addClass('on').add('#pic>div:first').show();
+      });
+
+      /*
+        효과 메서드
+          show()  -> display: block;
+          hide()  -> display: none;
+          toggle()
+          slideDown() -> 서서히 보이기(위에서 아래) : opacity:1; (translateY(y), top)
+          slideUp()   -> 서서히 숨기기(아래에서 위) : opacity:0; + (translateY(0), top);
+          slideToggle()
+          fadeIn()
+          fadeOut()
+          fadeTo()
+          fadeToggle(n) : n = 0 ~ 1
+
+        형식: 
+          $(selector).effectMethod([speed], [easing], [callback]);
+          $(선택자).효과메서드(시간, 가속도, 함수);
+            - speed (시간): 'slow', 'fast', miliseconds(default= 400ms)
+            - easing (가속도): swing(기본값, 가속), linear(등속), easeInQuad, easeOutQuad, -> jquery UI site, see to the easing 
+             * css의 transition-time-function
+                     animation-timing-fuction
+                        값: ease, ease-in, ease-out, ease-in-out, -> 가속
+             * jquery의 가속도: https://easings.net
+            - callback: 효과 메서드가 종료된 후 실행되는 함수
+      */
+    </script>
+</html>
