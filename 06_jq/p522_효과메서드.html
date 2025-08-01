@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>preventDefault</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        font-family: "돋움";
+        font-size: 12px;
+        color: #333;
+        height: 100%;
+      }
+      a {
+        font-family: "돋움";
+        font-size: 12px;
+        color: #333;
+        text-decoration: none;
+        line-height: 20px;
+      }
+
+    </style>
+    <!-- jquery main source -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jquery UI CDN -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script>
+  </head>
+  <body>
+    <div id="m1">
+      <button>show</button>
+      <button>hide</button>
+      <button>toggle</button>
+      <div class="box">CONTENT1</div>
+    </div>
+    
+    <div id="m2">
+      <button>slideDown</button>
+      <button>slideUp</button>
+      <button>slideToggle</button>
+      <div class="box">CONTENT2</div>
+    </div>
+    <div id="m3">
+      <button>fadeIn</button>
+      <button>fadeOut</button>
+      <button>fadeToggle</button>
+      <div class="box">CONTENT3</div>
+    </div>
+
+      
+    <script>
+      $(() => {
+
+      });
+
+      /*
+        효과 메서드
+          show()  -> display: block;
+          hide()  -> display: none;
+          toggle()
+          slideDown() -> 서서히 보이기(위에서 아래) : opacity:1; (translateY(y), top)
+          slideUp()   -> 서서히 숨기기(아래에서 위) : opacity:0; + (translateY(0), top);
+          slideToggle()
+          fadeIn()
+          fadeOut()
+          fadeTo()
+          fadeToggle(n) : n = 0 ~ 1
+
+        형식: 
+          $(selector).effectMethod([speed], [easing], [callback]);
+          $(선택자).효과메서드(시간, 가속도, 함수);
+            - speed (시간): 'slow', 'fast', miliseconds(default= 400ms)
+            - easing (가속도): swing(기본값, 가속), linear(등속), easeInQuad, easeOutQuad, -> jquery UI site, see to the easing 
+             * css의 transition-time-function
+                     animation-timing-fuction
+                        값: ease, ease-in, ease-out, ease-in-out, -> 가속
+             * jquery의 가속도: https://easings.net
+            - callback: 효과 메서드가 종료된 후 실행되는 함수
+      */
+    </script>
+  </body>
+</html>
