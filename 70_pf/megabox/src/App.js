@@ -1,7 +1,13 @@
+import {useState} from 'react';
 import "./css/App.css";
 
+
+
+
 // 구조 분해 할당
-function MovieCard({ rank, image, alt, likes }) {
+function MovieCard({rank, image, alt, initialLikes}) {
+  const [likes, setLikes] = useState(initialLikes);
+  const handleLike = () => setLikes(likes + 1);
   return (
     <div className="movie-card">
       {/* 영화순위 */}
@@ -10,7 +16,7 @@ function MovieCard({ rank, image, alt, likes }) {
       <img src={image} alt={alt} />
       <div className="likes-btn">
         {/* 좋아요 */}
-        <button className="likes">♡ {likes}</button>
+        <button className="likes" onClick={handleLike}>♡ {likes}</button>
         {/* 예매버튼 */}
         <a href="#">예매</a>
       </div>
@@ -53,14 +59,11 @@ function App() {
     <>
       <h2>박스오피스</h2>
       <div className="boxoffice">
-        {
-          {
+        {  
             /* 리스트 랜더링
             {array.map((array)=>{return 값;})}
             {array.map((array)=> return 값;)}
-        */
-          }
-        }
+        */}
 
         {movies.map((movie) => (
           <MovieCard
