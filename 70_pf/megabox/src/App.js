@@ -16,7 +16,7 @@ function MovieCard({rank, image, alt, initialLikes}) {
       <img src={image} alt={alt} />
       <div className="likes-btn">
         {/* 좋아요 */}
-        <button className="likes" onClick={handleLike}>♡ {likes}</button>
+        <button className="likes" onClick={handleLike}>♡ k{likes}</button>
         {/* 예매버튼 */}
         <a href="#">예매</a>
       </div>
