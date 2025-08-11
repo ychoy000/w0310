@@ -14,6 +14,5 @@ const TodoApp = ({ tasks }) => {
       )}
     </ul>
   );
-};
 
 export default TodoApp;

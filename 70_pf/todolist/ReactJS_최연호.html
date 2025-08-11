@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>(CDN)To Do List</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome (Optional for icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background-color: #f8f9fa;
+        padding: 20px;
+      }
+      .equal-height {
+        height: 40px;
+      }
+      .equal-width {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const { useState } = React;
+
+      const TodoHeader = () => {
+        return (
+          <div>
+            <h1 className="text-center mb-4">
+              <i className="fa-solid fa-list-ul text-primary me-3"></i>
+              <strong>To Do List</strong>
+            </h1>
+          </div>
+        );
+      };
+
+      function App() {
+        const [tasks, setTasks] = useState([]);
+        const [input, setInput] = useState("");
+
+        const addTask = () => {
+          if (input.trim() === "") return;
+          setTasks([...tasks, input.trim()]);
+          setInput("");
+        };
+
+        const handleKeyDown = (e) => {
+          if (e.key === "Enter") {
+            addTask();
+          }
+        };
+
+        const handleDelete = (index) => {
+          setTasks(tasks.filter((_, i) => i !== index));
+        };
+
+        return (
+          <div className="container">
+            <TodoHeader />
+            <div className="row mb-3">
+              <div className="col-sm-9 col-12 mb-2">
+                <input
+                  type="text"
+                  placeholder="할 일을 입력하세요"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  className="form-control equal-height"
+                />
+              </div>
+              <div className="col-sm-3 col-12">
+                <button onClick={addTask} className="btn btn-primary w-100 equal-height">
+                  추가
+                </button>
+              </div>
+            </div>
+
+            <ul className="list-group">
+              {tasks.map((task, index) => (
+                <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
+                  {task}
+                  <button
+                    className="btn btn-danger btn-sm"
+                    onClick={() => handleDelete(index)}
+                  >
+                    삭제
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
