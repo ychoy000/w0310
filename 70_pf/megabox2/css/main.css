@@ -1,0 +1,94 @@
+@charset 'utf-8';
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css");
+@import url("./css/font.css");
+@import url("reset.css");
+@import url("common.css");
+
+/* section 1 */
+/* section bg */
+#section1 {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+#section1 a {
+  color: #fff;
+}
+#section1 .bg {
+  height: 100vh; 
+  background: url('../images/3m5xfcluV5mBUCrpoNtD507AQ6ermcWV_380.jpg') no-repeat 50%/cover;
+  filter: blur(25px) brightness(30%);
+}
+#section1 .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#section1 .more {
+  text-align: right;
+}
+#section1 .more span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+#section1 .box_office ul {
+  display: grid;
+  /* grid-template-columns: auto auto auto auto; */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+#section1 li.box_office_card {
+position: relative;
+display: grid;
+grid-template-columns: 1fr 2fr;
+}
+#section1 .rank {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 32px;
+  font-weight: 300;
+  font-style: italic;
+  box-shadow: ; 2px 2px 2px #000; 
+}
+#section1 img {
+  /* 가로 세로 비율 유지 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#section1 .container {
+  text-align: center;
+}
+
+#section1 h2 {
+  display: inline-block;
+  font-size: 16px;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  padding-bottom: 4px;
+}
+#section1 .poster {
+  width: 254px;
+  height: 352px;
+  grid-column: 1/span 2;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* like button */
+#section1 .like {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 8px;
+}
+/* reservation button */
+#section1 .reservation_btn {
+  background: #037b94;
+  border-radius: 4px;
+  padding: 8px;
+}
