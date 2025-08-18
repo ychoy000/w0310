@@ -20,8 +20,46 @@ p, footer a {
   font-family: 'Pretendard-Regular', Arial, Helvetica, sans-serif;
 }
 
+/* background image parallex scrolling */
 #sec1 {
   height: 100vh;
-    /* background image parallex scrolling */
   background: url("../image/parallax1.jpg") no-repeat 50% 50%/cover fixed;
+}
+#sec3 .parallax_bg {
+    height: 400px;
+    background: url(../images/parallax2.jpg) no-repeat 50% 50%/cover fixed;
+}
+#sec4 .parallax_bg {
+    height: 400px;
+    background: url(../images/parallax3.jpg) no-repeat 50% 50%/cover fixed;
+}
+
+/* header */
+#mainNavbar {
+    transform:translateY(-100%);
+}
+#mainNavbar.navbar-scrolled {
+    background-color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform:translateY(0);
+}
+
+
+/* section common */
+.sec {
+    max-width: 920px;
+}
+
+/* skill progressbar */
+#skill p {
+    letter-spacing: 4px;
+}
+.progress {
+    height:35px;
+}
+
+/* footer */
+footer:hover {
+    background: #111 !important;
 }

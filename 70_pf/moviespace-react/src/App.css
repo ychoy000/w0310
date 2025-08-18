@@ -1,0 +1,40 @@
+@charset "uft-8";
+
+.app {
+  display: flex;
+  background: #000;
+  color: #fff;
+  height: 70px;
+  justify-content: space-between;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 200px;
+  padding: 15px;
+  align-items: center;
+}
+.logo img {
+  width: 35px;
+  height: 35px;  
+}
+.tlogo {
+  font-size: 24px;
+}
+.gnb {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  width: 200px;
+  list-style-type: none;
+}
+.gnb li a {
+  color: #fff;
+  text-decoration: none;
+
+}
+.active {
+  background-color: #888;
+  text-decoration: none;
+}

@@ -5,25 +5,30 @@ i<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MY SITE2</title>
   </head>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-    crossorigin="anonymous"
-  />
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"
-  ></script>
-  <link rel="stylesheet" href="css/main.css">
+   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <!-- bootstrap@5.3.7 - 바닐라JS, Grid -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- font-awesome 6.7.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"  integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous" ></script>
+  
+    <link rel="stylesheet" href="css/main.css">
   
   
   <body>
     <!-- header -->
-    <nav class="navbar navbar-expand-sm navbar-dark  fixed-top">
+    <nav class="navbar navbar-expand-sm fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="javascript:void(0)">HOME</a>
+        <a class="navbar-brand" href="#sec1">HOME</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -35,44 +40,51 @@ i<!DOCTYPE html>
         <div class="collapse navbar-collapse" id="mynavbar">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">ABOUT</a>
+              <a class="nav-link" href="#sec2">ABOUT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">PORTFOLIO</a>
+              <a class="nav-link" href="#sec3">PORTFOLIO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">CONTACT</a>
+              <a class="nav-link" href="sec4">CONTACT</a>
             </li>
           </ul>
           <!-- <form class="d-flex">
-            <input class="form-control me-2" type="text" placeholder="Search" />
+            <input class="form-control me-2" type="text" placeholder="Search">
             <button class="btn btn-primary" type="button">Search</button>
           </form> -->
-          <!-- <img src="image/parallax1.jpg" alt="avarta"> -->
         </div>
       </div>
     </nav>
     <!-- section 1 First Parallax Image with Logo Text -->
     <div id="sec1" class="container-fluid">
-      <div class="row justify-content-center align-items-center bg-secondary h-100">
-        <h1 class="text-center"><span class="bg-dark text-white sl10 fs-4 py-3 px-5">My Web Site Logo</span></h1>
+      <div class="row justify-content-center align-items-center h-100">
+        <h1 class="text-center"><span class="bg-dark text-white ls10 fs-4 py-3 px-5">My <span class="d-none d-sm-inline bg-dark">Web Site</span> Logo</span></h1>
 
     <!-- section2 about Me -->
-     <div class="container" id="sec2">
+     <div class="container-fluid pt-5" id="sec2">
        <h2>ABOUT ME</h2>
-               <p><em>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer.</em> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+               <p><em>나는 자랑스런 태극기 앞에 조국과 민족의 무궁한 영광을 위하여 몸과 마음을 바쳐 충성을 다할 것을 굳게 맹세합니다.</em> 무대 밖에서는 조용히 배우고 성장하는 시간이 더 소중하게 느껴집니다.
+                틈날 때마다 풍경과 일상을 사진으로 기록하며, 저만의 감각을 다듬어가고 있어요.
+                이런 시각적인 관심은 자연스럽게 UI/UX에 대한 흥미로 이어졌고,
+                더 많은 분들과 더 나은 경험을 나누고 싶다는 마음으로 웹 프론트엔드 개발 공부를 시작하게 되었습니다.
+
+                지금은 HTML, CSS, JavaScript를 비롯해 React 등 다양한 프론트엔드 기술을 하나씩 익히며
+                디자인과 기능이 조화를 이루는 웹을 만들기 위해 노력하고 있습니다.
+                이 웹사이트는 저의 사진과 개발 과정을 함께 담은 공간으로,
+                무대 위의 저와는 또 다른, 조금 더 진솔한 저를 만날 수 있는 곳이기도 해요.
+                천천히, 꾸준히 채워가 보겠습니다.</p>
       </div>
       <div class="row">
-        <div class="col">
-          <b >난 곰이다.</b>
-          <img src="image/avarta.jpg" alt="p3">
+        <div class="col-sm text-center mb-5">
+          <b class="my-5 my-lg-0 d-block "><i class="fa-solid fa-user-tie- me-2"></i>난 곰이다.</b>
+          <div id="my-pic"><img src="image/avarta.jpg" alt="p3" class="w-100">
         </div>
-        <div class="col mt-5">
-          <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
+        <p class="col-sm">제가 만든 웹사이트입니다. Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
     </div>
-    <!-- section3: portfolio -->
+    <!-- section3: skill progress bar -->
     <div class="container sec" id="sec3">
       <h2>PORTFOLIO</h2>
       <p class="text-center">I am really good at</p>
